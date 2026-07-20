@@ -6,7 +6,7 @@ Ink Paper was built from the ground up to provide a distraction-free, visually u
 
 ## Screenshot
 
-|![[assets/01.png]]|![[assets/02.png]]|
+|![](assets/01.png)|![[assets/02.png]]|
 | ----------- | --- |
 |             |     |
 
