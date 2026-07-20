@@ -2,7 +2,7 @@
 name: Workspace Layout (Cards & Panels)
 id: workspace-layout-settings
 settings:
-    - 
+    -
         id: layout-select
         title: Select Workspace Layout
         description: Choose between Default (flush) or Card (floating) layout.
@@ -14,12 +14,12 @@ settings:
               value: layout-default
             - label: Card Layout
               value: layout-card
-    - 
+    -
         id: toggle-left-panel
         title: Enable Custom Left Panel Background
         description: Adjust color and opacity for the left sidebar.
         type: class-toggle
-    - 
+    -
         id: color-left-panel
         title: Left Panel Color
         type: variable-themed-color
@@ -27,12 +27,12 @@ settings:
         format: hex
         default-light: '#fcfcfc'
         default-dark: '#1e1e1e'
-    - 
+    -
         id: toggle-middle-panel
         title: Enable Custom Middle Panel Background
         description: Adjust color and opacity for the main editor.
         type: class-toggle
-    - 
+    -
         id: color-middle-panel
         title: Middle Panel Color
         type: variable-themed-color
@@ -40,12 +40,12 @@ settings:
         format: hex
         default-light: '#ffffff'
         default-dark: '#100f0f'
-    - 
+    -
         id: toggle-right-panel
         title: Enable Custom Right Panel Background
         description: Adjust color and opacity for the right sidebar.
         type: class-toggle
-    - 
+    -
         id: color-right-panel
         title: Right Panel Color
         type: variable-themed-color
@@ -53,11 +53,11 @@ settings:
         format: hex
         default-light: '#fcfcfc'
         default-dark: '#1e1e1e'
-    - 
+    -
         id: toggle-active-tab
         title: Enable Custom Active Tab Background
         type: class-toggle
-    - 
+    -
         id: color-active-tab
         title: Active Tab Color
         type: variable-themed-color
@@ -65,11 +65,11 @@ settings:
         format: hex
         default-light: '#ffffff'
         default-dark: '#262626'
-    - 
+    -
         id: toggle-vault-profile
         title: Enable Custom Vault Profile Background
         type: class-toggle
-    - 
+    -
         id: color-vault-profile
         title: Vault Profile Color
         type: variable-themed-color
@@ -77,17 +77,17 @@ settings:
         format: hex
         default-light: '#e3e3e3'
         default-dark: '#363636'
-    - 
+    -
         id: toggle-panel-borders
         title: Enable Panel Borders
         description: Apply custom borders to the Left, Middle, and Right panels.
         type: class-toggle
-    - 
+    -
         id: panel-border-width
         title: Panel Border Thickness
         type: variable-text
         default: 1px
-    - 
+    -
         id: panel-border-color
         title: Panel Border Color
         type: variable-themed-color
@@ -95,7 +95,7 @@ settings:
         format: hex
         default-light: '#d4d4d4'
         default-dark: '#3f3f3f'
-    - 
+    -
         id: panel-border-style
         title: Panel Border Style
         description: Choose the line style for your custom borders.
@@ -105,7 +105,7 @@ settings:
             - solid
             - dashed
             - dotted
-    - 
+    -
         id: panel-border-color
         title: Panel Border Color
         type: variable-themed-color
@@ -113,36 +113,36 @@ settings:
         format: hex
         default-light: '#d4d4d4'
         default-dark: '#3f3f3f'
-    - 
+    -
         id: panel-border-radius
         title: Panel Border Radius
         description: Controls the corner roundness when borders are enabled (e.g., 8px, 12px)
         type: variable-text
         default: 8px
-    - 
+    -
         id: layout-gap-middle
         title: Inner Panel Gap
         description: Spacing BETWEEN the left, middle, and right panels (e.g., 5px, 16px).
         type: variable-text
         default: 5px
-    - 
+    -
         id: layout-gap-right
         title: Right Edge Gap
         description: Spacing on the far RIGHT edge of the window.
         type: variable-text
         default: 5px
-    - 
+    -
         id: layout-gap-bottom
         title: Bottom Edge Gap
         description: Spacing on the far BOTTOM edge of the window.
         type: variable-text
         default: 5px
-    - 
+    -
         id: toggle-card-bg
         title: Enable Custom Card Background
         description: Override the default background color and opacity for the Card Layout.
         type: class-toggle
-    - 
+    -
         id: card-bg-color
         title: Card Background Color
         type: variable-themed-color
@@ -156,19 +156,13 @@ settings:
 name: FlexoPaper Settings
 id: minimal-texture-theme
 settings:
-    - 
+    -
         id: bg-textures-light
         title: Light Mode Background
         type: heading
         collapsed: false
         level: 3
-    - 
-        id: paper-bg-color-light
-        title: Base Background Color (Light)
-        type: variable-color
-        format: hex
-        default: '#FFFCF0'
-    - 
+    -
         id: paper-bg-color-opacity-light
         title: Base Background Opacity (Light)
         type: variable-number-slider
@@ -176,19 +170,19 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: textures-light
         title: ""
         description: "<h3 style='text-align: center;'>Texture</h3>"
         type: info-text
         markdown: true
-    - 
+    -
         id: paper-bg-image-light
         title: Texture URL (Light)
         description: 'Ensure you wrap the link in url("...")'
         type: variable-text
         default: 'url("https://www.transparenttextures.com/patterns/cream-paper.png")'
-    - 
+    -
         id: paper-bg-image-opacity-light
         title: Texture Opacity (Light)
         type: variable-number-slider
@@ -196,7 +190,7 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: paper-bg-blend-light
         title: Texture Blend Mode (Light)
         type: variable-select
@@ -220,19 +214,19 @@ settings:
             - luminosity
             - plus-lighter
             - plus-darker
-    - 
+    -
         id: tint-light
         title: ""
         description: "<h3 style='text-align: center;'>Tint</h3>"
         type: info-text
         markdown: true
-    - 
+    -
         id: paper-tint-color-light
         title: Tint Color (Light)
         type: variable-color
         format: hex
-        default: '#FFFFFF'
-    - 
+        default: '#FFFCF0'
+    -
         id: paper-tint-opacity-light
         title: Tint Opacity (Light)
         type: variable-number-slider
@@ -240,7 +234,7 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: paper-tint-blend-light
         title: Tint Blend Mode (Light)
         type: variable-select
@@ -264,19 +258,13 @@ settings:
             - luminosity
             - plus-lighter
             - plus-darker
-    - 
+    -
         id: bg-textures-dark
         title: Dark Mode Background
         type: heading
         collapsed: false
         level: 3
-    - 
-        id: paper-bg-color-dark
-        title: Base Background Color (Dark)
-        type: variable-color
-        format: hex
-        default: '#100F0F'
-    - 
+    -
         id: paper-bg-color-opacity-dark
         title: Base Background Opacity (Dark)
         type: variable-number-slider
@@ -284,19 +272,19 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: textures-dark
         title: ""
         description: "<h3 style='text-align: center;'>Texture</h3>"
         type: info-text
         markdown: true
-    - 
+    -
         id: paper-bg-image-dark
         title: Texture URL (Dark)
         description: 'Ensure you wrap the link in url("...")'
         type: variable-text
         default: 'url("https://www.transparenttextures.com/patterns/black-paper.png")'
-    - 
+    -
         id: paper-bg-image-opacity-dark
         title: Texture Opacity (Dark)
         type: variable-number-slider
@@ -304,7 +292,7 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: paper-bg-blend-dark
         title: Texture Blend Mode (Dark)
         type: variable-select
@@ -328,19 +316,19 @@ settings:
             - luminosity
             - plus-lighter
             - plus-darker
-    - 
+    -
         id: tint-dark
         title: ""
         description: "<h3 style='text-align: center;'>Tint</h3>"
         type: info-text
         markdown: true
-    - 
+    -
         id: paper-tint-color-dark
         title: Tint Color (Dark)
         type: variable-color
         format: hex
-        default: '#000000'
-    - 
+        default: '#100F0F'
+    -
         id: paper-tint-opacity-dark
         title: Tint Opacity (Dark)
         type: variable-number-slider
@@ -348,7 +336,7 @@ settings:
         min: 0.0
         max: 1.0
         step: 0.05
-    - 
+    -
         id: paper-tint-blend-dark
         title: Tint Blend Mode (Dark)
         type: variable-select
@@ -372,1434 +360,6 @@ settings:
             - luminosity
             - plus-lighter
             - plus-darker
-*/
-
-/* @settings
-name: Components
-id: Components
-settings:
-    - 
-        id: autohide
-        title: Auto hide
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: tab-autohide
-        title: Auto hide tab bar
-        description: Mac users can adjust the position of the traffic light using the 'Electron Window Tweaker' plugin
-        type: class-toggle
-    - 
-        id: status-bar-autohide
-        title: Auto hide bottom status bar
-        type: class-toggle
-    - 
-        id: Ribbon-autohide
-        title: Auto hide left ribbon menu
-        type: class-toggle
-    - 
-        id: nav-header-autohide
-        title: Auto hide header icons in sidepane
-        type: class-toggle
-    - 
-        id: tab-title-bar-autohide
-        title: Auto hide tab title bar
-        type: class-toggle
-    - 
-        id: vault-profile-autohide
-        title: Auto hide vault profile
-        type: class-toggle
-    - 
-        id: file-explorer
-        title: File explorer
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: CTA-BTN-enable
-        title: Enable bigger "New note" button
-        type: class-toggle
-    - 
-        id: file-names-untrim
-        title: Untrim file names
-        type: class-toggle
-    - 
-        id: folder-font-bold
-        title: Bold folder font
-        type: class-toggle
-    - 
-        id: file-explorer-icon
-        title: icon
-        type: heading
-        collapsed: false
-        level: 4
-    - 
-        id: file-icon-remove
-        title: Remove custom icon
-        type: class-toggle
-    - 
-        id: colorful-folder
-        title: Enable colorful folder icon
-        type: class-toggle
-    - 
-        id: active-file-colors-heading
-        title: Active File Colors
-        type: heading
-        collapsed: true
-        level: 4
-    - 
-        id: toggle-active-file-colors
-        title: Enable Custom Active File Color
-        description: Set a specific color for the currently active file/folder text and icon.
-        type: class-toggle
-    - 
-        id: color-active-file
-        title: Active File Color
-        type: variable-themed-color
-        format: hex
-        default-light: '#205EA6'
-        default-dark: '#4385BE'
-    - 
-        id: outline-panel
-        title: Outline Panel
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: outline-enhanced
-        title: Enable enhanced outline style
-        description: from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536
-        type: class-toggle
-    - 
-        id: New-tab
-        title: New tab
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: new-tab-btn-select
-        title: New tab buttons
-        type: class-select
-        allowEmpty: false
-        default: new-tab-btn-default
-        options:
-            -   label: text buttons (obsidian default)
-                value: new-tab-text-btn-restore
-            -   label: default
-                value: new-tab-btn-default
-    - 
-        id: new-tab-image-select
-        title: New tab image
-        type: class-select
-        allowEmpty: false
-        default: new-tab-image-default
-        options:
-            -   label: none
-                value: new-tab-image-none
-            -   label: obsidian logo
-                value: new-tab-image-default
-            -   label: old default
-                value: new-tab-image-old
-            -   label: customize image
-                value: new-tab-image-customize
-    - 
-        id: new-tab-image
-        title: customize new tab image
-        type: variable-text
-        description: Enter the url of the image into quotes
-        default: url(" ")
-    - 
-        id: Graph-view
-        title: Graph view
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: graph-text
-        title: graph-text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-line
-        title: graph-line color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-node
-        title: graph-node color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-node-unresolved
-        title: graph-node-unresolved color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-node-focused
-        title: graph-node-focused color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-node-tag
-        title: graph-node-tag color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: graph-node-attachment
-        title: graph-node-attachment color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: Canvas
-        title: Canvas
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: immersive-canvas
-        title: immersive canvas
-        type: class-toggle
-    - 
-        id: media-embed-card-border-off
-        title: Remove border effect of media card.
-        type: class-toggle
-    - 
-        id: canvas-background
-        title: Customize canvas background color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: canvas-card-border-width
-        title: canvas card border width
-        type: variable-text
-        description: Input any CSS border-width value
-        default: 2px
-    - 
-        id: canvas-card-border-style
-        title: canvas card border style
-        type: variable-text
-        description: Input any CSS border-style value
-        default: solid
-    - 
-        id: canvas-card-menu
-        title: canvas card menu position
-        type: class-select
-        allowEmpty: false
-        default: canvas-card-menu-center
-        options:
-            -   label: center(obsidian default)
-                value: canvas-card-menu-center
-            -   label: left
-                value: canvas-card-menu-left
-            -   label: right
-                value: canvas-card-menu-right
-    - 
-        id: animation
-        title: Animation
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: extra-anim-remove
-        title: Remove additional added animation
-        type: class-toggle
-    - 
-        id: anim-speed
-        title: Animation speed
-        type: variable-number-slider
-        default: 1
-        min: 0.5
-        max: 2
-        step: 0.05
-    - 
-        id: Miscellaneous
-        title: Miscellaneous
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: setting-item-title-icon-remove
-        title: Remove setting item title icon
-        type: class-toggle
-    - 
-        id: scrollbar-hide
-        title: Hide scrollbar
-        type: class-toggle
-    - 
-        id: restored-scrollbars
-        title: Restore scrollbar style
-        type: class-toggle
-
-*/
-
-/* @settings
-name: Editor
-id: Editor
-settings:
-    - 
-        id: line-emphasis
-        title: Focus indicator
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: line-hover-indicator-info
-        description: "Display a vertical line indicator before focus line"
-        type: info-text
-        markdown: true
-    - 
-        id: line-hover-indicator
-        title: Enable Focus indicator
-        type: class-toggle
-    - 
-        id: focus-indicator-list-level
-        title: indicate list level
-        type: class-toggle
-    - 
-        id: focus-indicator-codeblock-line-number
-        title: indicate codeblock line number
-        type: class-toggle
-    - 
-        id: hover-indicator-color
-        title: Customize indicator color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: border-focus-mode-heading
-        title: Focus mode
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: border-focus-mode-info
-        description: "Highlight active line"
-        type: info-text
-        markdown: true
-    - 
-        id: border-focus-mode
-        title: Enable focus mode
-        type: class-toggle
-    - 
-        id: line-active-bg
-        title: Active line background color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: line-normal-opacity
-        title: Normal line opacity
-        type: variable-number-slider
-        default: 0.5
-        min: 0.05
-        max: 1
-        step: 0.05
-    - 
-        id: Editor-background-pattern
-        title: Editor background pattern
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: editor-grid-background-pattren
-        title: Enable grid background pattern
-        type: class-toggle
-    - 
-        id: grid-background-pattern-color
-        title: Customize grid background pattern color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: grid-background-pattern-size
-        title: Custom grid background pattern size
-        description: Accepts any CSS background-size value
-        type: variable-text
-        default: 36px
-    - 
-        id: Headings
-        title: Headings
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: collapse-icon-restore
-        title: Restore the collapse icon before headings
-        type: class-toggle
-    - 
-        id: heading-indicator-off
-        title: Remove headings indicator
-        type: class-toggle
-        default: false
-    - 
-        id: Inline-title
-        title: Inline Title
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: inline-title-divider-remove
-        title: Remove inline title divider
-        type: class-toggle
-    - 
-        id: inline-title-font
-        title: inline title font
-        type: variable-text
-        default: ''
-    - 
-        id: inline-title-size
-        title: inline title size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.5em
-    - 
-        id: inline-title-weight
-        title: inline title weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 700
-    - 
-        id: inline-title-text-transform
-        title: inline title text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: inline-title-color-select
-        title: inline title text color
-        type: class-select
-        allowEmpty: false
-        default: inline-title-color-default
-        options:
-            -   label: H1 color
-                value: inline-title-color-default
-            -   label: Customized color
-                value: inline-title-color-customized
-    - 
-        id: inline-title-color
-        title: Customize inline title text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: level-1-headings
-        title: Level 1 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h1-divider-on
-        title: Enable H1 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h1-font
-        title: H1 font
-        type: variable-text
-        default: ''
-    - 
-        id: h1-size
-        title: H1 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.5em
-    - 
-        id: h1-weight
-        title: H1 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 700
-    - 
-        id: h1-text-transform
-        title: H1 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h1-accent-color
-        title: Customize H1 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h1-color-select
-        title: H1 text color
-        type: class-select
-        allowEmpty: false
-        default: h1-color-default
-        options:
-            -   label: Default
-                value: h1-color-default
-            -   label: Accent color
-                value: h1-color-designated
-    - 
-        id: level-2-headings
-        title: Level 2 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h2-divider-on
-        title: Enable H2 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h2-font
-        title: H2 font
-        type: variable-text
-        default: ''
-    - 
-        id: h2-size
-        title: H2 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.425em
-    - 
-        id: h2-weight
-        title: H2 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 675
-    - 
-        id: h2-text-transform
-        title: H2 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h2-accent-color
-        title: Customize H2 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h2-color-select
-        title: H2 text color
-        type: class-select
-        allowEmpty: false
-        default: h2-color-default
-        options:
-            -   label: Default
-                value: h2-color-default
-            -   label: Accent color
-                value: h2-color-designated
-    - 
-        id: level-3-headings
-        title: Level 3 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h3-divider-on
-        title: Enable H3 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h3-font
-        title: H3 font
-        type: variable-text
-        default: ''
-    - 
-        id: h3-size
-        title: H3 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.35em
-    - 
-        id: h3-weight
-        title: H3 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 650
-    - 
-        id: h3-text-transform
-        title: H3 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h3-accent-color
-        title: Customize H3 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h3-color-select
-        title: H3 text color
-        type: class-select
-        allowEmpty: false
-        default: h3-color-default
-        options:
-            -   label: Default
-                value: h3-color-default
-            -   label: Accent color
-                value: h3-color-designated
-    - 
-        id: level-4-headings
-        title: Level 4 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h4-divider-on
-        title: Enable H4 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h4-font
-        title: H4 font
-        type: variable-text
-        default: ''
-    - 
-        id: h4-size
-        title: H4 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.275em
-    - 
-        id: h4-weight
-        title: H4 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 625
-    - 
-        id: h4-text-transform
-        title: H4 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h4-accent-color
-        title: Customize H4 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h4-color-select
-        title: H4 text color
-        type: class-select
-        allowEmpty: false
-        default: h4-color-default
-        options:
-            -   label: Default
-                value: h4-color-default
-            -   label: Accent color
-                value: h4-color-designated
-    - 
-        id: level-5-headings
-        title: Level 5 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h5-divider-on
-        title: Enable H5 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h5-font
-        title: H5 font
-        type: variable-text
-        default: ''
-    - 
-        id: h5-size
-        title: H5 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.2em
-    - 
-        id: h5-weight
-        title: H5 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 600
-    - 
-        id: h5-text-transform
-        title: H5 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h5-accent-color
-        title: Customize H5 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h5-color-select
-        title: H5 text color
-        type: class-select
-        allowEmpty: false
-        default: h5-color-default
-        options:
-            -   label: Default
-                value: h5-color-default
-            -   label: Accent color
-                value: h5-color-designated
-    - 
-        id: level-6-headings
-        title: Level 6 Headings
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: h6-divider-on
-        title: Enable H6 divider
-        type: class-toggle
-        default: false
-    - 
-        id: h6-font
-        title: H6 font
-        type: variable-text
-        default: ''
-    - 
-        id: h6-size
-        title: H6 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.125em
-    - 
-        id: h6-weight
-        title: H6 font weight
-        description: Accepts a value from 100 to 900
-        type: variable-number
-        default: 575
-    - 
-        id: h6-text-transform
-        title: H6 text-transform
-        description: Accepts any CSS text-transform value
-        type: variable-text
-        default: ''
-    - 
-        id: h6-accent-color
-        title: Customize H6 accent color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h6-color-select
-        title: H6 text color
-        type: class-select
-        allowEmpty: false
-        default: h6-color-default
-        options:
-            -   label: Default
-                value: h6-color-default
-            -   label: Accent color
-                value: h6-color-designated
-    - 
-        id: Paragraph
-        title: Paragraph
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: text-align-justify
-        title: Justify paragraph text
-        type: class-toggle
-        default: false
-    - 
-        id: line-height-customize
-        title: Paragraph line height
-        type: variable-number
-        default: 1.5
-    - 
-        id: file-line-width
-        title: Paragraph line width （Need to turn on “Readable line length”）
-        type: variable-text
-        default: 700px
-    - 
-        id: p-spacing
-        title: Paragraph spacing (Reading mode)
-        type: variable-text
-        default: 1em
-    - 
-        id: p-spacing-br
-        title: Paragraph spacing also takes effect after a line break (Reading mode)
-        type: class-toggle
-        default: false
-    - 
-        id: Text
-        title: Text
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: bold-color
-        title: Bold text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: italic-color
-        title: Italic text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: text-highlight-bg
-        title: text highlight bg color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: inline-code-normal
-        title: inline code text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: inline-code-background-light
-        title: Customize inline code background (light mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: inline-code-background-dark
-        title: Customize inline code background (dark mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: Links
-        title: Links
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: link-color
-        title: Link color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: link-color-hover
-        title: Link color (hover)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: link-decoration
-        title: Link decoration
-        description: Accepts any CSS text-decoration-line value
-        type: variable-text
-        default: underline
-    - 
-        id: link-decoration-hover
-        title: Link decoration (hover)
-        description: Accepts any CSS text-decoration-line value
-        type: variable-text
-        default: underline
-    - 
-        id: link-decoration-thickness
-        title: Link decoration thickness
-        description: Accepts any CSS text-decoration-thickness value
-        type: variable-text
-        default: auto
-    - 
-        id: link-unresolved
-        title: Unresolved link
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: link-unresolved-color
-        title: Unresolved link color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: link-unresolved-opacity
-        title: Unresolved link opacity
-        type: variable-number-slider
-        default: 0.7
-        min: 0.25
-        max: 1
-        step: 0.05
-    - 
-        id: link-unresolved-filter
-        title: Unresolved link filter
-        description: Accepts any CSS filter value
-        type: variable-text
-        default: none
-    - 
-        id: link-unresolved-decoration-style
-        title: Unresolved link decoration style
-        description: Accepts any CSS text-decoration-style value
-        type: variable-text
-        default: solid
-    - 
-        id: link-unresolved-decoration-color
-        title: Unresolved link decoration color
-        type: variable-themed-color
-        format: hex
-        opacity:  true
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: links-external
-        title: External links
-        type: heading
-        level: 4
-        collapsed: true
-    - 
-        id: link-external-color
-        title: External link color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: link-external-color-hover
-        title: External link color (hover)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: link-external-decoration
-        title: External link decoration
-        description: Accepts any CSS text-decoration-line value
-        type: variable-text
-        default: underline
-    - 
-        id: link-external-decoration-hover
-        title: External link decoration (hover)
-        description: Accepts any CSS text-decoration-line value
-        type: variable-text
-        default: underline
-    - 
-        id: link-external-filter
-        title: External link filter
-        description: Accepts any CSS filter value
-        type: variable-text
-        default: none
-    - 
-        id: Lists
-        title: Lists
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: list-indent
-        title: list indent
-        type: variable-text
-        default: 2.25em
-    - 
-        id: list-spacing
-        title: list spacing
-        type: variable-text
-        default: 0.075em
-    - 
-        id: list-bullet-size
-        title: list marker size
-        type: variable-text
-        default: 0.3em
-    - 
-        id: list-marker-color
-        title: list marker color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: list-marker-color-hover
-        title: list marker color (hover)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: list-marker-color-collapsed
-        title: list marker color (collapsed)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: ul-marker-restore
-        title: Restore default style of unordered list
-        type: class-toggle
-        default: false
-    - 
-        id: Tags
-        title: Tags
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: tag-color
-        title: Tag text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tag-background
-        title: Tag background color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tag-background-hover
-        title: Tag background color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: Table
-        title: Table
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: table-header-color
-        title: Customize table header color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: table-header-background-light
-        title: Customize table header background (light mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: table-header-background-dark
-        title: Customize table header background (dark mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: table-width-select
-        title: Table width
-        type: class-select
-        allowEmpty: false
-        default: table-width-default
-        options:
-            -   label: Consistent with line width (Default)
-                value: table-width-default
-            -   label: Obsidian default
-                value: table-width-obsidian-default
-            -   label: Customize table width
-                value: table-width-customized
-    - 
-        id: table-width
-        title: customize table width
-        description: () percent of the editor panel width
-        type: variable-number-slider
-        default: 88
-        min: 10
-        max: 100
-        step: 1
-        format: cqw
-    - 
-        id: Image
-        title: Image
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: img-center-align
-        title: center-align the image
-        type: class-toggle
-    - 
-        id: img-darken
-        title: darken image in dark mode
-        description: Hover to restore image
-        type: class-toggle
-    - 
-        id: Code-heading
-        title: Codeblock
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: codeblock-style-select
-        title: Codeblock theme
-        type: class-select
-        allowEmpty: false
-        default: codeblock-style-customize
-        options:
-            -   label: Customize
-                value: codeblock-style-customize
-            -   label: Dracula
-                value: codeblock-style-dracula
-            -   label: Solarized light
-                value: codeblock-style-solarized-light
-            -   label: Solarized dark
-                value: codeblock-style-solarized-dark
-            -   label: One dark
-                value: codeblock-style-one-dark
-    - 
-        id: code-background-light
-        title: Customize codeblock background (light mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: code-border-light
-        title: Customize codeblock border (light mode)
-        description: Input any CSS border value
-        type: variable-text
-        default: ''
-    - 
-        id: code-background-dark
-        title: Customize codeblock background (dark mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: code-border-dark
-        title: Customize codeblock border (dark mode)
-        description: Input any CSS border value
-        type: variable-text
-        default: ''
-    - 
-        id: code-normal
-        title: code-normal
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-comment
-        title: code-comment
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-function
-        title: code-function
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-important
-        title: code-important
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-keyword
-        title: code-keyword
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-operator
-        title: code-operator
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-property
-        title: code-property
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-punctuation
-        title: code-punctuation
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-string
-        title: code-string
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-tag
-        title: code-tag
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: code-value
-        title: code-value
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: Blockquote-heading
-        title: Blockquote
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: blockquote-background-light
-        title: Customize blockquote background (light mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: blockquote-background-dark
-        title: Customize blockquote background (dark mode)
-        description: Input any CSS background value
-        type: variable-text
-        default: ''
-    - 
-        id: Callouts
-        title: Callouts
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: callout-style-select
-        title: callout style
-        type: class-select
-        allowEmpty: false
-        default: callout-style-customize
-        options:
-            -   label: Customize
-                value: callout-style-customize
-            -   label: style 1
-                value: callout-style-1
-            -   label: style 2
-                value: callout-style-2
-            -   label: style 3
-                value: callout-style-3
-            -   label: style 4
-                value: callout-style-4
-    - 
-        id: callout-border-width
-        title: callout border width
-        description: Input any CSS border-width value
-        type: variable-text
-        default: 0px
-    - 
-        id: callout-border-opacity
-        title: callout border opacity
-        type: variable-number-slider
-        default: 0.25
-        min: 0
-        max: 1
-        step: 0.05
-    - 
-        id: callout-padding
-        title: callout padding
-        description: Accepts any CSS padding value
-        type: variable-text
-        default: ''
-    - 
-        id: callout-radius
-        title: callout radius
-        description: Input your border-radius value here
-        type: variable-text
-        default: ''
-    - 
-        id: callout-title-color
-        title: callout title color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: callout-title-padding
-        title: callout title padding
-        description: Accepts any CSS padding value
-        type: variable-text
-        default: ''
-    - 
-        id: callout-title-size
-        title: callout title size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: ''
-    - 
-        id: callout-content-padding
-        title: callout content padding
-        description: Accepts any CSS padding value
-        type: variable-text
-        default: ''
-    - 
-        id: callout-content-background
-        title: callout content background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: callout-content-radius
-        title: callout content radius
-        description: Input your border-radius value here
-        type: variable-text
-        default: ''
-    - 
-        id: Embeds
-        title: Embeds
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: seamless-embeds
-        title: seamless embeds
-        type: class-toggle
-    - 
-        id: embed-background
-        title: embed background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: embed-padding
-        title: embed padding
-        description: Input any CSS padding value
-        type: variable-text
-        default: ''
-    - 
-        id: embed-border-radius
-        title: embed border radius
-        description: Input any CSS border-radius value
-        type: variable-text
-        default: ''
-    - 
-        id: embed-font-style
-        title: embed font style
-        description: Input any CSS font-style value
-        type: variable-text
-        default: ''
-    - 
-        id: embed-max-height
-        title: embed max height
-        description: Input any CSS height value
-        type: variable-text
-        default: ''
-    - 
-        id: Checkbox
-        title: Checkbox
-        type: heading
-        collapsed: true
-        level: 3
-    -
-        id: disable-alternative-checkboxes
-        title: Disable Alternative Checkboxes
-        description: Disable this if you are using your own implementation via a CSS Snippet.
-        type: class-toggle
-    -
-        id: checkbox-radius
-        title: checkbox radius
-        description: Input any CSS border-radius value
-        type: variable-text
-        default: '6px'
-    - 
-        id: checkbox-marker-color
-        title: checkbox marker color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: checkbox-color
-        title: checkbox color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: checkbox-color-hover
-        title: checkbox color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: checkbox-border-color
-        title: checkbox border color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: checkbox-border-color-hover
-        title: checkbox border color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
 */
 
 /* ==========================================================
@@ -1848,7 +408,7 @@ settings:
   --text-muted: var(--color-base-70);
   --text-faint: var(--color-base-50);
   --icon-color: var(--color-base-70);
-  
+
   --background-primary: var(--color-base-00);
   --background-primary-alt: var(--color-base-10);
   --background-secondary: var(--color-base-10);
@@ -1924,7 +484,7 @@ settings:
   --radius-s: 6px;
   --divider-color: transparent;
 
-  --input-shadow: var(--input-shadow-dark);  
+  --input-shadow: var(--input-shadow-dark);
   --input-shadow-dark: 0px 4px 8px -4px rgba(0, 0, 0, 0.32), 0px 1px 2px rgba(0, 0, 0, 0.32), 0px 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px 1px rgba(0, 0, 0, 0.12), inset 0px 1px 0.75px rgba(255, 255, 255, 0.24), inset 0px -2px 0.75px rgba(0, 0, 0, 0.16);
 
 
@@ -1944,7 +504,7 @@ body {
   --paper-bg-blend-light: normal;
   --paper-tint-opacity-light: 0;
   --paper-tint-blend-light: normal;
-  
+
   --paper-bg-image-dark: url("https://www.transparenttextures.com/patterns/black-paper.png");
   --paper-bg-image-opacity-dark: 1;
   --paper-bg-blend-dark: normal;
@@ -1954,12 +514,12 @@ body {
 
 /* Base Background Logic using color-mix */
 body.theme-light {
-  background-color: color-mix(in srgb, var(--paper-bg-color-light, #FFFCF0) calc(var(--paper-bg-color-opacity-light, 1) * 100%), transparent) !important;
+  background-color: color-mix(in srgb, #FFFFFF calc(var(--paper-bg-color-opacity-light, 1) * 100%), transparent) !important;
   background-image: none !important;
 }
 
 body.theme-dark {
-  background-color: color-mix(in srgb, var(--paper-bg-color-dark, #100F0F) calc(var(--paper-bg-color-opacity-dark, 1) * 100%), transparent) !important;
+  background-color: color-mix(in srgb, #000000 calc(var(--paper-bg-color-opacity-dark, 1) * 100%), transparent) !important;
   background-image: none !important;
 }
 
@@ -2000,14 +560,14 @@ body.theme-dark::after {
 /* --- 4. TRANSPARENT WORKSPACE PANES & APP AREAS --- */
 /* Strips default opaque backgrounds from the entire app layout so the texture shows through */
 
-body .app-container, 
-body .workspace, 
+body .app-container,
+body .workspace,
 body .workspace-split,
-body .workspace-tab-container, 
+body .workspace-tab-container,
 body .workspace-leaf,
-body .workspace-leaf-content, 
+body .workspace-leaf-content,
 body .view-content,
-body .view-header, 
+body .view-header,
 body .workspace-tab-header-container,
 body .workspace-tabs,
 body .workspace-ribbon,
@@ -2040,7 +600,7 @@ body .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner
   height: 2px !important;
   background-color: var(--interactive-accent) !important;
   position: absolute !important;
-  top: auto !important; 
+  top: auto !important;
   bottom: 3px !important;
   border-radius: 2px !important;
   left: 0 !important;
@@ -2055,411 +615,28 @@ body .workspace-leaf-resize-handle {
 }
 
 
-body .workspace-tab-header::before, 
+body .workspace-tab-header::before,
 body .workspace-tab-header::after,
-body .workspace-tab-header.is-active::before, 
+body .workspace-tab-header.is-active::before,
 body .workspace-tab-header.is-active::after {
   display: none !important;
 }
 
 /* Clean up Left Ribbon lines */
-body .workspace-ribbon.mod-left { 
-    border-right: none !important; 
+body .workspace-ribbon.mod-left {
+    border-right: none !important;
 }
-body .workspace-ribbon.mod-left::before, 
-body .workspace-ribbon.mod-left::after { 
-    display: none !important; 
+body .workspace-ribbon.mod-left::before,
+body .workspace-ribbon.mod-left::after {
+    display: none !important;
 }
 
 /* Vault profile & Settings lines */
-body .workspace-sidedock-vault-profile, 
-body .workspace-drawer-vault-profile, 
+body .workspace-sidedock-vault-profile,
+body .workspace-drawer-vault-profile,
 body .side-dock-settings {
-  border-top: none !important; 
+  border-top: none !important;
   box-shadow: none !important;
-}
-
-/* ==========================================================
-   5. BORDER THEME INTEGRATIONS (Components & Editor)
-   ========================================================== */
-
-/* ====== autohide ===== */
-
-/*autohide transition*/
-body:not(.is-mobile) .workspace::before {
-    transition: width var(--anim-out), height var(--anim-out);
-}
-
-body:not(.is-mobile)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace::before,
-body:not(.is-mobile)>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace::before,
-body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)::before {
-    transition: width var(--anim-out), height var(--anim-in);
-}
-
-body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before {
-    transition: width var(--anim-in), height var(--anim-out);
-}
-
-/*tab autohide*/
-
-body:not(.is-mobile).tab-autohide .workspace-tabs {
-    gap: 0px;
-    transition: gap var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide .workspace-tabs:has(> .workspace-tab-header-container:hover) {
-    gap: 4px;
-    transition: gap var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
-    height: 16px;
-    opacity: 0;
-    transition: height var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
-    height: 40px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
-    transform: translateY(-22px);
-    opacity: 0;
-    transition: transform var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container-inner {
-    transform: translateY(0px);
-    opacity: 1;
-    transition: transform var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf,
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px var(--workspace-divider-color);
-    transition: box-shadow var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
-    height: 100%;
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:hover .titlebar-button,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:has(~ .app-container > .horizontal-main-container > .workspace > .workspace-split .mod-top > .workspace-tab-header-container:hover) .titlebar-button {
-    height: 44px;
-}
-
-/*tab autohide mod-top*/
-
-body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide .workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    height: calc(var(--divider-vertical-height) + 24px);
-    transition: height var(--anim-out), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    height: calc(var(--divider-vertical-height) - 4px);
-    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    height: calc(var(--divider-vertical-height) - 16px);
-    transition: height var(--anim-out), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide.is-hidden-frameless>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.status-bar-autohide.is-hidden-frameless>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:hover~.app-container>.horizontal-main-container>.workspace>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)>.workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
-    height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
-    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-/*---*/
-
-body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
-    gap: 0px;
-    transition: gap var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .workspace-tabs.mod-top {
-    transition: gap var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .workspace-tabs.mod-top,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .workspace-tabs.mod-top {
-    gap: 4px;
-    transition: gap var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide .workspace::before {
-    height: calc(100% - 16px);
-}
-
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace::before,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)::before {
-    height: calc(100% - 44px);
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container,
-body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
-    height: 16px;
-    opacity: 0;
-    transition: height var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container {
-    height: 40px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:hover .titlebar-button-container,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:has(~ .app-container > .horizontal-main-container > .workspace > .workspace-split .mod-top > .workspace-tab-header-container:hover) .titlebar-button-container {
-    height: 44px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide.is-hidden-frameless>.titlebar:has(~ .app-container > .status-bar:hover) .titlebar-button-container,
-body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .mod-top .workspace-tab-header-container {
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-
-/*status bar autohide*/
-
-body:not(.is-mobile).status-bar-autohide .status-bar {
-    position: absolute !important; 
-    bottom: 5px !important;        
-    right: 5px !important;         
-    left: auto !important;
-    width: 30px !important;        
-    max-width: 30px !important;    
-    height: 30px !important;       
-    border-radius: 50px !important; 
-    overflow: hidden;
-    white-space: nowrap;
-    opacity: 0.7;                  
-    
-    background-color: var(--background-secondary) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid var(--background-modifier-border);
-    
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    padding: 0 !important; 
-    /* Collapse animation: Smooth glide, NO bounce, prevents icon squish/blink */
-    transition: all 0.3s ease-out; 
-}
-
-/* Expand smoothly into a floating pill shape on hover */
-body:not(.is-mobile).status-bar-autohide .status-bar:hover {
-    opacity: 1;
-    max-width: 600px !important;    
-    width: auto !important;
-    border-radius: 50px !important; 
-    padding: 0 6px !important; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important; 
-    /* Expand animation: Bouncy overshoot */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.25);
-}
-
-/* Target ICON items (like pencil, sync, etc.) to make their hover background a perfect circle */
-body:not(.is-mobile).status-bar-autohide .status-bar .status-bar-item:has(svg) {
-    border-radius: 50% !important; 
-    height: 25px !important;
-    width: 25px !important;
-    min-width: 25px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 2px !important;
-    flex-shrink: 0;
-}
-
-/* Target TEXT items (like word count) to give them a nice rounded pill hover background */
-body:not(.is-mobile).status-bar-autohide .status-bar .status-bar-item:not(:has(svg)) {
-    border-radius: 10px !important;
-    height: 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 0 8px !important;
-    margin: 0 2px !important;
-    flex-shrink: 0;
-}
-
-/* Perfectly centers the right-most icon inside the 30px circle when collapsed */
-body:not(.is-mobile).status-bar-autohide .status-bar > .status-bar-item:last-child {
-    margin: 0 2.5px 0 0 !important; 
-}
-
-body:not(.is-mobile).status-bar-autohide .status-bar:hover > .status-bar-item:last-child {
-    margin: 0 2px !important;
-}
-
-body:not(.is-mobile).status-bar-autohide .horizontal-main-container,
-body:not(.is-mobile).status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover) {
-    padding-bottom: 0px !important;
-    transition: none !important;
-}
-
-/*ribbon autohide*/
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
-    --ribbon-width: 16px;
-    transition: all var(--anim-out);
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover {
-    --ribbon-width: 44px;
-    transition: all var(--anim-in);
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left>* {
-    opacity: 0;
-    transition: all var(--anim-out);
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
-    opacity: 1;
-    transition: all var(--anim-in);
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace::before {
-    width: calc(100% - 16px);
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before {
-    width: calc(100% - 44px);
-}
-
-/* macos autohide fix*/
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
-    margin-left: 28px;
-}
-
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
-    margin-left: 0px;
-}
-
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
-    transition: height var(--anim-out), opacity var(--anim-out), margin-left var(--anim-out);
-}
-
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
-    transition: height var(--anim-out), opacity var(--anim-out), margin-left var(--anim-in);
-}
-
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
-    transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
-}
-
-/* hider plugin*/
-.hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left {
-    display: unset;
-    -webkit-app-region: drag;
-}
-
-.hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left>.clickable-icon {
-    display: none;
-}
-
-/*nav header autohide*/
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
-    height: 8px;
-    opacity: 0;
-    transition: height var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .nav-buttons-container,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container,
-body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
-    height: 32px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container {
-    height: 0px;
-    opacity: 0;
-    margin: 0px auto;
-    transition: height var(--anim-out), opacity var(--anim-out), margin var(--anim-out);
-}
-
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .search-input-container,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container,
-body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .search-input-container {
-    height: 30px;
-    opacity: 1;
-    margin: 6px auto 4px;
-    transition: height var(--anim-in), opacity var(--anim-in), margin var(--anim-in);
-    ;
-}
-
-/*view-header autohide */
-
-body:not(.is-mobile).tab-title-bar-autohide .view-header::after {
-    width: 100%;
-    content: " ";
-    background-color: transparent;
-    height: var(--size-4-4);
-    position: absolute;
-    z-index: -9;
-    top: 1px;
-    right: 0;
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf .view-header {
-    height: 0;
-    margin-top: -1px;
-    opacity: 0;
-    transition: height var(--anim-out), margin var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf .view-header:focus-within,
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf .view-header:hover,
-body:not(.is-mobile).tab-title-bar-autohide .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
-    height: var(--header-height);
-    margin-top: 0px;
-    opacity: 1;
-    transition: height var(--anim-in), margin var(--anim-in), opacity var(--anim-in);
 }
 
 /*view-header*/
@@ -2504,53 +681,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
     gap: var(--size-2-1);
-}
-
-
-/* vault profile autohide*/
-body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    height: 16px;
-    border-top: 0 solid transparent;
-    opacity: 0;
-    transition: height var(--anim-out), border-top var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile:hover {
-    height: 44px;
-    border-top: var(--tab-outline-width) solid var(--tab-outline-color);
-    opacity: 1;
-    transition: height var(--anim-in), border-top var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
-    padding-bottom: 0px;
-    transition: padding-bottom var(--anim-out);
-}
-
-body:not(.is-mobile).vault-profile-autohide .workspace-sidedock-vault-profile:hover~.workspace-tabs:last-of-type .workspace-tab-container {
-    padding-bottom: 44px;
-    transition: padding-bottom var(--anim-in);
-}
-
-/* ====== file pane ====== */
-/*bigger cta*/
-body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
-    background-color: var(--interactive-accent);
-    color: var(--text-on-accent);
-    box-shadow: var(--input-shadow);
-    border-radius: var(--button-radius);
-    width: 100px;
-    padding: var(--size-2-3);
-}
-
-body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
-    background-color: var(--interactive-accent-hover);
-}
-
-body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
-    content: "New Note";
-    font-size: var(--font-ui-small);
-    margin-left: auto;
 }
 
 /* file active states */
@@ -2685,30 +815,6 @@ body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-expl
 box-shadow: var(--shadow-activated-file-dark);
 }
 
-/* Force Custom Active File Color on inner content (Text) */
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active .nav-file-title-content,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active .nav-folder-title-content,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active .tree-item-inner,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active .tree-item-inner {
-    color: var(--color-active-file, var(--interactive-accent)) !important;
-}
-
-/* Ensure the background variables recognize the new color */
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active {
-    --nav-item-color-active: var(--color-active-file, var(--interactive-accent)) !important;
-}
-
-/* Apply Custom Active File Color (Icon and SVG) */
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active::before,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active .tree-item-icon svg,
-body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active .tree-item-icon svg {
-    color: var(--color-active-file, var(--interactive-accent)) !important;
-    background-color: var(--color-active-file, var(--interactive-accent)) !important;
-}
-
-
 
 /* file layout & style */
 .workspace-leaf-content .tree-item-self {
@@ -2724,16 +830,6 @@ body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"
 
 .workspace-leaf-content .tree-item-self :is(.tree-item-flair, .tree-item-inner) {
     line-height: 20px;
-}
-
-.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] :is(.nav-file-title-content, .nav-folder-title-content) {
-    white-space: normal;
-}
-
-.folder-font-bold .nav-folder-title {
-    --nav-item-weight-hover: bold;
-    --nav-item-weight-active: bold;
-    --nav-item-weight: bold;
 }
 
 /*file tag*/
@@ -2759,19 +855,19 @@ body.toggle-active-file-colors .workspace-leaf-content[data-type="file-explorer"
     --icon-stroke: var(--icon-s-stroke-width);
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon svg.svg-icon,
-body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon svg.svg-icon {
+.workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon svg.svg-icon,
+.workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon svg.svg-icon {
     color: transparent;
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon,
-body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon {
+.workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon,
+.workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon {
     background-color: currentColor;
     opacity: var(--icon-opacity);
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon)):before,
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] :is(.nav-file-title, .nav-folder.mod-root>.nav-folder-title)::before {
+.workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon)):before,
+.workspace-leaf-content[data-type="file-explorer"] :is(.nav-file-title, .nav-folder.mod-root>.nav-folder-title)::before {
     content: " ";
     position: absolute;
     margin-left: calc(-1 * var(--size-4-5));
@@ -2785,142 +881,67 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] :
     flex: 0 0 auto;
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M14 12.8V3.2c0-.884-.264-1.2-1-1.2H3c-.736 0-1 .316-1 1.2v9.6c0 .884.264 1.2 1 1.2h10c.736 0 1-.316 1-1.2Z'/%3e%3cpath d='M9.978 7.04a2 2 0 1 1-3.956.587 2 2 0 0 1 3.956-.587ZM8 9.333v2m6-6.666h1m-1 6h1'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .tree-item-icon.collapse-icon,
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="bookmarks"] .tree-item-icon.collapse-icon {
+.workspace-leaf-content[data-type="file-explorer"] .tree-item-icon.collapse-icon,
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M4 9.333 4.967 7.4a1.333 1.333 0 0 1 1.193-.733h7.173m0 0a1.333 1.333 0 0 1 1.294 1.666l-1.034 4a1.333 1.333 0 0 1-1.293 1H2.667A1.333 1.333 0 0 1 1.333 12V3.333C1.333 2.6 1.933 2 2.667 2h2.62a1.333 1.333 0 0 1 1.106.6l.547.8a1.333 1.333 0 0 0 1.107.6H12a1.333 1.333 0 0 1 1.333 1.333v1.334Z'/%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .is-collapsed .tree-item-icon.collapse-icon,
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="bookmarks"] .is-collapsed .tree-item-icon.collapse-icon {
+.workspace-leaf-content[data-type="file-explorer"] .is-collapsed .tree-item-icon.collapse-icon,
+.workspace-leaf-content[data-type="bookmarks"] .is-collapsed .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M2.667 13.333h10.666A1.333 1.333 0 0 0 14.667 12V5.333A1.333 1.333 0 0 0 13.333 4H8.047a1.333 1.333 0 0 1-1.107-.6l-.547-.8A1.333 1.333 0 0 0 5.287 2h-2.62a1.333 1.333 0 0 0-1.334 1.333V12c0 .733.6 1.333 1.334 1.333Z'/%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M9.333 1.333v4h4'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"]::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667v4.666c0 .369.298.667.667.667H6a.667.667 0 0 0 .667-.667V2.667A.667.667 0 0 0 6 2Zm7.333 0H10a.667.667 0 0 0-.667.667v2c0 .368.299.667.667.667h3.333A.667.667 0 0 0 14 4.667v-2A.667.667 0 0 0 13.333 2Zm0 6H10a.667.667 0 0 0-.667.667v4.666c0 .368.299.667.667.667h3.333a.667.667 0 0 0 .667-.667V8.667A.667.667 0 0 0 13.333 8ZM6 10.667H2.667a.667.667 0 0 0-.667.666v2c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667v-2A.667.667 0 0 0 6 10.667Z'/%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".base"]::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".base"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667V6c0 .368.298.667.667.667H6A.667.667 0 0 0 6.667 6V2.667A.667.667 0 0 0 6 2Zm0 7.333H2.667A.667.667 0 0 0 2 10v3.333c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667V10A.667.667 0 0 0 6 9.333Zm3.333-6.666H14M9.333 6H14m-4.667 4H14m-4.667 3.333H14'/%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title::before {
+.workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M6.667 6.867c.133-.267.333-.534.6-.667A1.4 1.4 0 0 1 9 6.467c.2.266.333.533.333.866C9.333 8.2 8 8.667 8 8.667m0 2.666h.007'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title:is([data-path$=".zip"], [data-path$=".7z"])::before {
+.workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title:is([data-path$=".zip"], [data-path$=".7z"])::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M2.667 14.667v-12c0-.334.133-.667.4-.934.266-.266.6-.4.933-.4h5.667L13.333 5v8.333c0 .334-.133.667-.4.934-.266.266-.6.4-.933.4h-1.333'/%3e%3cpath d='M9.333 1.333v4h4m-6.666 9.334a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667Zm0-10V4m0 4v-.667m0 4.667v-1.333'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".webm"]::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".webm"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M2.667 14.667H12a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v2'/%3e%3cpath d='M9.333 1.333v4h4M4.667 6.667 2.667 8H1.333v2.667h1.334l2 1.333V6.667Zm2.666.666c.427.534.667 1.247.667 2 0 .754-.24 1.467-.667 2'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M12.667 2H3.333C2.597 2 2 2.597 2 3.333v9.334C2 13.403 2.597 14 3.333 14h9.334c.736 0 1.333-.597 1.333-1.333V3.333C14 2.597 13.403 2 12.667 2Z'/%3e%3cpath d='M6 7.333a1.333 1.333 0 1 0 0-2.666 1.333 1.333 0 0 0 0 2.666ZM14 10l-2.057-2.057a1.333 1.333 0 0 0-1.886 0L4 14'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".pdf"]::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".pdf"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M9.333 1.333v4h4m-2.666 3.334H5.333m5.334 2.666H5.333M6.667 6H5.333'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".excalidraw.md"]::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".excalidraw.md"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' clip-path='url(%23a)'%3e%3cpath d='M8 12.667 12.667 8l2 2L10 14.667l-2-2Z'/%3e%3cpath d='m12 8.667-1-5-9.667-2.334L3.667 11l5 1L12 8.667ZM1.333 1.333l5.058 5.058'/%3e%3cpath d='M7.333 8.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon {
+.workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' clip-path='url(%23a)'%3e%3cpath d='M8.781 1.333c.354 0 .693.14.943.391l4.473 4.473a1.6 1.6 0 0 1 0 2.272l-3.061 3.062a1.6 1.6 0 0 1-2.272 0L4.391 7.057A1.329 1.329 0 0 1 4 6.115V2a.667.667 0 0 1 .667-.667H8.78ZM1.333 4.667V8.78c0 .354.14.693.391.943l4.473 4.473a1.6 1.6 0 0 0 2.128.129'/%3e%3cpath d='M7 4.667A.333.333 0 1 0 7 4a.333.333 0 0 0 0 .667Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon))::before {
+.workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon))::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M8 1.333H1.333V8l6.194 6.193a1.617 1.617 0 0 0 2.28 0l4.386-4.386a1.617 1.617 0 0 0 0-2.28L8 1.333ZM4.667 4.667h.006'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-body:not(.file-icon-remove) .workspace-leaf-content[data-type="bookmarks"] svg.lucide-folder {
+.workspace-leaf-content[data-type="bookmarks"] svg.lucide-folder {
     background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M1.333 6V3.333C1.333 2.6 1.933 2 2.667 2h2.62a1.333 1.333 0 0 1 1.106.6l.547.8a1.333 1.333 0 0 0 1.107.6h5.286a1.333 1.333 0 0 1 1.334 1.333V12a1.333 1.333 0 0 1-1.334 1.333h-12'/%3e%3cpath d='m5.333 10.667 2-2-2-2'/%3e%3cpath d='M1.333 10.667V10a1.333 1.333 0 0 1 1.334-1.333h4'/%3e%3c/g%3e%3c/svg%3e");
-}
-
-/*colorful folder icon*/
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+2) {
-    --colorful-folder-color: var(--color-red);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+3) {
-    --colorful-folder-color: var(--color-orange);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+4) {
-    --colorful-folder-color: var(--color-yellow);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+5) {
-    --colorful-folder-color: var(--color-green);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+6) {
-    --colorful-folder-color: var(--color-cyan);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+7) {
-    --colorful-folder-color: var(--color-blue);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+8) {
-    --colorful-folder-color: var(--color-purple);
-}
-
-body:not(.file-icon-remove) .nav-folder:nth-child(8n+9) {
-    --colorful-folder-color: var(--color-pink);
-}
-
-body:not(.file-icon-remove).colorful-folder .workspace-leaf-content[data-type="file-explorer"] .tree-item-icon.collapse-icon {
-    background-color: var(--colorful-folder-color);
-}
-
-body:not(.file-icon-remove).colorful-folder .nav-folder.mod-root>.nav-folder-title::before {
-    background-color: currentColor;
-}
-
-/*====== empty state ======*/
-
-body {
-    --empty-state-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cpath fill='black' fill-opacity='.15' d='M13.32 7.155a4.375 4.375 0 0 1-5.7 6.517l5.7-6.517ZM10 5.625a4.375 4.375 0 0 0-3.32 7.22l5.704-6.514A4.35 4.35 0 0 0 10 5.625ZM18.125 10A8.125 8.125 0 1 1 10 1.875 8.135 8.135 0 0 1 18.125 10Zm-2.5 0a5.6 5.6 0 0 0-1.476-3.793l.382-.483a.626.626 0 1 0-.937-.823l-.384.483a5.625 5.625 0 0 0-7.36 8.409l-.381.483a.625.625 0 0 0 .937.823l.384-.483A5.621 5.621 0 0 0 15.625 10Z'/%3e%3c/svg%3e");
-}
-
-.tag-pane-empty,
-.bookmarks-pane-empty,
-.pane-empty,
-.search-empty-state {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-    padding-left: 0px;
-}
-
-.tag-pane-empty::before,
-.bookmarks-pane-empty::before,
-.pane-empty::before,
-.search-empty-state::before {
-    content: "";
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background-color: var(--icon-color);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: var(--empty-state-image);
 }
 
 
@@ -2938,12 +959,12 @@ body {
     padding-top: 2px;
 }
 
-body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-group .vertical-tab-header-group-title {
+body:not(.is-phone) .vertical-tab-header-group .vertical-tab-header-group-title {
     display: flex;
     align-items: center;
 }
 
-body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-group:nth-last-of-type(3) .vertical-tab-header-group-title::before {
+body:not(.is-phone) .vertical-tab-header-group:nth-last-of-type(3) .vertical-tab-header-group-title::before {
     content: " ";
     width: 16px;
     height: 16px;
@@ -2952,7 +973,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='m14.476 6.987-1.49-.445a5.177 5.177 0 0 0-.422-1.035l.73-1.365a.27.27 0 0 0-.05-.32l-1.062-1.066a.271.271 0 0 0-.32-.05l-1.355.725a5.165 5.165 0 0 0-1.05-.444l-.444-1.471a.271.271 0 0 0-.262-.183H7.25a.271.271 0 0 0-.258.191l-.444 1.467a5.169 5.169 0 0 0-1.058.445l-1.333-.72a.271.271 0 0 0-.32.048l-1.08 1.054a.271.271 0 0 0-.05.32l.72 1.333a5.169 5.169 0 0 0-.444 1.053l-1.47.445a.271.271 0 0 0-.192.258v1.502a.271.271 0 0 0 .191.258l1.48.444c.11.36.26.708.445 1.036l-.73 1.395a.271.271 0 0 0 .05.32l1.062 1.062a.271.271 0 0 0 .32.05l1.373-.734a5.25 5.25 0 0 0 1.022.418l.445 1.498a.27.27 0 0 0 .258.19h1.502a.271.271 0 0 0 .258-.19l.444-1.503a5.17 5.17 0 0 0 1.013-.417l1.383.737a.27.27 0 0 0 .32-.049l1.062-1.062a.27.27 0 0 0 .049-.32l-.738-1.378a5.17 5.17 0 0 0 .422-1.017l1.498-.445a.271.271 0 0 0 .191-.258V7.25a.271.271 0 0 0-.164-.262ZM8 10.444a2.444 2.444 0 1 1 0-4.888 2.444 2.444 0 0 1 0 4.888Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-group:nth-last-of-type(2) .vertical-tab-header-group-title::before {
+body:not(.is-phone) .vertical-tab-header-group:nth-last-of-type(2) .vertical-tab-header-group-title::before {
     content: " ";
     width: 16px;
     height: 16px;
@@ -2961,7 +982,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M13.249 7.111h-.36V3.924A.889.889 0 0 0 12 3.036H9.333A2.284 2.284 0 0 0 7.338.889a2.222 2.222 0 0 0-2.45 2.147h-3.11a.889.889 0 0 0-.89.888v3.632h1.25A1.391 1.391 0 0 1 3.556 8.75a1.333 1.333 0 0 1-.347 1.027 1.334 1.334 0 0 1-.987.444H.89v3.925a.889.889 0 0 0 .889.889H12a.889.889 0 0 0 .889-.89v-2.59h.444a2.223 2.223 0 0 0 2.223-2.45 2.29 2.29 0 0 0-2.307-1.995Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-group:nth-last-of-type(1) .vertical-tab-header-group-title::before {
+body:not(.is-phone) .vertical-tab-header-group:nth-last-of-type(1) .vertical-tab-header-group-title::before {
     content: " ";
     width: 16px;
     height: 16px;
@@ -2989,85 +1010,84 @@ body {
     --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.15);
 }
 
-body:not(.restored-scrollbars) ::-webkit-scrollbar,
-body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar {
-    width: 11px;
-    height: 11px;
-}
 
-body:not(.restored-scrollbars) ::-webkit-scrollbar-thumb,
-body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb {
-    background-clip: padding-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-    border-width: 3px;
-    min-height: 45px
-}
-
-body:not(.restored-scrollbars) .mobile-toolbar-options-container::-webkit-scrollbar {
-    width: 0 !important;
-    height: 0 !important;
-}
-
-body:not(.restored-scrollbars) ::-webkit-scrollbar-track,
-body:not(.restored-scrollbars) ::-webkit-scrollbar-track-piece,
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb {
+/* Keep the 14px physical width so your mouse can still easily grab it */
+::-webkit-scrollbar {
+    width: 14px !important;
+    height: 14px !important;
     background-color: transparent !important;
 }
 
-body:not(.restored-scrollbars):not(.is-mobile) :hover::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+/* 1. Default State: Invisible with a heavier mask */
+::-webkit-scrollbar-thumb {
+    background-color: transparent !important;
+    border-radius: 99px !important;
+    background-clip: padding-box !important;
+    /* A 5px mask leaves only a 4px sleek visible line in the center */
+    border: 5px solid transparent !important;
+}
+
+/* 2. Show the thin line when hovering anywhere in the pane */
+.workspace-leaf:hover ::-webkit-scrollbar-thumb,
+.workspace-drawer:hover ::-webkit-scrollbar-thumb,
+.modal:hover ::-webkit-scrollbar-thumb,
+.menu:hover ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-bg) !important;
 }
 
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:hover,
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active {
+/* 3. Direct Hover: Thicken slightly when grabbed */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
     background-color: var(--scrollbar-active-thumb-bg) !important;
+    /* Shrinking the mask to 4px makes the visible bar 6px thick */
+    border-width: 4px !important;
 }
 
-.workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
-.scrollbar-hide ::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar-corner {
+    background-color: transparent !important;
 }
 
-/* ======table ====== */
+
+/* ====== TABLE ====== */
+
 body {
     --table-header-background-light: var(--background-alt-light);
     --table-header-background-dark: var(--background-alt-dark);
-    --table-width: 88cqw;
-    --table-radius: 8px;
+    --table-radius: var(--radius-s);
 }
 
-.theme-light .markdown-rendered thead tr {
+/* Table width — same as note width */
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper,
+:is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
+    width: 100% !important;
+}
+
+/* Header background */
+.theme-light :is(.markdown-rendered, .cm-table-widget) thead tr {
     background: var(--table-header-background-light);
 }
 
-.theme-dark .markdown-rendered thead tr {
+.theme-dark :is(.markdown-rendered, .cm-table-widget) thead tr {
     background: var(--table-header-background-dark);
 }
 
-body:not(.table-width-obsidian-default) .markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper,
-body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
-    width: 100% !important;
-
-    outline: 1px solid var(--background-modifier-border);
-    outline-offset: -1px;
-
+/* Table + rounded corners */
+:is(.markdown-rendered, .cm-table-widget) table {
     border-collapse: separate;
     border-spacing: 0;
     border-radius: var(--table-radius);
     overflow: hidden;
 }
 
-.markdown-source-view,
-.markdown-reading-view {
-    container-type: inline-size;
-}
-
-.table-width-customized .markdown-source-view.mod-cm6.is-live-preview .cm-content>.cm-table-widget,
-.table-width-customized .markdown-rendered .markdown-preview-sizer>div:has(>table) {
-    overflow: auto;
-    width: var(--table-width) !important;
-    margin-left: calc((var(--table-width) - 100%) / -2) !important;
+:is(.markdown-rendered, .cm-table-widget) {
+    & th:first-child { border-top-left-radius: var(--table-radius); }
+    & th:last-child { border-top-right-radius: var(--table-radius); }
+    & tr:last-child td:first-child { border-bottom-left-radius: var(--table-radius); }
+    & tr:last-child td:last-child { border-bottom-right-radius: var(--table-radius); }
 }
 
 /* ====== tag ====== */
@@ -3532,8 +1552,8 @@ body {
     --code-size: var(--font-smaller);
     --code-background-light: var(--background-alt-light);
     --code-background-dark: var(--background-alt-dark);
-    --code-border-light: 1px dashed var(--background-modifier-border);
-    --code-border-dark: 1px dashed var(--background-modifier-border);
+    --code-border-light: 1px solid var(--background-modifier-border);
+    --code-border-dark: 1px solid var(--background-modifier-border);
     --code-normal: var(--text-muted);
     --code-comment: var(--text-faint);
     --code-function: var(--color-yellow);
@@ -3585,88 +1605,18 @@ body {
     caret-color: auto;
 }
 
-.codeblock-style-dracula {
-    --code-background-light: #282A36;
-    --code-background-dark: #282A36;
-    --code-border-light: none;
-    --code-border-dark: none;
-    --code-normal: #f8f8f2;
-    --code-comment: #6272a4;
-    --code-function: #f1fa8c;
-    --code-important: #ffb86c;
-    --code-keyword: #ff79c6;
-    --code-operator: #ff5555;
-    --code-property: #8be9fd;
-    --code-punctuation: #f8f8f2;
-    --code-string: #50fa7b;
-    --code-tag: #ff5555;
-    --code-value: #bd93f9;
-}
-
-.codeblock-style-solarized-light {
-    --code-background-light: #fdf6e3;
-    --code-background-dark: #fdf6e3;
-    --code-border-light: none;
-    --code-border-dark: none;
-    --code-normal: #657b83;
-    --code-comment: #93a1a1;
-    --code-function: #b58900;
-    --code-important: #cb4b16;
-    --code-keyword: #d33682;
-    --code-operator: #dc322f;
-    --code-property: #2aa198;
-    --code-punctuation: #657b83;
-    --code-string: #859900;
-    --code-tag: #dc322f;
-    --code-value: #6c71c4;
-}
-
-.codeblock-style-solarized-dark {
-    --code-background-light: #002b36;
-    --code-background-dark: #002b36;
-    --code-border-light: none;
-    --code-border-dark: none;
-    --code-normal: #839496;
-    --code-comment: #586e75;
-    --code-function: #b58900;
-    --code-important: #cb4b16;
-    --code-keyword: #d33682;
-    --code-operator: #dc322f;
-    --code-property: #2aa198;
-    --code-punctuation: #839496;
-    --code-string: #859900;
-    --code-tag: #dc322f;
-    --code-value: #6c71c4;
-}
-
-.codeblock-style-one-dark {
-    --code-background-light: #282C34;
-    --code-background-dark: #282C34;
-    --code-border-light: none;
-    --code-border-dark: none;
-    --code-normal: #ABB2BF;
-    --code-comment: #5C6370;
-    --code-function: #E5C07B;
-    --code-important: #D19A66;
-    --code-keyword: #E06C75;
-    --code-operator: #BE5046;
-    --code-property: #56B6C2;
-    --code-punctuation: #ABB2BF;
-    --code-string: #98C379;
-    --code-tag: #BE5046;
-    --code-value: #C678DD;
-}
-
-.css-settings-manager:not(.codeblock-style-customize) .cm-s-obsidian .HyperMD-codeblock ::selection,
-.css-settings-manager:not(.codeblock-style-customize) .markdown-rendered pre ::selection,
-.css-settings-manager:not(.codeblock-style-customize) .markdown-source-view.mod-cm6 .code-block-flair:hover,
-.css-settings-manager:not(.codeblock-style-customize) .markdown-rendered button.copy-code-button:hover {
-    background-color: hsl(from var(--code-normal) h s l / 20%);
-}
-
 .markdown-source-view.mod-cm6 .code-block-flair,
 .markdown-rendered button.copy-code-button {
     color: var(--code-normal);
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair {
+    transform: translateY(-5px);
+    padding: 1px 5px;
+    height: auto;
+    min-height: 0;
+    line-height: 1.2;
+    border-radius: 4px;
 }
 
 /* ===== embeds ====== */
@@ -3833,48 +1783,48 @@ input[type=checkbox]:checked:after {
 
 /* Alternate Checkboxes */
 
-body:not(.disable-alternative-checkboxes) input[data-task="<"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="<"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="<"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task=">"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task=">"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task=">"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="d"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="d"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="d"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="u"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="u"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="u"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="S"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="S"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="S"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="“"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="“"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="“"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="\""]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="\""]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="\""]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="c"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="c"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="c"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="p"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="p"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="p"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="n"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="n"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="n"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="b"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="b"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="b"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="l"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="l"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="l"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="I"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="I"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="I"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="*"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="*"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="*"]>p>input:checked {
+input[data-task="<"]:checked,
+li[data-task="<"]>input:checked,
+li[data-task="<"]>p>input:checked,
+input[data-task=">"]:checked,
+li[data-task=">"]>input:checked,
+li[data-task=">"]>p>input:checked,
+input[data-task="d"]:checked,
+li[data-task="d"]>input:checked,
+li[data-task="d"]>p>input:checked,
+input[data-task="u"]:checked,
+li[data-task="u"]>input:checked,
+li[data-task="u"]>p>input:checked,
+input[data-task="S"]:checked,
+li[data-task="S"]>input:checked,
+li[data-task="S"]>p>input:checked,
+input[data-task="“"]:checked,
+li[data-task="“"]>input:checked,
+li[data-task="“"]>p>input:checked,
+input[data-task="\""]:checked,
+li[data-task="\""]>input:checked,
+li[data-task="\""]>p>input:checked,
+input[data-task="c"]:checked,
+li[data-task="c"]>input:checked,
+li[data-task="c"]>p>input:checked,
+input[data-task="p"]:checked,
+li[data-task="p"]>input:checked,
+li[data-task="p"]>p>input:checked,
+input[data-task="n"]:checked,
+li[data-task="n"]>input:checked,
+li[data-task="n"]>p>input:checked,
+input[data-task="b"]:checked,
+li[data-task="b"]>input:checked,
+li[data-task="b"]>p>input:checked,
+input[data-task="l"]:checked,
+li[data-task="l"]>input:checked,
+li[data-task="l"]>p>input:checked,
+input[data-task="I"]:checked,
+li[data-task="I"]>input:checked,
+li[data-task="I"]>p>input:checked,
+input[data-task="*"]:checked,
+li[data-task="*"]>input:checked,
+li[data-task="*"]>p>input:checked {
     --checkbox-marker-color: transparent;
     border: none;
     border-radius: 0;
@@ -3884,101 +1834,101 @@ body:not(.disable-alternative-checkboxes) li[data-task="*"]>p>input:checked {
     -webkit-mask-position: 50% 50%
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="!"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="!"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="!"]>p>input:checked {
+input[data-task="!"]:checked,
+li[data-task="!"]>input:checked,
+li[data-task="!"]>p>input:checked {
     --checkbox-color: var(--color-orange);
     --checkbox-color-hover: var(--color-orange);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="!"]:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="!"]>input:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="!"]>p>input:checked:after {
+input[data-task="!"]:checked:after,
+li[data-task="!"]>input:checked:after,
+li[data-task="!"]>p>input:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M8 0a2.463 2.463 0 0 0-2.43 2.864v.002L6.686 9.55a1.334 1.334 0 0 0 2.63 0l1.114-6.685v-.002A2.463 2.463 0 0 0 8 0Zm0 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="?"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="?"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="?"]>p>input:checked {
+input[data-task="?"]:checked,
+li[data-task="?"]>input:checked,
+li[data-task="?"]>p>input:checked {
     --checkbox-color: var(--color-pink);
     --checkbox-color-hover: var(--color-pink);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="?"]:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="?"]>input:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="?"]>p>input:checked:after {
+input[data-task="?"]:checked:after,
+li[data-task="?"]>input:checked:after,
+li[data-task="?"]>p>input:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' d='M12.871 3.692c0 3.56-3.956 3.319-3.956 5.78v.014c0 .284-.23.514-.514.514H6.243a.514.514 0 0 1-.515-.514V9.34c0-3.803 3.473-3.56 3.473-5.341 0-.77-.571-1.23-1.517-1.23-.768 0-1.554.335-2.268 1.022a.512.512 0 0 1-.67.031l-1.419-1.11a.513.513 0 0 1-.056-.76C4.457.731 5.997 0 8.036 0c3.23 0 4.835 1.736 4.835 3.692ZM9.355 14c0 1.099-.88 2-2 2-1.1 0-2-.901-2-2s.9-2 2-2c1.12 0 2 .901 2 2Z'/%3e%3c/svg%3e");
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="*"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="*"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="*"]>p>input:checked {
+input[data-task="*"]:checked,
+li[data-task="*"]>input:checked,
+li[data-task="*"]>p>input:checked {
     --checkbox-color-hover: var(--color-yellow);
     color: var(--color-yellow);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M8.91,.58c-.08-.17-.21-.32-.37-.42C8.38,.05,8.19,0,8,0s-.38,.05-.54,.16c-.16,.1-.29,.25-.37,.42l-1.93,4.12L.85,5.36c-.18,.03-.35,.1-.49,.22-.14,.12-.25,.27-.3,.45-.06,.17-.07,.36-.03,.54,.04,.18,.13,.34,.26,.48l3.15,3.23-.75,4.57c-.03,.19,0,.38,.06,.55,.07,.17,.19,.32,.35,.43,.15,.11,.33,.17,.52,.18,.19,0,.37-.03,.54-.12l3.84-2.13,3.84,2.13c.16,.09,.35,.13,.54,.12,.19-.01,.37-.07,.52-.18,.15-.11,.27-.26,.35-.43,.07-.17,.09-.36,.06-.55l-.75-4.57,3.15-3.23c.13-.13,.22-.3,.26-.48,.04-.18,.03-.37-.03-.54-.06-.17-.16-.33-.31-.45-.14-.12-.31-.2-.49-.22l-4.31-.66L8.91,.58Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="i"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="i"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="i"]>p>input:checked {
+input[data-task="i"]:checked,
+li[data-task="i"]>input:checked,
+li[data-task="i"]>p>input:checked {
     --checkbox-color: var(--color-cyan);
     --checkbox-color-hover: var(--color-cyan);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="i"]:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="i"]>input:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="i"]>p>input:checked:after {
+input[data-task="i"]:checked:after,
+li[data-task="i"]>input:checked:after,
+li[data-task="i"]>p>input:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' d='M10.34 14.025c-.007.002-.56.186-1.04.186-.265 0-.372-.055-.406-.08-.168-.116-.48-.335.054-1.4l1-1.993c.593-1.184.681-2.33.245-3.226-.356-.733-1.039-1.236-1.92-1.416A5 5 0 0 0 7.315 6C5.466 6 4.221 7.08 4.17 7.125a.5.5 0 0 0 .493.848c.005-.002.559-.187 1.04-.187.262 0 .368.055.401.078.17.119.482.34-.05 1.403l-1.001 1.995c-.594 1.185-.681 2.33-.245 3.225.356.733 1.038 1.236 1.921 1.416.314.063.636.097.954.097 1.85 0 3.096-1.08 3.148-1.126a.5.5 0 0 0-.49-.85ZM9.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z'/%3e%3c/svg%3e");
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="/"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>p>input:checked {
+input[data-task="/"]:checked,
+li[data-task="/"]>input:checked,
+li[data-task="/"]>p>input:checked {
     --checkbox-color-hover: var(--color-yellow);
     --checkbox-color: var(--color-yellow);
     border: 2px var(--color-yellow) solid;
     background: conic-gradient(var(--color-yellow) 0% 37.5%, transparent 37.5% 100%);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="/"]:checked:hover,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>input:checked:hover,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>p>input:checked:hover {
+input[data-task="/"]:checked:hover,
+li[data-task="/"]>input:checked:hover,
+li[data-task="/"]>p>input:checked:hover {
     background: conic-gradient(var(--color-yellow) 0% 37.5%, transparent 37.5% 100%);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="/"]:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>input:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="/"]>p>input:checked:after {
+input[data-task="/"]:checked:after,
+li[data-task="/"]>input:checked:after,
+li[data-task="/"]>p>input:checked:after {
     background-color: rgba(0, 0, 0, 0);
     -webkit-mask-image: none;
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="I"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="I"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="I"]>p>input:checked {
+input[data-task="I"]:checked,
+li[data-task="I"]>input:checked,
+li[data-task="I"]>p>input:checked {
     --checkbox-color-hover: var(--color-orange);
     color: var(--color-orange);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><g><rect class="cls-1" width="16" height="16"/><path d="M9,1c0-.27-.11-.52-.29-.71-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29c-.19,.19-.29,.44-.29,.71v1c0,.27,.11,.52,.29,.71,.19,.19,.44,.29,.71,.29s.52-.11,.71-.29c.19-.19,.29-.44,.29-.71V1Zm4.66,2.76c.18-.19,.28-.44,.28-.7,0-.26-.11-.51-.29-.7s-.44-.29-.7-.29c-.26,0-.51,.1-.7,.28l-.71,.71c-.18,.19-.28,.44-.28,.7,0,.26,.11,.51,.29,.7s.44,.29,.7,.29c.26,0,.51-.1,.7-.28l.71-.71Zm2.34,4.24c0,.27-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29h-1c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29h1c.27,0,.52,.11,.71,.29,.19,.19,.29,.44,.29,.71ZM3.05,4.46c.09,.1,.2,.17,.32,.22,.12,.05,.25,.08,.39,.08,.13,0,.26-.02,.39-.07,.12-.05,.23-.12,.33-.22,.09-.09,.17-.21,.22-.33,.05-.12,.08-.25,.07-.39,0-.13-.03-.26-.08-.39-.05-.12-.13-.23-.22-.32l-.71-.71c-.19-.18-.44-.28-.7-.28-.26,0-.51,.11-.7,.29s-.29,.44-.29,.7c0,.26,.1,.51,.28,.7l.71,.71Zm-.05,3.54c0,.27-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29H1c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29h1c.27,0,.52,.11,.71,.29,.19,.19,.29,.44,.29,.71Zm3,6v-1h4v1c0,.53-.21,1.04-.59,1.41-.38,.38-.88,.59-1.41,.59s-1.04-.21-1.41-.59c-.38-.38-.59-.88-.59-1.41Zm4-2c.02-.34,.21-.65,.48-.86,.65-.51,1.13-1.22,1.36-2.02,.23-.8,.21-1.65-.06-2.43-.27-.79-.78-1.47-1.46-1.95-.68-.48-1.49-.74-2.32-.74s-1.64,.26-2.32,.74c-.68,.48-1.19,1.16-1.46,1.95-.27,.79-.29,1.64-.06,2.43,.23,.8,.71,1.5,1.36,2.02,.27,.21,.46,.52,.48,.86h4Z"/></g></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="l"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="l"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="l"]>p>input:checked {
+input[data-task="l"]:checked,
+li[data-task="l"]>input:checked,
+li[data-task="l"]>p>input:checked {
     --checkbox-color-hover: var(--color-red);
     color: var(--color-red);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M8,.12c-1.64,0-3.21,.65-4.37,1.81-1.16,1.16-1.81,2.73-1.81,4.37,0,1.34,.44,2.64,1.25,3.71,0,0,.17,.22,.2,.25l4.74,5.6,4.75-5.6s.19-.25,.19-.25h0c.81-1.07,1.25-2.37,1.25-3.71,0-1.64-.65-3.21-1.81-4.37C11.21,.78,9.64,.13,8,.12Zm0,8.44c-.45,0-.88-.13-1.25-.38-.37-.25-.66-.6-.83-1.01-.17-.41-.21-.86-.13-1.3,.09-.44,.3-.84,.62-1.15,.31-.31,.72-.53,1.15-.62,.44-.09,.89-.04,1.3,.13,.41,.17,.76,.46,1.01,.83,.25,.37,.38,.81,.38,1.25,0,.6-.24,1.17-.66,1.59-.42,.42-.99,.66-1.59,.66Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="-"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="-"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="-"]>p>input:checked {
+input[data-task="-"]:checked,
+li[data-task="-"]>input:checked,
+li[data-task="-"]>p>input:checked {
     --checkbox-color: var(--text-faint);
     --checkbox-color-hover: var(--text-faint);
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="-"]:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="-"]>input:checked:after,
-body:not(.disable-alternative-checkboxes) li[data-task="-"]>p>input:checked:after {
+input[data-task="-"]:checked:after,
+li[data-task="-"]>input:checked:after,
+li[data-task="-"]>p>input:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M0 8a1.5 1.5 0 0 1 1.5-1.5h13a1.5 1.5 0 0 1 0 3h-13A1.5 1.5 0 0 1 0 8Z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
 
@@ -3990,164 +1940,92 @@ body:not(.disable-alternative-checkboxes):not(.tasks) li[data-task="-"].task-lis
 }
 
 
-body:not(.disable-alternative-checkboxes) input[data-task="b"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="b"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="b"]>p>input:checked {
+input[data-task="b"]:checked,
+li[data-task="b"]>input:checked,
+li[data-task="b"]>p>input:checked {
     --checkbox-color-hover: var(--color-blue);
     color: var(--color-blue);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M4.25,.5c-.6,0-1.17,.24-1.59,.66-.42,.42-.66,.99-.66,1.59V14.1c0,.2,.05,.39,.15,.56,.1,.17,.24,.31,.41,.41,.17,.1,.36,.15,.56,.15,.2,0,.39-.05,.56-.15l3.94-2.25c.11-.06,.24-.1,.37-.1s.26,.03,.37,.1l3.95,2.25c.17,.1,.36,.15,.56,.15,.2,0,.39-.05,.56-.15,.17-.1,.31-.24,.41-.41s.15-.36,.15-.56V2.75c0-.6-.24-1.17-.66-1.59-.42-.42-.99-.66-1.59-.66H4.25Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="n"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="n"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="n"]>p>input:checked {
+input[data-task="n"]:checked,
+li[data-task="n"]>input:checked,
+li[data-task="n"]>p>input:checked {
     --checkbox-color-hover: var(--color-cyan);
     color: var(--color-cyan);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,14.75c-.41,0-.77-.15-1.06-.44-.29-.29-.44-.65-.44-1.06V2.75c0-.41,.15-.77,.44-1.06,.29-.29,.65-.44,1.06-.44H13.25c.41,0,.77,.15,1.06,.44,.29,.29,.44,.65,.44,1.06v7.5l-4.5,4.5H2.75Zm4.5-5.25c.21,0,.39-.07,.53-.22,.14-.14,.22-.32,.22-.53s-.07-.39-.22-.53c-.14-.14-.32-.22-.53-.22h-2.25c-.21,0-.39,.07-.53,.22-.14,.14-.22,.32-.22,.53s.07,.39,.22,.53c.14,.14,.32,.22,.53,.22h2.25Zm3.75-3c.21,0,.39-.07,.53-.22,.14-.14,.22-.32,.22-.53s-.07-.39-.22-.53c-.14-.14-.32-.22-.53-.22H5c-.21,0-.39,.07-.53,.22-.14,.14-.22,.32-.22,.53s.07,.39,.22,.53,.32,.22,.53,.22h6Zm-1.5,6.75l3.75-3.75h-3c-.21,0-.39,.07-.53,.22s-.22,.32-.22,.53v3Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="p"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="p"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="p"]>p>input:checked {
+input[data-task="p"]:checked,
+li[data-task="p"]>input:checked,
+li[data-task="p"]>p>input:checked {
     --checkbox-color-hover: var(--color-green);
     color: var(--color-green);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><path class="cls-1" d="M0,16H16V0H0V16Z"/><g><path d="M3.33,15h-.72c-.33,0-.66-.13-.9-.35-.25-.23-.4-.54-.43-.87L.73,7.11c-.02-.18,0-.37,.07-.54,.06-.18,.16-.34,.28-.47,.13-.14,.28-.25,.45-.32,.17-.07,.35-.11,.54-.11h1.27c.36,0,.69,.14,.94,.39,.25,.25,.39,.59,.39,.94v6.67c0,.35-.14,.7-.39,.94-.25,.25-.59,.39-.94,.39Z"/><path d="M15.4,7.69l-1.79,6.34c-.08,.28-.25,.53-.48,.7-.23,.17-.52,.27-.81,.27H6.67c-.36,0-.69-.14-.94-.39-.25-.25-.39-.59-.39-.94V7.13c0-.53,.32-1.02,.81-1.25,.79-.37,1.38-.82,1.62-1.22,.36-.6,.53-1.78,.57-2.65,0-.06,0-.12,.01-.18,.06-.41,.34-.72,.73-.8,.07-.01,.14-.02,.21-.02,.8,0,1.73,.83,2.12,1.48,.29,.48,.41,1.09,.36,1.84-.03,.55-.18,1.05-.33,1.55l-.04,.12h2.72c.21,0,.41-.05,.6,.14,.18,.09,.34,.23,.47,.39,.12,.17,.21,.35,.24,.55,.04,.2,.03,.41-.03,.61ZM9,1.94h0Z"/></g></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="c"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="c"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="c"]>p>input:checked {
+input[data-task="c"]:checked,
+li[data-task="c"]>input:checked,
+li[data-task="c"]>p>input:checked {
     --checkbox-color-hover: var(--color-red);
     color: var(--color-red);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><path class="cls-1" d="M0,0H16V16H0V0Z"/><g><path d="M3.33,1h-.72c-.33,0-.66,.13-.9,.35-.25,.23-.4,.54-.43,.87l-.56,6.67c-.02,.18,0,.37,.07,.54,.06,.18,.16,.34,.28,.47,.13,.14,.28,.25,.45,.32,.17,.07,.35,.11,.54,.11h1.27c.36,0,.69-.14,.94-.39,.25-.25,.39-.59,.39-.94V2.33c0-.35-.14-.7-.39-.94-.25-.25-.59-.39-.94-.39Z"/><path d="M15.4,8.31l-1.79-6.34c-.08-.28-.25-.53-.48-.7-.23-.17-.52-.27-.81-.27H6.67c-.36,0-.69,.14-.94,.39-.25,.25-.39,.59-.39,.94v6.54c0,.53,.32,1.02,.81,1.25,.79,.37,1.38,.82,1.62,1.22,.36,.6,.53,1.78,.57,2.65,0,.06,0,.12,.01,.18,.06,.41,.34,.72,.73,.8,.07,.01,.14,.02,.21,.02,.8,0,1.73-.83,2.12-1.48,.29-.48,.41-1.09,.36-1.84-.03-.55-.18-1.05-.33-1.55l-.04-.12h2.72c.21,0,.41-.05,.6,.14,.18-.09,.34-.23,.47-.39,.12,.17,.21-.35,.24-.55,.04-.2,.03-.41-.03-.61Zm-6.4,5.75h0Z"/></g></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="“"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="“"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="“"]>p>input:checked,
-body:not(.disable-alternative-checkboxes) input[data-task="\""]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="\""]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="\""]>p>input:checked {
+input[data-task="“"]:checked,
+li[data-task="“"]>input:checked,
+li[data-task="“"]>p>input:checked,
+input[data-task="\""]:checked,
+li[data-task="\""]>input:checked,
+li[data-task="\""]>p>input:checked {
     --checkbox-color-hover: var(--color-purple);
     color: var(--color-purple);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.46,4.19c.94-1.01,2.35-1.53,4.21-1.53h.67v1.88l-.54,.11c-.91,.18-1.55,.54-1.89,1.07-.18,.28-.28,.61-.29,.94h2.05c.18,0,.35,.07,.47,.2,.13,.13,.2,.29,.2,.47v4.67c0,.74-.6,1.33-1.33,1.33H2c-.18,0-.35-.07-.47-.2-.13-.12-.2-.29-.2-.47V7.39c0-.07-.13-1.83,1.13-3.19ZM13.33,13.33h-4c-.18,0-.35-.07-.47-.2-.13-.12-.2-.29-.2-.47V7.39c0-.07-.13-1.83,1.13-3.19,.94-1.01,2.35-1.53,4.21-1.53h.67v1.88l-.54,.11c-.91,.18-1.55,.54-1.89,1.07-.18,.28-.28,.61-.29,.94h2.05c.18,0,.35,.07,.47,.2,.12,.13,.2,.29,.2,.47v4.67c0,.74-.6,1.33-1.33,1.33Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="S"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="S"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="S"]>p>input:checked {
+input[data-task="S"]:checked,
+li[data-task="S"]>input:checked,
+li[data-task="S"]>p>input:checked {
     --checkbox-color-hover: var(--color-green);
     color: var(--color-green);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' d='M12.781 8.34c-.84-.665-2.146-1.247-3.354-1.715V4.396a28.48 28.48 0 0 1 2.123.772c.096.04.209.006.265-.082l1.193-1.805a.219.219 0 0 0-.079-.314c-.68-.365-2.072-.93-3.502-1.293V.366a.27.27 0 0 0-.27-.271H6.985a.271.271 0 0 0-.271.271v.973c-2.014.092-3.38.795-4.166 2.147-.616 1.06-.613 2.255.004 3.118.645.922 1.699 1.332 3.031 1.851l.172.066c.309.118.634.239.959.359v2.715c-1.41-.335-2.736-1.023-2.98-1.189a.218.218 0 0 0-.296.048l-1.444 1.883a.211.211 0 0 0-.043.163.22.22 0 0 0 .086.145c.874.648 2.145 1.266 3.403 1.654a12.4 12.4 0 0 0 1.275.316v1.018c0 .148.121.27.271.27h2.173a.27.27 0 0 0 .27-.27v-.845c1.928-.16 3.368-.997 4.192-2.45.793-1.402.49-2.858-.839-3.998ZM6.712 4.014v1.643c-.624-.2-.993-.394-.953-.872.04-.49.51-.69.954-.771Zm2.716 5.875c.458.205.806.42.927.689.069.152.063.326-.016.533-.14.364-.502.553-.912.649V9.889Z'/%3e%3c/svg%3e");
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="u"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="u"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="u"]>p>input:checked {
+input[data-task="u"]:checked,
+li[data-task="u"]>input:checked,
+li[data-task="u"]>p>input:checked {
     --checkbox-color-hover: var(--color-green);
     color: var(--color-green);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,5c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29h5c.27,0,.52,.11,.71,.29,.19,.19,.29,.44,.29,.71v5c0,.27-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29c-.19-.19-.29-.44-.29-.71v-2.59l-4.29,4.29c-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29l-2.29-2.29L1.71,12.71c-.19,.18-.44,.28-.7,.28-.26,0-.51-.11-.7-.29S.01,12.26,.01,12c0-.26,.1-.51,.28-.7L5.29,6.29c.19-.19,.44-.29,.71-.29s.52,.11,.71,.29l2.29,2.29,3.59-3.59h-2.59Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="d"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="d"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="d"]>p>input:checked {
+input[data-task="d"]:checked,
+li[data-task="d"]>input:checked,
+li[data-task="d"]>p>input:checked {
     --checkbox-color-hover: var(--color-red);
     color: var(--color-red);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,11c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29h5c.27,0,.52-.11,.71-.29,.19-.19,.29-.44,.29-.71V7c0-.27-.11-.52-.29-.71-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29c-.19,.19-.29,.44-.29,.71v2.59l-4.29-4.29c-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29l-2.29,2.29L1.71,3.29c-.19-.18-.44-.28-.7-.28-.26,0-.51,.11-.7,.29S.01,3.74,.01,4c0,.26,.1,.51,.28,.7l5,5c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29l2.29-2.29,3.59,3.59h-2.59Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task=">"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task=">"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task=">"]>p>input:checked {
+input[data-task=">"]:checked,
+li[data-task=">"]>input:checked,
+li[data-task=">"]>p>input:checked {
     --checkbox-color-hover: var(--color-pink);
     color: var(--color-pink);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M1.72,1.05c-.08-.04-.18-.06-.27-.05-.09,0-.18,.04-.26,.1-.07,.06-.13,.13-.16,.22-.03,.09-.04,.18-.02,.27l1.4,4.85c.03,.09,.08,.17,.15,.23,.07,.06,.16,.1,.25,.12l5.69,.95c.27,.05,.27,.44,0,.49l-5.69,.95c-.09,.02-.18,.06-.25,.12s-.12,.14-.15,.23l-1.4,4.85c-.02,.09-.01,.19,.02,.27,.03,.09,.09,.16,.16,.22,.07,.06,.16,.09,.26,.1,.09,0,.19,0,.27-.05l13-6.5c.08-.04,.15-.11,.2-.18,.05-.08,.07-.17,.07-.26s-.03-.18-.07-.26c-.05-.08-.12-.14-.2-.18L1.72,1.05Z"/></svg>');
 }
 
-body:not(.disable-alternative-checkboxes) input[data-task="<"]:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="<"]>input:checked,
-body:not(.disable-alternative-checkboxes) li[data-task="<"]>p>input:checked {
+input[data-task="<"]:checked,
+li[data-task="<"]>input:checked,
+li[data-task="<"]>p>input:checked {
     --checkbox-color-hover: var(--color-blue);
     color: var(--color-blue);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,15.5H13.25c.83,0,1.5-.67,1.5-1.5V3.5c0-.83-.67-1.5-1.5-1.5h-1.5V.5h-1.5v1.5H5.75V.5h-1.5v1.5h-1.5c-.83,0-1.5,.67-1.5,1.5V14c0,.83,.67,1.5,1.5,1.5Zm0-11.25H13.25v1.5H2.75v-1.5Z"/></svg>');
 }
 
-/*new tab image*/
-.workspace-leaf-content[data-type="empty"] .empty-state::before {
-    content: "";
-    width: 100%;
-    height: 30%;
-    background-color: var(--icon-color);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20viewBox%3D%220%200%2080%2080%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-opacity%3D%22.1%22%20fill-rule%3D%22evenodd%22%20d%3D%22M41.025%2044.046c-1.565-4.198-2.066-7.455-1.95-10.13.126-2.9.975-5.058%201.89-6.923.243-.495.485-.96.717-1.406.66-1.27%201.243-2.393%201.57-3.657.398-1.537.4-3.279-.519-5.633a3.197%203.197%200%200%200-3.486.523l-9.875%208.884a3.197%203.197%200%200%200-1.023%201.9c-.118.78-.259%201.752-.404%202.757-.25%201.72-.512%203.537-.7%204.67%202.313%201.47%205.437%203.94%207.093%207.98.226.553.424%201.132.589%201.74%202.033-.46%204.085-.765%206.098-.705Zm1.587.128c.957.129%201.901.355%202.827.701%203.307%201.238%206.25%203.964%208.665%208.966l.08-.12a139.935%20139.935%200%200%200%204.196-6.627%201.618%201.618%200%200%200-.122-1.797c-1.03-1.364-3-4.138-4.074-6.706-1.104-2.64-1.269-6.74-1.278-8.736a3.406%203.406%200%200%200-.714-2.097l-7.383-9.38a9.237%209.237%200%200%201-.165%203.912c-.371%201.437-1.062%202.763-1.744%204.075a60.2%2060.2%200%200%200-.644%201.26c-.87%201.771-1.631%203.728-1.745%206.353-.111%202.562.393%205.815%202.101%2010.196Zm4.66%2019.708c2.13.59%204.273-1.12%204.567-3.31.218-1.618.633-3.462%201.408-5.16-2.394-5.402-5.261-8.05-8.312-9.19-2.97-1.112-6.244-.85-9.698-.068.666%203.863.018%208.748-3%2014.906.158.036.32.06.483.072l4.844.367c2.362.182%204.92.956%207.328%201.684.816.246%201.613.488%202.38.7Zm-16.329-3.449c3.777-7.702%203.612-13.101%202.065-16.876-1.404-3.426-3.996-5.637-6.134-7.054-.91%202.125-5.19%2011.535-5.19%2011.535a3.196%203.196%200%200%200%20.622%203.535l8.348%208.597c.091.094.188.182.29.263Z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.new-tab-image-old .workspace-leaf-content[data-type="empty"] .empty-state::before {
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' fill='none' viewBox='0 0 240 240'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath fill-opacity='.25' fill-rule='evenodd' d='M67.793 61.072A80.673 80.673 0 0 1 95.85 45.667v32.798H75.54l-7.748-17.393Zm-28.703 58.26a3.98 3.98 0 0 0 2.737-.18l4.546-2.025 7.425 52.553C44.474 156.487 39 140.377 39 123c0-1.23.03-2.453.09-3.668Zm60.322 73.005h-21.3c12.038 7.29 26.13 11.535 41.198 11.655-8.453-.24-15.81-4.852-19.898-11.655Zm62.476 0c-12.038 7.29-26.131 11.535-41.198 11.655 8.453-.24 15.81-4.852 19.898-11.655h21.3Zm28.049-28.454C196.972 151.883 201 137.91 201 123c0-1.747-.053-3.472-.165-5.19l-14.918-5.43v9.293h3.128c3.622 0 6.405 3.202 5.895 6.787l-5.003 35.423Zm-22.312-85.418H147.15v-31.8a80.945 80.945 0 0 1 26.385 15.548l-5.91 16.252Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.4' d='M185.917 112.38v9.293H100.83a5.96 5.96 0 0 1-5.895-5.115l-1.47-10.403a5.947 5.947 0 0 0-5.895-5.115h-5.31a3.954 3.954 0 0 0 1.215-4.748L75.54 78.466h20.31v17.46a3.945 3.945 0 0 0 3.945 3.945h43.41a3.945 3.945 0 0 0 3.945-3.945v-17.46h20.475l-7.237 19.882-.173.48a3.936 3.936 0 0 0 2.355 5.055l23.347 8.498Zm-67.312-57.855s-4.23-8.648-5.76-12.21c-.277-.637-.465-1.117-.525-1.35 0 0-.285-.72-1.298-.72-1.012 0-1.267.645-1.267.645-.083.3-.36.968-.765 1.86-1.74 3.833-5.745 11.775-5.745 11.775-.36.742-1.245 1.44-1.245 1.943 0 .412.217.532.817.532h2.04c.6 0 .84-.12.84-.532 0-.503-.84-1.178-.84-1.943l1.321-2.76h6.697l1.32 2.76c0 .765-.84 1.44-.84 1.943 0 .412.21.532.84.532h4.823c.6 0 .839-.12.839-.532 0-.503-.915-1.2-1.252-1.943ZM106.822 50.4l2.693-5.737 2.708 5.737h-5.401Z'/%3e%3cg fill-opacity='.1'%3e%3cpath d='M135.315 40.958V29.123h-35.52a3.945 3.945 0 0 0-3.945 3.945v62.857a3.945 3.945 0 0 0 3.945 3.945h43.41a3.945 3.945 0 0 0 3.945-3.945V40.958h-11.835Zm-32.07 13.567s4.005-7.942 5.745-11.775c.405-.892.683-1.56.765-1.86 0 0 .263-.645 1.268-.645s1.297.72 1.297.72c.06.232.248.712.525 1.35 1.53 3.563 5.76 12.21 5.76 12.21.338.742 1.253 1.44 1.253 1.943 0 .412-.24.532-.84.532h-4.823c-.63 0-.84-.12-.84-.532 0-.503.84-1.178.84-1.943l-1.32-2.76h-6.697l-1.32 2.76c0 .765.839 1.44.839 1.943 0 .412-.239.532-.839.532h-2.04c-.6 0-.818-.12-.818-.532 0-.503.885-1.2 1.245-1.943ZM141 93h-39v-2.25h39V93Zm0-9h-39v-2.25h39V84Zm0-9h-39v-2.25h39V75Zm0-9h-39v-2.25h39V66Zm0-9h-18v-2.25h18V57Zm0-9h-18v-2.25h18V48Z'/%3e%3cpath d='m109.515 44.663-2.693 5.737h5.401l-2.708-5.737Z'/%3e%3c/g%3e%3cpath fill-opacity='.3' d='m67.823 76.245-4.808-10.808-3.428-7.694a4.49 4.49 0 0 0-2.505-2.37 4.458 4.458 0 0 0-3.442.09L26.235 67.665a4.51 4.51 0 0 0-2.28 5.94l8.235 18.502a4.502 4.502 0 0 0 5.94 2.28l7.402-3.292L57 85.987l8.543-3.802a4.492 4.492 0 0 0 2.647-3.72 4.43 4.43 0 0 0-.367-2.22Zm-5.715-7.313 1.83 4.118-8.91 3.96-.66-1.485-1.17-2.625 4.957-2.205 3.945-1.762h.008Zm-2.753-6.165 1.83 4.11-8.903 3.968-1.83-4.11 8.903-3.968Zm-8.212 11.048 1.71 3.855.12.255-.405.18L43.38 82.2l-1.83-4.11 9.593-4.275Zm-10.508 2.22-1.83-4.11 9.593-4.275 1.83 4.11-9.593 4.275Zm13.92-18.517c.292-.128.608-.196.915-.196.278 0 .547.053.81.15a2.22 2.22 0 0 1 1.245 1.185l.915 2.056-8.902 3.967-1.83-4.118 6.847-3.044Zm-8.91 3.967 1.837 4.11-9.592 4.275-1.837-4.118 9.592-4.267ZM26.01 72.69a2.236 2.236 0 0 1-.045-1.718 2.258 2.258 0 0 1 1.185-1.252l6.848-3.052 1.837 4.117-8.91 3.968-.915-2.063Zm1.83 4.118 8.91-3.968 1.83 4.11-8.91 3.968-1.83-4.11Zm4.575 10.274-1.83-4.11 8.91-3.967 1.83 4.11-8.91 3.968Zm4.8 5.25a2.235 2.235 0 0 1-1.718.046 2.258 2.258 0 0 1-1.252-1.186l-.915-2.054 8.91-3.968 1.83 4.11-6.855 3.052Zm9.712-4.327-.802.36-1.83-4.11 6.12-2.722 3.473-1.553 1.83 4.117-8.79 3.908Zm18.998-9.54a2.224 2.224 0 0 1-1.297 1.665l-6.855 3.053-.383-.863-1.447-3.255 8.91-3.96.915 2.055c.187.428.232.877.157 1.305Z'/%3e%3cpath fill-opacity='.2' d='M57.525 58.657a2.22 2.22 0 0 0-1.245-1.184 2.313 2.313 0 0 0-.81-.15c-.307 0-.623.067-.915.194l-6.847 3.045 1.83 4.118 8.902-3.968-.915-2.055Zm-21.472 7.095 1.837 4.118 9.593-4.275-1.838-4.11-9.593 4.267ZM27.15 69.72c-.547.248-.967.69-1.185 1.252a2.236 2.236 0 0 0 .045 1.718l.915 2.063 8.91-3.968-1.837-4.117-6.848 3.052Z'/%3e%3cpath fill-opacity='.1' d='M83.475 96.293 75.54 78.465l-7.748-17.393-6.675-15-10.814 4.816-4.816-10.816-32.444 14.445a3.943 3.943 0 0 0-1.995 5.205l25.567 57.428a3.957 3.957 0 0 0 2.475 2.183c.87.255 1.837.217 2.737-.181l4.546-2.024-.893-6.308-4.133 1.838-.922-2.055 4.733-2.108-.098-.667c-.503-3.585 2.273-6.788 5.895-6.788h10.95l14.153-6.3.914 2.055-9.532 4.245h14.82a3.954 3.954 0 0 0 1.215-4.748Zm-65.01-35.018L41.078 51.21l.914 2.055L19.38 63.33l-.915-2.055Zm17.842 33.503a4.502 4.502 0 0 1-4.117-2.67l-8.235-18.503a4.51 4.51 0 0 1 2.28-5.94L53.64 55.462a4.458 4.458 0 0 1 3.443-.09 4.49 4.49 0 0 1 2.505 2.37l3.427 7.696 4.808 10.807a4.43 4.43 0 0 1 .367 2.22 4.492 4.492 0 0 1-2.647 3.72L57 85.987l-11.468 5.108-7.402 3.293c-.585.262-1.2.39-1.823.39ZM57 95.835l-15.443 6.877-3.877 1.726-.915-2.056 5.587-2.49L57 93.376l15.397-6.855.915 2.055L57 95.835Z'/%3e%3cpath fill-opacity='.05' d='m36.746 72.85-8.907 3.965 1.83 4.111 8.907-3.965-1.83-4.111Zm11.648-5.192L38.8 71.93l1.83 4.11 9.593-4.27-1.83-4.11Zm10.965-4.89-8.907 3.966 1.83 4.11 8.907-3.965-1.83-4.11ZM53.197 72.9l1.17 2.625.66 1.485 8.91-3.96-1.83-4.117H62.1l-3.945 1.762-4.958 2.205Zm-.629 5.205.404-.18-.12-.255-1.71-3.855-9.592 4.275 1.83 4.11 9.188-4.088v-.007Zm-13.08.91-8.907 3.966 1.83 4.11 8.908-3.965-1.83-4.11Zm2.752 6.155-8.91 3.968.915 2.054c.248.548.69.968 1.253 1.186.562.217 1.17.195 1.717-.046l6.855-3.052-1.83-4.11Zm8.175-3.645v.008l-6.12 2.722 1.83 4.11.803-.352v-.008l8.79-3.907-1.83-4.118-3.473 1.545Zm6.975.795.383.863 6.854-3.053a2.224 2.224 0 0 0 1.298-1.665c.075-.427.03-.877-.157-1.305l-.915-2.055-8.91 3.96 1.447 3.255Z'/%3e%3cpath fill-opacity='.1' d='m216.098 60.667 4.042-11.122-33.368-12.15a3.954 3.954 0 0 0-5.062 2.355l-3.78 10.388-4.395 12.075-5.91 16.252-7.237 19.882-.173.48a3.936 3.936 0 0 0 2.355 5.055l23.347 8.498 14.918 5.43 2.52.915a3.946 3.946 0 0 0 5.063-2.355l.172-.48 17.55-48.203 1.08-2.97-11.122-4.05ZM185.977 46.02l25.373 9.232-.773 2.115-25.372-9.232.772-2.115Zm17.663 65.49-3.653-1.328-14.07-5.122-18.922-6.885.765-2.115 18.157 6.607 13.62 4.951 4.875 1.777-.772 2.115Zm11.505-31.598-7.118 19.545a3.89 3.89 0 0 1-4.995 2.333l-5.407-1.965-11.708-4.267-12.202-4.44a3.884 3.884 0 0 1-2.333-4.995l2.783-7.658 4.223-11.603.105-.284a3.894 3.894 0 0 1 5.002-2.333l29.317 10.672a3.897 3.897 0 0 1 2.333 4.995Zm3.63-9.982L182.13 56.595l.765-2.115 36.653 13.335-.773 2.115Z'/%3e%3cpath fill-opacity='.25' d='m212.813 74.918-29.318-10.673a3.894 3.894 0 0 0-5.002 2.332l-.105.285-4.223 11.603-2.782 7.657a3.884 3.884 0 0 0 2.332 4.996l12.203 4.44 11.707 4.26 5.407 1.972a3.891 3.891 0 0 0 4.996-2.333l7.117-19.544a3.896 3.896 0 0 0-2.332-4.995Zm-31.763-3.953c.037-.105.083-.21.128-.308.037-.075.067-.15.112-.217.045-.082.09-.157.143-.233 0 0 .022-.03.03-.044.03-.045.06-.09.097-.128a2.55 2.55 0 0 1 .225-.255c.053-.06.113-.12.173-.165.052-.06.112-.105.172-.15.18-.135.375-.255.593-.36.825-.36 1.635-.398 2.49-.083.15.053.3.12.435.195.082.038.157.083.225.128.165.097.314.21.449.338a3.19 3.19 0 0 1 .586.712c.052.098.105.195.157.3.368.818.405 1.635.09 2.49-.308.855-.862 1.455-1.672 1.852-.053.023-.113.045-.165.068-.008.007-.015.007-.03.007-.068.03-.128.053-.196.076-.127.037-.247.075-.382.09-.09.022-.187.037-.277.044-.473.053-.945-.014-1.44-.195-.855-.307-1.455-.862-1.853-1.672-.367-.825-.405-1.635-.09-2.49Zm23.317 27.157-8.295-3.014-10.154-3.698-10.868-3.953 1.417-3.914 6.893-4.006.127-.075.593.66.593.66 2.752 3.068 2.76-1.313 10.635-5.07 6.863 11.543-3.316 9.112Z'/%3e%3cpath fill-opacity='.05' d='m207.682 89.01-3.315 9.112-8.295-3.014-10.155-3.698-10.867-3.953 1.417-3.914 6.893-4.006.127-.075.593.66.592.66 2.753 3.068 2.76-1.313 10.635-5.07 6.862 11.543Zm-20.527-15.825c-.308.855-.863 1.455-1.673 1.852-.052.023-.112.045-.165.068-.007.007-.015.007-.03.007-.067.03-.127.053-.195.076-.127.037-.247.075-.382.09-.09.022-.188.037-.278.044-.472.053-.945-.014-1.44-.195-.855-.307-1.455-.862-1.852-1.672-.368-.825-.405-1.635-.09-2.49.037-.105.082-.21.127-.308.03-.075.068-.15.113-.217.045-.082.09-.157.142-.233 0 0 .023-.03.03-.044.03-.045.06-.09.098-.128.067-.09.142-.172.225-.255.052-.06.112-.12.172-.165.053-.052.113-.105.173-.15.18-.135.375-.255.592-.36.825-.36 1.635-.398 2.49-.083.15.053.3.12.435.195.083.038.158.083.225.128.165.097.315.21.45.338.075.067.143.134.21.21.135.15.255.322.375.502.053.098.105.195.158.3.367.818.405 1.635.09 2.49Z'/%3e%3cpath fill-opacity='.3' d='M147.15 40.958h-11.835V29.13l11.835 11.828Zm-96.847 9.929 10.815-4.815-15.63-6 4.815 10.815ZM227.22 64.718l-11.122-4.05 4.042-11.123 7.08 15.172Z'/%3e%3cpath fill-opacity='.15' d='m194.94 128.46-5.002 35.422-3.3 23.333a5.949 5.949 0 0 1-5.895 5.123h-40.156c.12-.203.24-.398.353-.608A23.85 23.85 0 0 0 144 180c0-13.26-10.747-24-24-24s-24 10.74-24 24c0 4.26 1.11 8.265 3.06 11.73.112.21.233.405.352.608H62.167a5.96 5.96 0 0 1-5.895-5.123l-2.474-17.535-7.425-52.553-.893-6.307-.322-2.325-.098-.667c-.503-3.585 2.273-6.788 5.895-6.788H87.57a5.947 5.947 0 0 1 5.895 5.115l1.47 10.403a5.959 5.959 0 0 0 5.895 5.114h88.215c3.622 0 6.405 3.203 5.895 6.788Z'/%3e%3cpath fill-opacity='.4' d='M120 156c-13.253 0-24 10.74-24 24 0 4.26 1.11 8.265 3.06 11.73.112.21.233.405.352.608 4.088 6.802 11.446 11.414 19.898 11.654h1.38c8.452-.24 15.81-4.852 19.897-11.654.12-.203.24-.398.353-.608A23.85 23.85 0 0 0 144 180c0-13.26-10.747-24-24-24Zm13.65 35.73c-.173.21-.36.413-.547.608A17.928 17.928 0 0 1 120 198a17.908 17.908 0 0 1-13.095-5.662 8.574 8.574 0 0 1-.555-.608A17.935 17.935 0 0 1 102 180c0-9.945 8.062-18 18-18s18 8.055 18 18c0 4.485-1.635 8.58-4.35 11.73Z'/%3e%3cpath fill-opacity='.5' d='M120 162c-9.938 0-18 8.055-18 18 0 4.485 1.643 8.58 4.35 11.73.173.21.36.413.555.608A17.92 17.92 0 0 0 120 198a17.94 17.94 0 0 0 13.103-5.662c.187-.195.374-.398.547-.608A17.893 17.893 0 0 0 138 180c0-9.945-8.055-18-18-18Zm7.5 19.5h-6v6c0 .825-.675 1.5-1.5 1.5s-1.5-.675-1.5-1.5v-6h-6c-.825 0-1.5-.675-1.5-1.5s.675-1.5 1.5-1.5h6v-6a1.5 1.5 0 1 1 3 0v6h6a1.5 1.5 0 1 1 0 3Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h240v240H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-}
-
-.new-tab-image-customize .workspace-leaf-content[data-type="empty"] .empty-state::before {
-    background-color: unset;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: var(--new-tab-image);
-    -webkit-mask: unset;
-}
-
-.new-tab-image-none .workspace-leaf-content[data-type="empty"] .empty-state::before {
-    display: none;
-}
-
-.new-tab-image-none .workspace-leaf-content[data-type="empty"] .empty-state-title {
-    display: block;
-}
-
-body {
-    --new-tab-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20viewBox%3D%220%200%2080%2080%22%3E%3Cg%20filter%3D%22url(%23a)%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-opacity%3D%22.26%22%20d%3D%22M51.894%2060.617c-.291%202.162-2.41%203.85-4.515%203.267-3-.825-6.474-2.112-9.6-2.352l-4.79-.362a3.163%203.163%200%200%201-2.042-.95l-8.254-8.483a3.15%203.15%200%200%201-.616-3.49S27.18%2037.053%2027.37%2036.47c.19-.582.886-5.66%201.298-8.388a3.153%203.153%200%200%201%201.011-1.875l9.765-8.767a3.165%203.165%200%200%201%204.597.394l8.202%2010.4c.464.59.702%201.32.706%202.07.009%201.97.172%206.016%201.263%208.621%201.062%202.535%203.01%205.272%204.03%206.619.39.517.45%201.216.12%201.773a138.06%20138.06%200%200%201-4.15%206.54c-1.386%202.063-2.028%204.613-2.318%206.761Z%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%230E0E0E%22%20d%3D%22M51.602%2060.187c-.292%202.171-2.417%203.867-4.528%203.282-3.008-.829-6.491-2.122-9.626-2.362l-4.803-.365a3.168%203.168%200%200%201-2.048-.953l-8.277-8.523a3.168%203.168%200%200%201-.618-3.504S26.82%2036.515%2027.01%2035.93c.19-.585.888-5.686%201.301-8.427a3.17%203.17%200%200%201%201.015-1.883l9.79-8.807a3.17%203.17%200%200%201%204.61.396l8.226%2010.448c.465.59.704%201.326.707%202.078.01%201.98.173%206.043%201.268%208.66%201.064%202.547%203.018%205.296%204.04%206.65a1.6%201.6%200%200%201%20.12%201.78%20137.46%20137.46%200%200%201-4.16%206.57c-1.39%202.072-2.034%204.634-2.325%206.792Z%22%2F%3E%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M31.489%2060.433c3.844-7.804%203.736-13.395%202.1-17.384-1.505-3.672-4.304-5.988-6.51-7.425-.047.208-.115.41-.202.605l-5.175%2011.532a3.168%203.168%200%200%200%20.618%203.505l8.277%208.523c.26.267.562.484.892.644Z%22%2F%3E%3Cpath%20fill%3D%22url(%23c)%22%20d%3D%22M47.075%2063.469c2.11.585%204.235-1.11%204.527-3.282.252-1.869.769-4.041%201.806-5.936-2.38-5.121-5.256-7.777-8.41-8.954-3.339-1.246-6.987-.835-10.684.063.826%203.76.331%208.673-2.82%2015.073.358.174.75.28%201.154.309%200%200%202.275.191%204.98.383%202.705.191%206.73%201.59%209.447%202.344Z%22%2F%3E%3Cpath%20fill%3D%22url(%23d)%22%20d%3D%22M41.95%2044.595c1.038.108%202.056.332%203.047.702%203.154%201.177%206.032%203.833%208.411%208.954.16-.292.333-.578.519-.855a138.877%20138.877%200%200%200%204.16-6.57%201.603%201.603%200%200%200-.12-1.78c-1.022-1.354-2.976-4.103-4.04-6.65-1.095-2.617-1.258-6.68-1.267-8.66a3.377%203.377%200%200%200-.708-2.079L43.727%2017.21a3.198%203.198%200%200%200-.136-.162c.603%201.978.562%203.569.19%205.015-.345%201.341-.975%202.558-1.641%203.843-.223.43-.45.87-.672%201.323-.884%201.806-1.68%203.85-1.798%206.592-.118%202.74.444%206.179%202.28%2010.774Z%22%2F%3E%3Cpath%20fill%3D%22url(%23e)%22%20d%3D%22M41.948%2044.594c-1.835-4.595-2.398-8.033-2.28-10.774.118-2.742.915-4.786%201.798-6.592.222-.454.45-.893.673-1.324.665-1.285%201.295-2.501%201.64-3.842.373-1.447.414-3.038-.19-5.017a3.17%203.17%200%200%200-4.472-.232l-9.792%208.807a3.17%203.17%200%200%200-1.014%201.883l-1.192%207.902a3.182%203.182%200%200%201-.04.218c2.206%201.438%205.006%203.754%206.511%207.426.294.717.54%201.486.72%202.31%202.6-.632%205.177-1.022%207.638-.765Z%22%2F%3E%3Cg%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22url(%23f)%22%20d%3D%22M39.687%2033.638c-.118%202.72.221%205.839%202.053%2010.424l-.575-.052c-1.643-4.785-2.001-7.238-1.881-9.995.12-2.758%201.01-4.879%201.899-6.688.225-.458.75-1.319.974-1.75.665-1.28%201.108-1.955%201.488-3.124.53-1.633.416-2.406.355-3.176.422%202.783-1.178%205.202-2.388%207.667-.882%201.795-1.807%203.976-1.925%206.694Z%22%2F%3E%3Cpath%20fill%3D%22url(%23g)%22%20d%3D%22M34.131%2043.25c.217.502.422.907.552%201.529l-.48.108c-.2-.726-.354-1.242-.63-1.865-1.654-3.902-4.309-5.91-6.478-7.381%202.62%201.41%205.31%203.616%207.036%207.608Z%22%2F%3E%3Cpath%20fill%3D%22url(%23h)%22%20d%3D%22M34.71%2045.27c.917%204.264-.105%209.683-3.118%2014.95%202.518-5.22%203.74-10.234%202.723-14.866l.396-.085Z%22%2F%3E%3Cpath%20fill%3D%22url(%23i)%22%20d%3D%22M45.11%2044.888c4.94%201.848%206.842%205.908%208.264%209.294-1.756-3.546-4.197-7.462-8.441-8.915-3.23-1.106-5.957-.975-10.619.083l-.104-.462c4.948-1.128%207.535-1.26%2010.9%200Z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CradialGradient%20id%3D%22b%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(-5.44827%20-20.95522%2013.96424%20-3.63065%2031.076%2059.662)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.44%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23333%22%20stop-opacity%3D%22.52%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22c%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(-9.24927%20-16.1868%2016.18663%20-9.24917%2047.535%2064.623)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23565656%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23151515%22%20stop-opacity%3D%22.71%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22d%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(4.6468%20-35.22462%2026.02364%203.433%2049.53%2050.76)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%237E7E7E%22%20stop-opacity%3D%22.91%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231E1E1E%22%20stop-opacity%3D%22.6%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22e%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(13.14708%20-30.29344%2020.65904%208.96583%2034.531%2046.293)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23D7D7D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23414141%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22f%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(-3.34584%2015.42817%20-10.40357%20-2.25617%2044.882%2027.895)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.17%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22g%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22matrix(8.17858%208.27172%20-17.61805%2017.41967%2026.387%2036.445)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.2%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.44%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22h%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22rotate(80.202%20-7.323%2041.856)%20scale(13.634%2028.9518)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.12%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.35%22%2F%3E%3C%2FradialGradient%3E%3CradialGradient%20id%3D%22i%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22rotate(-152.296%2033.168%2019.977)%20scale(20.7745%2065.377)%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.21%22%2F%3E%3Cstop%20offset%3D%22.467%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.19%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.29%22%2F%3E%3C%2FradialGradient%3E%3Cfilter%20id%3D%22a%22%20width%3D%2239.273%22%20height%3D%2249.867%22%20x%3D%2220.551%22%20y%3D%2215.381%22%20color-interpolation-filters%3D%22sRGB%22%20filterUnits%3D%22userSpaceOnUse%22%3E%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%3CfeBlend%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20mode%3D%22normal%22%20result%3D%22shape%22%2F%3E%3CfeGaussianBlur%20result%3D%22effect1_foregroundBlur_3584_482%22%20stdDeviation%3D%22.624%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
-}
-
-.new-tab-image-customize .workspace-leaf-content[data-type="empty"] .empty-state::before {
-    background-color: unset;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: var(--new-tab-image);
-    -webkit-mask: unset;
-}
-
-.workspace-leaf-content[data-type="empty"] .empty-state-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-height: 100%;
-}
-
-.workspace-leaf-content[data-type="empty"] .empty-state-title {
-    display: none;
-}
-
-.is-mobile .workspace-leaf-content[data-type="empty"] .empty-state-action-list,
-.workspace-leaf-content[data-type="empty"] .empty-state-action-list {
-    margin-top: 0px;
-}
-
-.workspace-leaf-content[data-type="empty"] .empty-state-container div:has(+ .empty-state-action-list) {
-    margin-bottom: 20px;
-}
-
-.is-mobile .workspace-leaf-content[data-type="empty"] .empty-state-action {
-    margin: 12px 0;
-    padding: 4px 24px;
-}
-
 
 /* ==========================================================
-   1. HIDE INACTIVE SETTINGS
+   0. HIDE INACTIVE SETTINGS
    ========================================================== */
 body:not(.toggle-card-bg) .setting-item[data-id="color-card-bg"],
 body:not(.toggle-left-panel) .setting-item[data-id="color-left-panel"],
@@ -4356,3 +2234,23 @@ body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-right-split
     background-color: var(--card-bg-color) !important;
 }
 
+
+/* graph view*/
+.graph-controls {
+    right: var(--size-4-2);
+    top: var(--size-4-2);
+}
+
+.graph-controls.is-close {
+    border: 1px solid var(--background-modifier-border);
+    padding: 0px;
+    border-radius: var(--radius-s);
+}
+
+.graph-controls-button.mod-open,
+.graph-controls-button.mod-animate {
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+    --icon-color: var(--text-normal);
+}
