@@ -4,7 +4,7 @@
 
 Ink Paper was built from the ground up to provide a distraction-free, visually unified writing experience. It strips away the heavy, opaque backgrounds of the default Obsidian UI, allowing a custom paper texture to flow seamlessly through your panes, sidebars, and active tabs.
 
-## Screenshot
+## 🖼️ Screenshot
 
 |![](assets/01.png)|![](assets/02.png)|
 | ----------- | --- |
