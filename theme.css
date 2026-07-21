@@ -17,46 +17,158 @@ settings:
     -
         id: toggle-left-panel
         title: Enable Custom Left Panel Background
-        description: Adjust color and opacity for the left sidebar.
+        description: Adjust color and corner radius for the left sidebar.
         type: class-toggle
+        default: false
     -
         id: color-left-panel
         title: Left Panel Color
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#fcfcfc'
-        default-dark: '#1e1e1e'
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
+    -
+        id: left-panel-radius-top-left
+        title: Top Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: left-panel-radius-top-right
+        title: Top Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: left-panel-radius-bottom-left
+        title: Bottom Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: left-panel-radius-bottom-right
+        title: Bottom Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
     -
         id: toggle-middle-panel
         title: Enable Custom Middle Panel Background
-        description: Adjust color and opacity for the main editor.
+        description: Adjust color and corner radius for the main editor.
         type: class-toggle
+        default: false
     -
         id: color-middle-panel
         title: Middle Panel Color
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#ffffff'
-        default-dark: '#100f0f'
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
+    -
+        id: middle-panel-radius-top-left
+        title: Top Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: middle-panel-radius-top-right
+        title: Top Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: middle-panel-radius-bottom-left
+        title: Bottom Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: middle-panel-radius-bottom-right
+        title: Bottom Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
     -
         id: toggle-right-panel
         title: Enable Custom Right Panel Background
-        description: Adjust color and opacity for the right sidebar.
+        description: Adjust color and corner radius for the right sidebar.
         type: class-toggle
+        default: false
     -
         id: color-right-panel
         title: Right Panel Color
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#fcfcfc'
-        default-dark: '#1e1e1e'
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
+    -
+        id: right-panel-radius-top-left
+        title: Top Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: right-panel-radius-top-right
+        title: Top Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: right-panel-radius-bottom-left
+        title: Bottom Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: right-panel-radius-bottom-right
+        title: Bottom Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
     -
         id: toggle-active-tab
         title: Enable Custom Active Tab Background
         type: class-toggle
+        default: false
     -
         id: color-active-tab
         title: Active Tab Color
@@ -68,20 +180,59 @@ settings:
     -
         id: toggle-vault-profile
         title: Enable Custom Vault Profile Background
+        description: Adjust color and corner radius for the vault profile.
         type: class-toggle
+        default: false
     -
         id: color-vault-profile
         title: Vault Profile Color
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#e3e3e3'
-        default-dark: '#363636'
+        default-light: '#E6E4D9'
+        default-dark: '#343331'
+    -
+        id: vault-profile-radius-top-left
+        title: Top Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: vault-profile-radius-top-right
+        title: Top Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: vault-profile-radius-bottom-left
+        title: Bottom Left Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
+    -
+        id: vault-profile-radius-bottom-right
+        title: Bottom Right Corner Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 30
+        step: 1
+        format: px
     -
         id: toggle-panel-borders
         title: Enable Panel Borders
-        description: Apply custom borders to the Left, Middle, and Right panels.
+        description: Apply custom borders to the Left, Middle, Right, and Vault Profile panels.
         type: class-toggle
+        default: false
     -
         id: panel-border-width
         title: Panel Border Thickness
@@ -98,7 +249,6 @@ settings:
     -
         id: panel-border-style
         title: Panel Border Style
-        description: Choose the line style for your custom borders.
         type: variable-select
         default: solid
         options:
@@ -106,23 +256,14 @@ settings:
             - dashed
             - dotted
     -
-        id: panel-border-color
-        title: Panel Border Color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#d4d4d4'
-        default-dark: '#3f3f3f'
-    -
         id: panel-border-radius
         title: Panel Border Radius
-        description: Controls the corner roundness when borders are enabled (e.g., 8px, 12px)
         type: variable-text
         default: 8px
     -
         id: layout-gap-middle
         title: Inner Panel Gap
-        description: Spacing BETWEEN the left, middle, and right panels (e.g., 5px, 16px).
+        description: Spacing BETWEEN the left, middle, and right panels.
         type: variable-text
         default: 5px
     -
@@ -140,21 +281,22 @@ settings:
     -
         id: toggle-card-bg
         title: Enable Custom Card Background
-        description: Override the default background color and opacity for the Card Layout.
+        description: Override the default background color and opacity for Card Layout.
         type: class-toggle
+        default: false
     -
         id: card-bg-color
         title: Card Background Color
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#ffffff'
-        default-dark: '#1c1b1a'
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
 */
 
 /* @settings
-name: FlexoPaper Settings
-id: minimal-texture-theme
+name: Paper Texture Engine
+id: paper-texture-engine
 settings:
     -
         id: bg-textures-light
@@ -362,12 +504,10 @@ settings:
             - plus-darker
 */
 
-/* ==========================================================
-   MINIMAL PAPER THEME - FULL FEATURE EDITION
-   Flexoki Palette + Border Component Logic
-   ========================================================== */
 
-/* --- 1. LIGHT MODE COLOR PALETTE --- */
+/* ==========================================================
+   1. LIGHT MODE COLOR PALETTE
+   ========================================================== */
 .theme-light {
   --color-red-rgb: 175, 48, 41;
   --color-orange-rgb: 188, 82, 21;
@@ -420,15 +560,18 @@ settings:
   --background-modifier-border-hover: var(--color-base-40);
   --background-modifier-border-focus: var(--color-base-50);
 
+  --background-card: var(--color-base-30);
+
   --radius-s: 6px;
   --divider-color: transparent;
 
   --input-shadow: var(--input-shadow-light);
   --input-shadow-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.4), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
-
 }
 
-/* --- 2. DARK MODE COLOR PALETTE --- */
+/* ==========================================================
+   2. DARK MODE COLOR PALETTE
+   ========================================================== */
 .theme-dark {
   --color-red-rgb: 209, 77, 65;
   --color-orange-rgb: 218, 112, 44;
@@ -476,6 +619,8 @@ settings:
   --background-secondary-alt: var(--color-base-00);
   --background-tertiary: var(--color-base-40);
 
+  --background-card: var(--color-base-30);
+
   --background-modifier-hover: rgba(206, 205, 195, 0.08);
   --background-modifier-border: var(--color-base-35);
   --background-modifier-border-hover: var(--color-base-40);
@@ -486,31 +631,120 @@ settings:
 
   --input-shadow: var(--input-shadow-dark);
   --input-shadow-dark: 0px 4px 8px -4px rgba(0, 0, 0, 0.32), 0px 1px 2px rgba(0, 0, 0, 0.32), 0px 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px 1px rgba(0, 0, 0, 0.12), inset 0px 1px 0.75px rgba(255, 255, 255, 0.24), inset 0px -2px 0.75px rgba(0, 0, 0, 0.16);
-
-
 }
 
-/* --- Some Global Color --- */
+/* ==========================================================
+   03. SHARED GLOBAL VARIABLES & UI ANCHORS
+   ========================================================== */
 body {
   --card-border-color: hsla(var(--interactive-accent-hsl), 0.55);
 }
 
+/* ZERO SPECIFICITY FALLBACKS
+   These provide defaults for the UI, but wrapping them in :where() means
+   they have 0,0,0 specificity. This guarantees that when Style Settings
+   adds custom colors to the <body> tag, it successfully overrides them! */
 
+:where(body.theme-light) {
+  /* UI Layout Color Anchors */
+  --color-left-panel: #ffffff;
+  --color-middle-panel: #ffffff;
+  --color-right-panel: #ffffff;
+  --color-active-tab: #ffffff;
+  --color-vault-profile: #e3e3e3;
+  --card-bg-color: #ffffff;
 
-/* --- 3. GLOBAL BACKGROUND TEXTURES & COLORS --- */
-body {
+  /* Paper Engine Color Anchors */
   --paper-bg-image-light: url("https://www.transparenttextures.com/patterns/cream-paper.png");
   --paper-bg-image-opacity-light: 1;
   --paper-bg-blend-light: normal;
+  --paper-tint-color-light: #FFFCF0;
   --paper-tint-opacity-light: 0;
   --paper-tint-blend-light: normal;
+}
 
+:where(body.theme-dark) {
+  /* UI Layout Color Anchors */
+  --color-left-panel: #2c2c2c;
+  --color-middle-panel: #2c2c2c;
+  --color-right-panel: #2c2c2c;
+  --color-active-tab: #262626;
+  --color-vault-profile: #363636;
+  --card-bg-color: #2c2c2c;
+
+  /* Paper Engine Color Anchors */
   --paper-bg-image-dark: url("https://www.transparenttextures.com/patterns/black-paper.png");
   --paper-bg-image-opacity-dark: 1;
   --paper-bg-blend-dark: normal;
+  --paper-tint-color-dark: #100F0F;
   --paper-tint-opacity-dark: 0;
   --paper-tint-blend-dark: normal;
 }
+
+/* ==========================================================
+   04. STYLE SETTINGS — CONDITIONAL HIDING
+   ========================================================== */
+
+/* Panel-specific controls */
+body:not(.toggle-left-panel) .setting-item:is(
+    [data-id$="color-left-panel"],
+    [data-id$="left-panel-radius-top-left"],
+    [data-id$="left-panel-radius-top-right"],
+    [data-id$="left-panel-radius-bottom-left"],
+    [data-id$="left-panel-radius-bottom-right"]
+),
+body:not(.toggle-middle-panel) .setting-item:is(
+    [data-id$="color-middle-panel"],
+    [data-id$="middle-panel-radius-top-left"],
+    [data-id$="middle-panel-radius-top-right"],
+    [data-id$="middle-panel-radius-bottom-left"],
+    [data-id$="middle-panel-radius-bottom-right"]
+),
+body:not(.toggle-right-panel) .setting-item:is(
+    [data-id$="color-right-panel"],
+    [data-id$="right-panel-radius-top-left"],
+    [data-id$="right-panel-radius-top-right"],
+    [data-id$="right-panel-radius-bottom-left"],
+    [data-id$="right-panel-radius-bottom-right"]
+),
+body:not(.toggle-active-tab) .setting-item[data-id$="color-active-tab"],
+body:not(.toggle-vault-profile) .setting-item:is(
+    [data-id$="color-vault-profile"],
+    [data-id$="vault-profile-radius-top-left"],
+    [data-id$="vault-profile-radius-top-right"],
+    [data-id$="vault-profile-radius-bottom-left"],
+    [data-id$="vault-profile-radius-bottom-right"]
+),
+body:not(.toggle-panel-borders) .setting-item:is(
+    [data-id$="panel-border-width"],
+    [data-id$="panel-border-color"],
+    [data-id$="panel-border-style"],
+    [data-id$="panel-border-radius"]
+) {
+    display: none !important;
+}
+
+/* Card background toggle exists only in Card Layout */
+body:not(.layout-card) .setting-item:is(
+    [data-id$="toggle-card-bg"],
+    [data-id$="card-bg-color"]
+),
+body.layout-card:not(.toggle-card-bg) .setting-item[data-id$="card-bg-color"] {
+    display: none !important;
+}
+
+/* Gap controls are useful whenever Card Layout OR Panel Borders is active. */
+body:not(.layout-card):not(.toggle-panel-borders) .setting-item:is(
+    [data-id$="layout-gap-middle"],
+    [data-id$="layout-gap-right"],
+    [data-id$="layout-gap-bottom"]
+) {
+    display: none !important;
+}
+
+/* ==========================================================
+   05. THE PAPER ENGINE (BACKGROUND COMPOSITING)
+   ========================================================== */
 
 /* Base Background Logic using color-mix */
 body.theme-light {
@@ -557,9 +791,22 @@ body.theme-dark::after {
   mix-blend-mode: var(--paper-tint-blend-dark);
 }
 
-/* --- 4. TRANSPARENT WORKSPACE PANES & APP AREAS --- */
-/* Strips default opaque backgrounds from the entire app layout so the texture shows through */
+/* Swatch Shield (Prevents the ::after tint layer from bleeding through the color picker UI) */
+.setting-item-control .color-picker-swatch,
+.setting-item-control input[type="color"],
+.style-settings-container .setting-item-control div[style*="background-color"] {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  background-blend-mode: normal !important;
+  filter: none !important;
+  isolation: isolate !important;
+}
 
+/* ==========================================================
+   06. WORKSPACE TRANSPARENCY & DEFAULT APP CHROME
+   ========================================================== */
+
+/* Strips default opaque backgrounds from the entire app layout so the texture shows through */
 body .app-container,
 body .workspace,
 body .workspace-split,
@@ -614,7 +861,6 @@ body .workspace-leaf-resize-handle {
   border-width: 1px !important;
 }
 
-
 body .workspace-tab-header::before,
 body .workspace-tab-header::after,
 body .workspace-tab-header.is-active::before,
@@ -631,16 +877,7 @@ body .workspace-ribbon.mod-left::after {
     display: none !important;
 }
 
-/* Vault profile & Settings lines */
-body .workspace-sidedock-vault-profile,
-body .workspace-drawer-vault-profile,
-body .side-dock-settings {
-  border-top: none !important;
-  box-shadow: none !important;
-}
-
-/*view-header*/
-
+/* View Header Layout */
 body:not(.is-mobile) .view-header {
     padding: 0 6px;
     border: 0;
@@ -653,10 +890,167 @@ body:not(.is-mobile) .view-header>* {
     --icon-stroke: var(--icon-m-stroke-width);
 }
 
+/* ==========================================================
+   07. WORKSPACE LAYOUT & PANEL STYLE SETTINGS
+   ========================================================== */
+
+/* --- Panel Toggles & Custom Colors --- */
+body.toggle-left-panel .workspace-split.mod-left-split .workspace-tab-container {
+    background-color: var(--color-left-panel) !important;
+    border-radius:
+        var(--left-panel-radius-top-left, 8px)
+        var(--left-panel-radius-top-right, 8px)
+        var(--left-panel-radius-bottom-right, 8px)
+        var(--left-panel-radius-bottom-left, 8px);
+}
+
+body.toggle-middle-panel .workspace-split.mod-root .workspace-tab-container {
+    background-color: var(--color-middle-panel) !important;
+    border-radius:
+        var(--middle-panel-radius-top-left, 8px)
+        var(--middle-panel-radius-top-right, 8px)
+        var(--middle-panel-radius-bottom-right, 8px)
+        var(--middle-panel-radius-bottom-left, 8px);
+}
+
+body.toggle-right-panel .workspace-split.mod-right-split .workspace-tab-container {
+    background-color: var(--color-right-panel) !important;
+    border-radius:
+        var(--right-panel-radius-top-left, 8px)
+        var(--right-panel-radius-top-right, 8px)
+        var(--right-panel-radius-bottom-right, 8px)
+        var(--right-panel-radius-bottom-left, 8px);
+}
+
+body.toggle-active-tab .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background-color: var(--color-active-tab) !important;
+}
+
+/* --- Border System --- */
+body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-left-split .workspace-tab-container,
+body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-root .workspace-tab-container,
+body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-right-split .workspace-tab-container {
+    border: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--card-border-color, var(--color-accent)) !important;
+    border-radius: var(--panel-border-radius, 8px) !important;
+    overflow: hidden !important;
+}
+
+/* --- Panel Gaps --- */
+body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+    margin-right: var(--layout-gap-middle, 5px) !important;
+}
+body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+    margin-left: var(--layout-gap-middle, 5px) !important;
+}
+body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace-split.mod-vertical {
+    gap: var(--layout-gap-middle, 5px) !important;
+}
+
+/* Outer Gaps */
+body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace {
+    padding-right: var(--layout-gap-right, 5px) !important;
+    padding-bottom: var(--layout-gap-bottom, 5px) !important;
+}
+
+/* Native Box Shadow Cleanup */
+body.toggle-panel-borders:not(.is-mobile) .workspace-tabs:not(.mod-top) .workspace-tab-container > .workspace-leaf {
+    box-shadow: none !important;
+}
+
+/* Global Resize Handle Hide (Borders/Cards) */
+body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle,
+body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle {
+    opacity: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::before,
+body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::after,
+body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::before,
+body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::after {
+    display: none !important;
+}
+
+/* Vertical Dividers (Default Layout, Borders OFF) */
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    height: 75% !important;
+    width: 2px !important;
+    top: calc((100% - 75%) / 2) !important;
+    background-color: var(--background-modifier-border) !important;
+    border: none !important;
+    transition: background-color 0.2s ease;
+    opacity: 1 !important;
+}
+
+/* Hover Accent for Default Layout */
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:hover,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:active,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle.is-grabbing,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle.is-grabbing,
+body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle.is-grabbing {
+    background-color: var(--color-accent) !important;
+    opacity: 1 !important;
+    transition: background-color 0.15s ease-in-out !important;
+}
+
+/* --- Card Layout --- */
+body.layout-card:not(.is-mobile) .workspace::before {
+    display: none !important;
+}
+
+body.layout-card:not(.is-mobile) .workspace-split.mod-vertical {
+    gap: var(--layout-gap-middle, 8px) !important;
+}
+body.layout-card:not(.is-mobile) .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+    margin-right: var(--layout-gap-middle, 8px) !important;
+}
+body.layout-card:not(.is-mobile) .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+    margin-left: var(--layout-gap-middle, 8px) !important;
+}
+
+body.layout-card:not(.is-mobile) .workspace {
+    padding-right: var(--layout-gap-right, 8px) !important;
+    padding-bottom: var(--layout-gap-bottom, 8px) !important;
+    margin-right: 0px !important;
+}
+
+body.layout-card:not(.is-mobile) .workspace-tab-container {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.layout-card:not(.toggle-left-panel) .workspace-split.mod-left-split .workspace-tab-container,
+body.layout-card:not(.toggle-middle-panel) .workspace-split.mod-root .workspace-tab-container,
+body.layout-card:not(.toggle-right-panel) .workspace-split.mod-right-split .workspace-tab-container {
+    background-color: var(--background-card) !important;
+}
+
+body.layout-card:not(.is-mobile) .workspace-tabs,
+body.layout-card:not(.is-mobile) .workspace-split {
+    overflow: visible !important;
+    background-color: transparent !important;
+}
+
+body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-left-split .workspace-tab-container,
+body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-root .workspace-tab-container,
+body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-right-split .workspace-tab-container {
+    background-color: var(--card-bg-color) !important;
+}
 
 
-/* vault profile */
+/* ==========================================================
+   08. VAULT PROFILE STATE MACHINE & POSITIONING
+   ========================================================== */
 
+/* Positioning */
 body:not(.is-mobile) .workspace-split.mod-left-split {
     position: relative;
 }
@@ -674,6 +1068,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     height: 44px;
 }
 
+/* Hide vault profile border/shadow defaults */
+body .workspace-sidedock-vault-profile,
+body .workspace-drawer-vault-profile,
+body .side-dock-settings {
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
     height: 32px;
     cursor: pointer;
@@ -683,7 +1085,116 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     gap: var(--size-2-1);
 }
 
-/* file active states */
+/* --- Border State Machine --- */
+/* BASE */
+body:not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* CARD LAYOUT + VAULT PROFILE OFF */
+body.layout-card:not(.toggle-vault-profile):not(.toggle-panel-borders):not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: none !important;
+    border-top: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--panel-border-color, var(--card-border-color, var(--color-accent))) !important;
+    border-radius: 0 !important;
+}
+
+/* CARD LAYOUT + VAULT PROFILE ON */
+body.layout-card.toggle-vault-profile:not(.toggle-panel-borders):not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: none !important;
+    border-top: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--panel-border-color, var(--card-border-color, var(--color-accent))) !important;
+    border-radius:
+        var(--vault-profile-radius-top-left, 8px)
+        var(--vault-profile-radius-top-right, 8px)
+        var(--vault-profile-radius-bottom-right, 8px)
+        var(--vault-profile-radius-bottom-left, 8px) !important;
+    overflow: hidden !important;
+}
+
+body:not(.layout-card).toggle-left-panel:not(.toggle-vault-profile):not(.toggle-panel-borders):not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: none !important;
+
+    border-top:
+        var(--panel-border-width, 1px)
+        var(--panel-border-style, solid)
+        var(--panel-border-color,
+            var(--card-border-color, var(--color-accent)))
+        !important;
+
+    border-radius:
+        0
+        0
+        var(--left-panel-radius-bottom-right, 8px)
+        var(--left-panel-radius-bottom-left, 8px)
+        !important;
+
+    overflow: hidden !important;
+}
+
+
+/* DEFAULT LAYOUT + CUSTOM LEFT PANEL + VAULT PROFILE ON
+   Vault Profile becomes independently customizable.
+   All four Vault Profile corner sliders work. */
+body:not(.layout-card).toggle-left-panel.toggle-vault-profile:not(.toggle-panel-borders):not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: none !important;
+
+    border-top:
+        var(--panel-border-width, 1px)
+        var(--panel-border-style, solid)
+        var(--panel-border-color,
+            var(--card-border-color, var(--color-accent)))
+        !important;
+
+    border-radius:
+        var(--vault-profile-radius-top-left, 8px)
+        var(--vault-profile-radius-top-right, 8px)
+        var(--vault-profile-radius-bottom-right, 8px)
+        var(--vault-profile-radius-bottom-left, 8px)
+        !important;
+
+    overflow: hidden !important;
+}
+
+/* PANEL BORDERS — FINAL OVERRIDE */
+body.toggle-panel-borders:not(.is-mobile)
+.workspace-split.mod-left-split
+.workspace-sidedock-vault-profile {
+    border: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--panel-border-color, var(--card-border-color, var(--color-accent))) !important;
+    border-radius: var(--panel-border-radius, 8px) !important;
+    overflow: hidden !important;
+}
+
+/* --- Color Toggle Override --- */
+body.toggle-vault-profile .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body.toggle-vault-profile .workspace-split.mod-left-split .workspace-drawer-vault-profile {
+    background-color: var(--color-vault-profile) !important;
+    border-radius:
+        var(--vault-profile-radius-top-left, 8px)
+        var(--vault-profile-radius-top-right, 8px)
+        var(--vault-profile-radius-bottom-right, 8px)
+        var(--vault-profile-radius-bottom-left, 8px) !important;
+    overflow: hidden;
+}
+
+body.toggle-vault-profile .workspace-sidedock-vault-profile *,
+body.toggle-vault-profile .workspace-drawer-vault-profile * {
+    background-color: transparent !important;
+}
+
+/* ==========================================================
+   09. FILE EXPLORER & NAVIGATION
+   ========================================================== */
+
 .theme-light {
     --border-radius-activated-file-light: var(--radius-s);
     --color-activated-file-light: var(--nav-item-color-active);
@@ -811,12 +1322,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     box-shadow: var(--shadow-activated-file-dark);
 }
 
-
-box-shadow: var(--shadow-activated-file-dark);
-}
-
-
-/* file layout & style */
+/* File Layout & Styling */
 .workspace-leaf-content .tree-item-self {
     margin-bottom: var(--size-2-2);
     position: relative;
@@ -832,19 +1338,19 @@ box-shadow: var(--shadow-activated-file-dark);
     line-height: 20px;
 }
 
-/*file tag*/
+/* File Tags */
 .nav-file-tag {
     background-color: transparent;
     color: var(--text-faint);
     margin-left: 4px;
 }
 
-/*other pane*/
+/* Padding Fix */
 .workspace-leaf-content .nav-header~.node-insert-event {
     padding-top: var(--size-4-1);
 }
 
-/*icons in pane*/
+/* Folder & File Icons */
 .tree-item-self .tree-item-icon {
     height: var(--size-4-4);
     --icon-color: currentColor;
@@ -881,71 +1387,60 @@ box-shadow: var(--shadow-activated-file-dark);
     flex: 0 0 auto;
 }
 
+/* Custom Icon Masking */
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M14 12.8V3.2c0-.884-.264-1.2-1-1.2H3c-.736 0-1 .316-1 1.2v9.6c0 .884.264 1.2 1 1.2h10c.736 0 1-.316 1-1.2Z'/%3e%3cpath d='M9.978 7.04a2 2 0 1 1-3.956.587 2 2 0 0 1 3.956-.587ZM8 9.333v2m6-6.666h1m-1 6h1'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .tree-item-icon.collapse-icon,
 .workspace-leaf-content[data-type="bookmarks"] .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M4 9.333 4.967 7.4a1.333 1.333 0 0 1 1.193-.733h7.173m0 0a1.333 1.333 0 0 1 1.294 1.666l-1.034 4a1.333 1.333 0 0 1-1.293 1H2.667A1.333 1.333 0 0 1 1.333 12V3.333C1.333 2.6 1.933 2 2.667 2h2.62a1.333 1.333 0 0 1 1.106.6l.547.8a1.333 1.333 0 0 0 1.107.6H12a1.333 1.333 0 0 1 1.333 1.333v1.334Z'/%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .is-collapsed .tree-item-icon.collapse-icon,
 .workspace-leaf-content[data-type="bookmarks"] .is-collapsed .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M2.667 13.333h10.666A1.333 1.333 0 0 0 14.667 12V5.333A1.333 1.333 0 0 0 13.333 4H8.047a1.333 1.333 0 0 1-1.107-.6l-.547-.8A1.333 1.333 0 0 0 5.287 2h-2.62a1.333 1.333 0 0 0-1.334 1.333V12c0 .733.6 1.333 1.334 1.333Z'/%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M9.333 1.333v4h4'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667v4.666c0 .369.298.667.667.667H6a.667.667 0 0 0 .667-.667V2.667A.667.667 0 0 0 6 2Zm7.333 0H10a.667.667 0 0 0-.667.667v2c0 .368.299.667.667.667h3.333A.667.667 0 0 0 14 4.667v-2A.667.667 0 0 0 13.333 2Zm0 6H10a.667.667 0 0 0-.667.667v4.666c0 .368.299.667.667.667h3.333a.667.667 0 0 0 .667-.667V8.667A.667.667 0 0 0 13.333 8ZM6 10.667H2.667a.667.667 0 0 0-.667.666v2c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667v-2A.667.667 0 0 0 6 10.667Z'/%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".base"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667V6c0 .368.298.667.667.667H6A.667.667 0 0 0 6.667 6V2.667A.667.667 0 0 0 6 2Zm0 7.333H2.667A.667.667 0 0 0 2 10v3.333c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667V10A.667.667 0 0 0 6 9.333Zm3.333-6.666H14M9.333 6H14m-4.667 4H14m-4.667 3.333H14'/%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M6.667 6.867c.133-.267.333-.534.6-.667A1.4 1.4 0 0 1 9 6.467c.2.266.333.533.333.866C9.333 8.2 8 8.667 8 8.667m0 2.666h.007'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title:is([data-path$=".zip"], [data-path$=".7z"])::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M2.667 14.667v-12c0-.334.133-.667.4-.934.266-.266.6-.4.933-.4h5.667L13.333 5v8.333c0 .334-.133.667-.4.934-.266.266-.6.4-.933.4h-1.333'/%3e%3cpath d='M9.333 1.333v4h4m-6.666 9.334a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667Zm0-10V4m0 4v-.667m0 4.667v-1.333'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".webm"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M2.667 14.667H12a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v2'/%3e%3cpath d='M9.333 1.333v4h4M4.667 6.667 2.667 8H1.333v2.667h1.334l2 1.333V6.667Zm2.666.666c.427.534.667 1.247.667 2 0 .754-.24 1.467-.667 2'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M12.667 2H3.333C2.597 2 2 2.597 2 3.333v9.334C2 13.403 2.597 14 3.333 14h9.334c.736 0 1.333-.597 1.333-1.333V3.333C14 2.597 13.403 2 12.667 2Z'/%3e%3cpath d='M6 7.333a1.333 1.333 0 1 0 0-2.666 1.333 1.333 0 0 0 0 2.666ZM14 10l-2.057-2.057a1.333 1.333 0 0 0-1.886 0L4 14'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".pdf"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M9.333 1.333v4h4m-2.666 3.334H5.333m5.334 2.666H5.333M6.667 6H5.333'/%3e%3c/g%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".excalidraw.md"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' clip-path='url(%23a)'%3e%3cpath d='M8 12.667 12.667 8l2 2L10 14.667l-2-2Z'/%3e%3cpath d='m12 8.667-1-5-9.667-2.334L3.667 11l5 1L12 8.667ZM1.333 1.333l5.058 5.058'/%3e%3cpath d='M7.333 8.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' clip-path='url(%23a)'%3e%3cpath d='M8.781 1.333c.354 0 .693.14.943.391l4.473 4.473a1.6 1.6 0 0 1 0 2.272l-3.061 3.062a1.6 1.6 0 0 1-2.272 0L4.391 7.057A1.329 1.329 0 0 1 4 6.115V2a.667.667 0 0 1 .667-.667H8.78ZM1.333 4.667V8.78c0 .354.14.693.391.943l4.473 4.473a1.6 1.6 0 0 0 2.128.129'/%3e%3cpath d='M7 4.667A.333.333 0 1 0 7 4a.333.333 0 0 0 0 .667Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon))::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M8 1.333H1.333V8l6.194 6.193a1.617 1.617 0 0 0 2.28 0l4.386-4.386a1.617 1.617 0 0 0 0-2.28L8 1.333ZM4.667 4.667h.006'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
-
 .workspace-leaf-content[data-type="bookmarks"] svg.lucide-folder {
     background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M1.333 6V3.333C1.333 2.6 1.933 2 2.667 2h2.62a1.333 1.333 0 0 1 1.106.6l.547.8a1.333 1.333 0 0 0 1.107.6h5.286a1.333 1.333 0 0 1 1.334 1.333V12a1.333 1.333 0 0 1-1.334 1.333h-12'/%3e%3cpath d='m5.333 10.667 2-2-2-2'/%3e%3cpath d='M1.333 10.667V10a1.333 1.333 0 0 1 1.334-1.333h4'/%3e%3c/g%3e%3c/svg%3e");
 }
 
 
-/*====== setting modal ======*/
+/* ==========================================================
+   10. SETTINGS MODAL
+   ========================================================== */
 
 body {
     --modal-border-color: var(--background-modifier-border);
@@ -1002,7 +1497,9 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
     box-shadow: inset 0 1px 0 0 var(--background-modifier-border-focus);
 }
 
-/* scrollbar */
+/* ==========================================================
+   11. SCROLLBARS
+   ========================================================== */
 body {
     /* Scrollbars */
     --scrollbar-bg: rgba(var(--mono-rgb-100), 0);
@@ -1052,7 +1549,9 @@ body {
 }
 
 
-/* ====== TABLE ====== */
+/* ==========================================================
+   12. EDITOR COMPONENTS — TABLES
+   ========================================================== */
 
 body {
     --table-header-background-light: var(--background-alt-light);
@@ -1090,7 +1589,7 @@ body {
     & tr:last-child td:last-child { border-bottom-right-radius: var(--table-radius); }
 }
 
-/* ====== tag ====== */
+/* --- Editor Components: Tags --- */
 body {
     /* Tags */
     --tag-size: var(--font-smaller);
@@ -1121,7 +1620,7 @@ body {
     }
 }
 
-/* ====== highlight ====== */
+/* --- Editor Components: Highlights --- */
 /* Reading view */
 .markdown-rendered mark {
     border-radius: 4px;
@@ -1135,7 +1634,7 @@ body {
 }
 
 
-/* ====== link ====== */
+/* --- Editor Components: Links --- */
 body {
     /* Links */
     --link-external-color: var(--color-blue);
@@ -1156,10 +1655,8 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 }
 
 
-/* ====== hover indicator ====== */
-
+/* --- Editor Components: Hover Indicators --- */
 /*general*/
-
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div::after {
     content: "";
     position: absolute;
@@ -1182,7 +1679,6 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 }
 
 /* num */
-
 .line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:after,
 .line-hover-indicator.focus-indicator-codeblock-line-number .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
     background: unset !important;
@@ -1263,7 +1759,6 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 }
 
 /* active line */
-
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active::after {
     content: "";
     position: absolute;
@@ -1288,13 +1783,12 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 }
 
 /* Cursor */
-
 body {
     --cursor: pointer;
     --cursor-link: pointer;
 }
 
-/* ====== Callout ====== */
+/* --- Editor Components: Callouts --- */
 body {
     /* Callouts */
     --callout-border-width: 0px;
@@ -1411,8 +1905,7 @@ body:is(.theme-light, .theme-dark) .callout:is([data-callout-metadata*="style-3"
     border-radius: var(--callout-content-radius);
 }
 
-
-/* ====== Blockquotes ====== */
+/* --- Editor Components: Blockquotes --- */
 body {
     --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -1509,7 +2002,7 @@ body {
     border-end-end-radius: var(--radius-s);
 }
 
-/*kbd*/
+/* --- Editor Components: Code & KBD --- */
 kbd {
     background-color: var(--background-modifier-hover);
     color: var(--text-muted);
@@ -1552,8 +2045,8 @@ body {
     --code-size: var(--font-smaller);
     --code-background-light: var(--background-alt-light);
     --code-background-dark: var(--background-alt-dark);
-    --code-border-light: 1px solid var(--background-modifier-border);
-    --code-border-dark: 1px solid var(--background-modifier-border);
+    --code-border-light: 1px dashed var(--background-modifier-border);
+    --code-border-dark: 1px dashed var(--background-modifier-border);
     --code-normal: var(--text-muted);
     --code-comment: var(--text-faint);
     --code-function: var(--color-yellow);
@@ -1610,16 +2103,7 @@ body {
     color: var(--code-normal);
 }
 
-.markdown-source-view.mod-cm6 .code-block-flair {
-    transform: translateY(-5px);
-    padding: 1px 5px;
-    height: auto;
-    min-height: 0;
-    line-height: 1.2;
-    border-radius: 4px;
-}
-
-/* ===== embeds ====== */
+/* --- Editor Components: Embeds --- */
 body {
     /* Embeds */
     --embed-border-radius: 0px;
@@ -1637,115 +2121,8 @@ body {
     border-radius: var(--embed-border-radius);
 }
 
-/* ===== image ====== */
 
-/*  image center align */
-.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:not([class]),
-.img-center-align .markdown-preview-view img:not([class]),
-.img-center-align .markdown-source-view img:not([class]) {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize, .image-ready-click-view),
-.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize, .image-ready-click-view),
-.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize, .image-ready-click-view) {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-/*  image hover effect */
-
-.theme-dark.img-darken .markdown-preview-view img,
-.theme-dark.img-darken .markdown-source-view img {
-    opacity: 0.75;
-    transition: opacity var(--anim-duration-fast) linear;
-}
-
-.theme-dark.img-darken .markdown-preview-view img:hover,
-.theme-dark.img-darken .markdown-source-view img:hover {
-    opacity: 1;
-    transition: opacity var(--anim-duration-fast) linear;
-}
-
-/* ====== icon ====== */
-body {
-    --clickable-icon-radius: 6px;
-}
-
-.workspace-tab-header-inner-icon {
-    align-items: center;
-    justify-content: center;
-}
-
-.workspace-tab-header-tab-list,
-.workspace-tab-header-new-tab {
-    padding-top: 6px;
-}
-
-.clickable-icon.document-search-button,
-.clickable-icon.document-search-close-button,
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon,
-.mod-left-split .workspace-tab-header .workspace-tab-header-inner,
-.mod-right-split .workspace-tab-header .workspace-tab-header-inner,
-.clickable-icon.nav-action-button,
-.clickable-icon.side-dock-ribbon-action,
-.sidebar-toggle-button .clickable-icon,
-.workspace-tab-header-new-tab .clickable-icon,
-.workspace-tab-header-tab-list .clickable-icon,
-body:not(.is-mobile) .view-header .clickable-icon:not([aria-label="Accept changes"], [aria-label="Cancel apply"]) {
-    padding: 7px;
-    height: 32px;
-    width: 32px;
-}
-
-.workspace-leaf.has-pane-relief-label .view-header .view-header-nav-buttons .clickable-icon {
-    width: unset;
-}
-
-.mod-left-split .workspace-tab-header .workspace-tab-header-inner,
-.mod-right-split .workspace-tab-header .workspace-tab-header-inner {
-    /*pin icon*/
-    width: fit-content;
-    gap: var(--size-2-2);
-}
-
-.is-mobile .clickable-icon.nav-action-button,
-.is-mobile .clickable-icon.side-dock-ribbon-action,
-.is-mobile .sidebar-toggle-button .clickable-icon,
-.is-mobile .view-header .clickable-icon {
-    padding: var(--size-2-2);
-}
-
-.titlebar .workspace-tab-header-tab-list,
-.titlebar .workspace-tab-header-new-tab,
-.mod-root .workspace-tab-header-tab-list,
-.mod-root .workspace-tab-header-new-tab {
-    display: unset;
-}
-
-.side-dock-settings,
-.side-dock-actions {
-    gap: var(--size-2-2);
-}
-
-.workspace-tab-header-status-icon,
-.mod-root .workspace-tab-header-status-icon,
-.mod-root .workspace-tab-header-inner-icon {
-    --icon-size: var(--icon-s);
-}
-
-
-/* ====== icon replace ====== */
-svg {
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-}
-
-/* ====== checkboxes ====== */
+/* --- Editor Components: Checkboxes --- */
 body {
     /* Checkboxes */
     --checkbox-radius: 6px;
@@ -1780,9 +2157,7 @@ input[type=checkbox]:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M15.53 2.41a1.5 1.5 0 0 1 .06 2.12l-8.5 9a1.501 1.501 0 0 1-2.15.03l-4.5-4.5a1.5 1.5 0 0 1 2.12-2.12l3.41 3.408 7.44-7.878a1.5 1.5 0 0 1 2.12-.06Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-
 /* Alternate Checkboxes */
-
 input[data-task="<"]:checked,
 li[data-task="<"]>input:checked,
 li[data-task="<"]>p>input:checked,
@@ -1939,318 +2314,36 @@ body:not(.disable-alternative-checkboxes):not(.tasks) li[data-task="-"].task-lis
     text-decoration: line-through solid var(--text-faint) 1px
 }
 
-
-input[data-task="b"]:checked,
-li[data-task="b"]>input:checked,
-li[data-task="b"]>p>input:checked {
-    --checkbox-color-hover: var(--color-blue);
-    color: var(--color-blue);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M4.25,.5c-.6,0-1.17,.24-1.59,.66-.42,.42-.66,.99-.66,1.59V14.1c0,.2,.05,.39,.15,.56,.1,.17,.24,.31,.41,.41,.17,.1,.36,.15,.56,.15,.2,0,.39-.05,.56-.15l3.94-2.25c.11-.06,.24-.1,.37-.1s.26,.03,.37,.1l3.95,2.25c.17,.1,.36,.15,.56,.15,.2,0,.39-.05,.56-.15,.17-.1,.31-.24,.41-.41s.15-.36,.15-.56V2.75c0-.6-.24-1.17-.66-1.59-.42-.42-.99-.66-1.59-.66H4.25Z"/></svg>');
-}
-
-input[data-task="n"]:checked,
-li[data-task="n"]>input:checked,
-li[data-task="n"]>p>input:checked {
-    --checkbox-color-hover: var(--color-cyan);
-    color: var(--color-cyan);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,14.75c-.41,0-.77-.15-1.06-.44-.29-.29-.44-.65-.44-1.06V2.75c0-.41,.15-.77,.44-1.06,.29-.29,.65-.44,1.06-.44H13.25c.41,0,.77,.15,1.06,.44,.29,.29,.44,.65,.44,1.06v7.5l-4.5,4.5H2.75Zm4.5-5.25c.21,0,.39-.07,.53-.22,.14-.14,.22-.32,.22-.53s-.07-.39-.22-.53c-.14-.14-.32-.22-.53-.22h-2.25c-.21,0-.39,.07-.53,.22-.14,.14-.22,.32-.22,.53s.07,.39,.22,.53c.14,.14,.32,.22,.53,.22h2.25Zm3.75-3c.21,0,.39-.07,.53-.22,.14-.14,.22-.32,.22-.53s-.07-.39-.22-.53c-.14-.14-.32-.22-.53-.22H5c-.21,0-.39,.07-.53,.22-.14,.14-.22,.32-.22,.53s.07,.39,.22,.53,.32,.22,.53,.22h6Zm-1.5,6.75l3.75-3.75h-3c-.21,0-.39,.07-.53,.22s-.22,.32-.22,.53v3Z"/></svg>');
-}
-
-input[data-task="p"]:checked,
-li[data-task="p"]>input:checked,
-li[data-task="p"]>p>input:checked {
-    --checkbox-color-hover: var(--color-green);
-    color: var(--color-green);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><path class="cls-1" d="M0,16H16V0H0V16Z"/><g><path d="M3.33,15h-.72c-.33,0-.66-.13-.9-.35-.25-.23-.4-.54-.43-.87L.73,7.11c-.02-.18,0-.37,.07-.54,.06-.18,.16-.34,.28-.47,.13-.14,.28-.25,.45-.32,.17-.07,.35-.11,.54-.11h1.27c.36,0,.69,.14,.94,.39,.25,.25,.39,.59,.39,.94v6.67c0,.35-.14,.7-.39,.94-.25,.25-.59,.39-.94,.39Z"/><path d="M15.4,7.69l-1.79,6.34c-.08,.28-.25,.53-.48,.7-.23,.17-.52,.27-.81,.27H6.67c-.36,0-.69-.14-.94-.39-.25-.25-.39-.59-.39-.94V7.13c0-.53,.32-1.02,.81-1.25,.79-.37,1.38-.82,1.62-1.22,.36-.6,.53-1.78,.57-2.65,0-.06,0-.12,.01-.18,.06-.41,.34-.72,.73-.8,.07-.01,.14-.02,.21-.02,.8,0,1.73,.83,2.12,1.48,.29,.48,.41,1.09,.36,1.84-.03,.55-.18,1.05-.33,1.55l-.04,.12h2.72c.21,0,.41-.05,.6,.14,.18,.09,.34,.23,.47,.39,.12,.17,.21,.35,.24,.55,.04,.2,.03,.41-.03,.61ZM9,1.94h0Z"/></g></svg>');
-}
-
-input[data-task="c"]:checked,
-li[data-task="c"]>input:checked,
-li[data-task="c"]>p>input:checked {
-    --checkbox-color-hover: var(--color-red);
-    color: var(--color-red);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><path class="cls-1" d="M0,0H16V16H0V0Z"/><g><path d="M3.33,1h-.72c-.33,0-.66,.13-.9,.35-.25,.23-.4,.54-.43,.87l-.56,6.67c-.02,.18,0,.37,.07,.54,.06,.18,.16,.34,.28,.47,.13,.14,.28,.25,.45,.32,.17,.07,.35,.11,.54,.11h1.27c.36,0,.69-.14,.94-.39,.25-.25,.39-.59,.39-.94V2.33c0-.35-.14-.7-.39-.94-.25-.25-.59-.39-.94-.39Z"/><path d="M15.4,8.31l-1.79-6.34c-.08-.28-.25-.53-.48-.7-.23-.17-.52-.27-.81-.27H6.67c-.36,0-.69,.14-.94,.39-.25,.25-.39,.59-.39,.94v6.54c0,.53,.32,1.02,.81,1.25,.79,.37,1.38,.82,1.62,1.22,.36,.6,.53,1.78,.57,2.65,0,.06,0,.12,.01,.18,.06,.41,.34,.72,.73,.8,.07,.01,.14,.02,.21,.02,.8,0,1.73-.83,2.12-1.48,.29-.48,.41-1.09,.36-1.84-.03-.55-.18-1.05-.33-1.55l-.04-.12h2.72c.21,0,.41-.05,.6,.14,.18-.09,.34-.23,.47-.39,.12,.17,.21-.35,.24-.55,.04-.2,.03-.41-.03-.61Zm-6.4,5.75h0Z"/></g></svg>');
-}
-
-input[data-task="“"]:checked,
-li[data-task="“"]>input:checked,
-li[data-task="“"]>p>input:checked,
-input[data-task="\""]:checked,
-li[data-task="\""]>input:checked,
-li[data-task="\""]>p>input:checked {
-    --checkbox-color-hover: var(--color-purple);
-    color: var(--color-purple);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.46,4.19c.94-1.01,2.35-1.53,4.21-1.53h.67v1.88l-.54,.11c-.91,.18-1.55,.54-1.89,1.07-.18,.28-.28,.61-.29,.94h2.05c.18,0,.35,.07,.47,.2,.13,.13,.2,.29,.2,.47v4.67c0,.74-.6,1.33-1.33,1.33H2c-.18,0-.35-.07-.47-.2-.13-.12-.2-.29-.2-.47V7.39c0-.07-.13-1.83,1.13-3.19ZM13.33,13.33h-4c-.18,0-.35-.07-.47-.2-.13-.12-.2-.29-.2-.47V7.39c0-.07-.13-1.83,1.13-3.19,.94-1.01,2.35-1.53,4.21-1.53h.67v1.88l-.54,.11c-.91,.18-1.55,.54-1.89,1.07-.18,.28-.28,.61-.29,.94h2.05c.18,0,.35,.07,.47,.2,.12,.13,.2,.29,.2,.47v4.67c0,.74-.6,1.33-1.33,1.33Z"/></svg>');
-}
-
-input[data-task="S"]:checked,
-li[data-task="S"]>input:checked,
-li[data-task="S"]>p>input:checked {
-    --checkbox-color-hover: var(--color-green);
-    color: var(--color-green);
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' d='M12.781 8.34c-.84-.665-2.146-1.247-3.354-1.715V4.396a28.48 28.48 0 0 1 2.123.772c.096.04.209.006.265-.082l1.193-1.805a.219.219 0 0 0-.079-.314c-.68-.365-2.072-.93-3.502-1.293V.366a.27.27 0 0 0-.27-.271H6.985a.271.271 0 0 0-.271.271v.973c-2.014.092-3.38.795-4.166 2.147-.616 1.06-.613 2.255.004 3.118.645.922 1.699 1.332 3.031 1.851l.172.066c.309.118.634.239.959.359v2.715c-1.41-.335-2.736-1.023-2.98-1.189a.218.218 0 0 0-.296.048l-1.444 1.883a.211.211 0 0 0-.043.163.22.22 0 0 0 .086.145c.874.648 2.145 1.266 3.403 1.654a12.4 12.4 0 0 0 1.275.316v1.018c0 .148.121.27.271.27h2.173a.27.27 0 0 0 .27-.27v-.845c1.928-.16 3.368-.997 4.192-2.45.793-1.402.49-2.858-.839-3.998ZM6.712 4.014v1.643c-.624-.2-.993-.394-.953-.872.04-.49.51-.69.954-.771Zm2.716 5.875c.458.205.806.42.927.689.069.152.063.326-.016.533-.14.364-.502.553-.912.649V9.889Z'/%3e%3c/svg%3e");
-}
-
-input[data-task="u"]:checked,
-li[data-task="u"]>input:checked,
-li[data-task="u"]>p>input:checked {
-    --checkbox-color-hover: var(--color-green);
-    color: var(--color-green);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,5c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29h5c.27,0,.52,.11,.71,.29,.19,.19,.29,.44,.29,.71v5c0,.27-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29c-.19-.19-.29-.44-.29-.71v-2.59l-4.29,4.29c-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29l-2.29-2.29L1.71,12.71c-.19,.18-.44,.28-.7,.28-.26,0-.51-.11-.7-.29S.01,12.26,.01,12c0-.26,.1-.51,.28-.7L5.29,6.29c.19-.19,.44-.29,.71-.29s.52,.11,.71,.29l2.29,2.29,3.59-3.59h-2.59Z"/></svg>');
-}
-
-input[data-task="d"]:checked,
-li[data-task="d"]>input:checked,
-li[data-task="d"]>p>input:checked {
-    --checkbox-color-hover: var(--color-red);
-    color: var(--color-red);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,11c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29h5c.27,0,.52-.11,.71-.29,.19-.19,.29-.44,.29-.71V7c0-.27-.11-.52-.29-.71-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29c-.19,.19-.29,.44-.29,.71v2.59l-4.29-4.29c-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29l-2.29,2.29L1.71,3.29c-.19-.18-.44-.28-.7-.28-.26,0-.51,.11-.7,.29S.01,3.74,.01,4c0,.26,.1,.51,.28,.7l5,5c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29l2.29-2.29,3.59,3.59h-2.59Z"/></svg>');
-}
-
-input[data-task=">"]:checked,
-li[data-task=">"]>input:checked,
-li[data-task=">"]>p>input:checked {
-    --checkbox-color-hover: var(--color-pink);
-    color: var(--color-pink);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M1.72,1.05c-.08-.04-.18-.06-.27-.05-.09,0-.18,.04-.26,.1-.07,.06-.13,.13-.16,.22-.03,.09-.04,.18-.02,.27l1.4,4.85c.03,.09,.08,.17,.15,.23,.07,.06,.16,.1,.25,.12l5.69,.95c.27,.05,.27,.44,0,.49l-5.69,.95c-.09,.02-.18,.06-.25,.12s-.12,.14-.15,.23l-1.4,4.85c-.02,.09-.01,.19,.02,.27,.03,.09,.09,.16,.16,.22,.07,.06,.16,.09,.26,.1,.09,0,.19,0,.27-.05l13-6.5c.08-.04,.15-.11,.2-.18,.05-.08,.07-.17,.07-.26s-.03-.18-.07-.26c-.05-.08-.12-.14-.2-.18L1.72,1.05Z"/></svg>');
-}
-
-input[data-task="<"]:checked,
-li[data-task="<"]>input:checked,
-li[data-task="<"]>p>input:checked {
-    --checkbox-color-hover: var(--color-blue);
-    color: var(--color-blue);
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,15.5H13.25c.83,0,1.5-.67,1.5-1.5V3.5c0-.83-.67-1.5-1.5-1.5h-1.5V.5h-1.5v1.5H5.75V.5h-1.5v1.5h-1.5c-.83,0-1.5,.67-1.5,1.5V14c0,.83,.67,1.5,1.5,1.5Zm0-11.25H13.25v1.5H2.75v-1.5Z"/></svg>');
-}
-
-
 /* ==========================================================
-   0. HIDE INACTIVE SETTINGS
-   ========================================================== */
-body:not(.toggle-card-bg) .setting-item[data-id="color-card-bg"],
-body:not(.toggle-left-panel) .setting-item[data-id="color-left-panel"],
-body:not(.toggle-middle-panel) .setting-item[data-id="color-middle-panel"],
-body:not(.toggle-right-panel) .setting-item[data-id="color-right-panel"],
-body:not(.toggle-active-tab) .setting-item[data-id="color-active-tab"],
-body:not(.toggle-vault-profile) .setting-item[data-id="color-vault-profile"],
-body:not(.toggle-panel-borders) .setting-item[data-id="panel-border-width"],
-body:not(.toggle-panel-borders) .setting-item[data-id="panel-border-color"],
-body:not(.toggle-panel-borders) .setting-item[data-id="panel-border-radius"],
-body:not(.toggle-panel-borders):not(.layout-card) .setting-item:is([data-id="layout-gap-middle"], [data-id="layout-gap-right"], [data-id="layout-gap-bottom"]),
-body:not(.toggle-panel-borders) .setting-item:is([data-id="panel-border-width"], [data-id="panel-border-color"], [data-id="panel-border-radius"], [data-id="panel-border-style"]),
-body:not(.toggle-active-file-colors) .setting-item[data-id="color-active-file"], {
-    display: none !important;
-}
-
-/* ==========================================================
-   1. HIDE INACTIVE SETTINGS
-   ========================================================== */
-body:not(.toggle-active-file-colors) .setting-item[data-id$="color-active-file"],
-body:not(.toggle-card-bg) .setting-item[data-id$="color-card-bg"],
-body:not(.toggle-left-panel) .setting-item[data-id$="color-left-panel"],
-body:not(.toggle-middle-panel) .setting-item[data-id$="color-middle-panel"],
-body:not(.toggle-right-panel) .setting-item[data-id$="color-right-panel"],
-body:not(.toggle-active-tab) .setting-item[data-id$="color-active-tab"],
-body:not(.toggle-vault-profile) .setting-item[data-id$="color-vault-profile"],
-body:not(.toggle-panel-borders) .setting-item[data-id$="panel-border-width"],
-body:not(.toggle-panel-borders) .setting-item[data-id$="panel-border-color"],
-body:not(.toggle-panel-borders) .setting-item[data-id$="panel-border-radius"],
-body:not(.toggle-panel-borders):not(.layout-card) .setting-item:is([data-id$="layout-gap-middle"], [data-id$="layout-gap-right"], [data-id$="layout-gap-bottom"]),
-body:not(.toggle-panel-borders) .setting-item:is([data-id$="panel-border-width"], [data-id$="panel-border-color"], [data-id$="panel-border-radius"], [data-id$="panel-border-style"]) {
-    display: none !important;
-}
-
-/* ==========================================================
-   2. FORCE CHILD TRANSPARENCY
-   Ensures inner panes don't block the container backgrounds
-   ========================================================== */
-body .workspace-split .workspace-leaf,
-body .workspace-split .workspace-leaf-content,
-body .workspace-split .view-content,
-body .workspace-split .view-header {
-    background-color: transparent !important;
-}
-
-/* ==========================================================
-   3. CUSTOM PANEL COLORS & OPACITY
-   ========================================================== */
-body.toggle-left-panel .workspace-split.mod-left-split .workspace-tab-container {
-    background-color: var(--color-left-panel) !important;
-}
-
-body.toggle-middle-panel .workspace-split.mod-root .workspace-tab-container {
-    background-color: var(--color-middle-panel) !important;
-}
-
-body.toggle-right-panel .workspace-split.mod-right-split .workspace-tab-container {
-    background-color: var(--color-right-panel) !important;
-}
-
-body.toggle-vault-profile .workspace-sidedock-vault-profile {
-    background-color: var(--color-vault-profile) !important;
-}
-
-body.toggle-active-tab .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--color-active-tab) !important;
-}
-
-/* ==========================================================
-   4. CUSTOM BORDERS, RADIUS & DIVIDERS (ALL DESKTOPS ONLY)
+   13. EDITOR COMPONENTS — IMAGES
    ========================================================== */
 
-/* 1. APPLY MAIN PANEL BORDERS (Any Desktop, never on mobile) */
-body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-left-split .workspace-tab-container,
-body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-root .workspace-tab-container,
-body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-right-split .workspace-tab-container {
-    border: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--card-border-color, var(--color-accent)) !important;
-    border-radius: var(--panel-border-radius, 8px) !important;
-    overflow: hidden !important;
+/*  image center align */
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:not([class]),
+.img-center-align .markdown-preview-view img:not([class]),
+.img-center-align .markdown-source-view img:not([class]) {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
-/* 2. PANEL GAP LOGIC (Separates the panels so borders never overlap) */
-/* Internal Gaps */
-body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
-    margin-right: var(--layout-gap-middle, 5px) !important;
-}
-body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
-    margin-left: var(--layout-gap-middle, 5px) !important;
-}
-body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace-split.mod-vertical {
-    gap: var(--layout-gap-middle, 5px) !important;
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize, .image-ready-click-view) {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
-/* Outer Gaps */
-body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace {
-    padding-right: var(--layout-gap-right, 5px) !important;
-    padding-bottom: var(--layout-gap-bottom, 5px) !important;
+/*  image hover effect */
+.theme-dark.img-darken .markdown-preview-view img,
+.theme-dark.img-darken .markdown-source-view img {
+    opacity: 0.75;
+    transition: opacity var(--anim-duration-fast) linear;
 }
 
-/* Clean up native box-shadows added by the original theme */
-body.toggle-panel-borders:not(.is-mobile) .workspace-tabs:not(.mod-top) .workspace-tab-container > .workspace-leaf {
-    box-shadow: none !important;
-}
-
-/* 3. HIDE ALL RESIZE HANDLES GLOBALLY (When Borders or Cards are ON) */
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle {
-    opacity: 0 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::before,
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::after,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::before,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::after {
-    display: none !important;
-}
-
-/* 4. VAULT PROFILE DIVIDER LINE */
-body.layout-card:not(.is-mobile) .workspace-sidedock-vault-profile,
-body.toggle-panel-borders:not(.is-mobile) .workspace-sidedock-vault-profile {
-    border-top: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--card-border-color, var(--color-accent)) !important;
-}
-
-/* 5. RE-ADD THE 75% VERTICAL DIVIDERS (Default Layout ONLY, Borders OFF) */
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-    height: 75% !important;
-    width: 2px !important;
-    top: calc((100% - 75%) / 2) !important;
-    background-color: var(--background-modifier-border) !important;
-    border: none !important;
-    transition: background-color 0.2s ease;
-    opacity: 1 !important;
-}
-
-/* 6. HOVER ACCENT FOR DEFAULT LAYOUT */
-/* Standard hover for inner elements */
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:hover,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:active,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle.is-grabbing,
-/* High-specificity hover for the left and right 75% dividers */
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle.is-grabbing,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle.is-grabbing {
-    background-color: var(--color-accent) !important;
-    opacity: 1 !important;
-    transition: background-color 0.15s ease-in-out !important;
-}
-
-/* ==========================================================
-   5. CARD LAYOUT LOGIC
-   ========================================================== */
-body.layout-card:not(.is-mobile) .workspace::before {
-    display: none !important;
-}
-
-/* Custom Gap Logic for Cards (Syncs with Style Settings!) */
-body.layout-card:not(.is-mobile) .workspace-split.mod-vertical {
-    gap: var(--layout-gap-middle, 8px) !important;
-}
-body.layout-card:not(.is-mobile) .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
-    margin-right: var(--layout-gap-middle, 8px) !important;
-}
-body.layout-card:not(.is-mobile) .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
-    margin-left: var(--layout-gap-middle, 8px) !important;
-}
-
-/* Outer Gaps (Perfectly frames the cards against the Right and Bottom window edges) */
-body.layout-card:not(.is-mobile) .workspace {
-    padding-right: var(--layout-gap-right, 8px) !important;
-    padding-bottom: var(--layout-gap-bottom, 8px) !important;
-    margin-right: 0px !important; /* Overrides the native theme's hardcoded margin */
-}
-
-/* Shape the containers as cards */
-body.layout-card:not(.is-mobile) .workspace-tab-container {
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Fallback: If Card Layout is ON but Custom Colors are OFF, give cards a default solid background */
-body.layout-card:not(.toggle-left-panel) .workspace-split.mod-left-split .workspace-tab-container,
-body.layout-card:not(.toggle-middle-panel) .workspace-split.mod-root .workspace-tab-container,
-body.layout-card:not(.toggle-right-panel) .workspace-split.mod-right-split .workspace-tab-container {
-    background-color: var(--background-primary) !important;
-}
-
-/* Clean up tab bar areas for cards */
-body.layout-card:not(.is-mobile) .workspace-tabs,
-body.layout-card:not(.is-mobile) .workspace-split {
-    overflow: visible !important;
-    background-color: transparent !important;
-}
-
-/* Apply custom card background color & opacity when toggled ON */
-body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-left-split .workspace-tab-container,
-body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-root .workspace-tab-container,
-body.layout-card.toggle-card-bg:not(.is-mobile) .workspace-split.mod-right-split .workspace-tab-container {
-    background-color: var(--card-bg-color) !important;
-}
-
-
-/* graph view*/
-.graph-controls {
-    right: var(--size-4-2);
-    top: var(--size-4-2);
-}
-
-.graph-controls.is-close {
-    border: 1px solid var(--background-modifier-border);
-    padding: 0px;
-    border-radius: var(--radius-s);
-}
-
-.graph-controls-button.mod-open,
-.graph-controls-button.mod-animate {
-    width: 32px;
-    height: 32px;
-    border-radius: 0px;
-    --icon-color: var(--text-normal);
+.theme-dark.img-darken .markdown-preview-view img:hover,
+.theme-dark.img-darken .markdown-source-view img:hover {
+    opacity: 1;
+    transition: opacity var(--anim-duration-fast) linear;
 }
