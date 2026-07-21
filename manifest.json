@@ -1,8 +1,7 @@
 {
   "name": "Ink Paper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "minAppVersion": "0.14.0",
-  "description": "A minimal paper-inspired theme for Obsidian.",
   "author": "Jayanta Kumar Das",
   "authorUrl": "https://github.com/dsvictor"
 }
