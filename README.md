@@ -1,6 +1,6 @@
 # Ink Paper
 
-**A tactile, highly customizable theme blending the warmth of physical paper with modern workspace layouts, powered by the soothing Flexoki color palette.**
+**A highly customizable theme blending the warmth of physical paper with modern workspace layouts, powered by the soothing Flexoki color palette.**
 
 Ink Paper was built from the ground up to provide a distraction-free, visually unified writing experience. It strips away the heavy, opaque backgrounds of the default Obsidian UI, allowing a custom paper texture to flow seamlessly through your panes, sidebars, and active tabs.
 
