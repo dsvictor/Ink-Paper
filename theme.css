@@ -791,7 +791,7 @@ body.theme-dark::after {
   mix-blend-mode: var(--paper-tint-blend-dark);
 }
 
-/* Swatch Shield (Prevents the ::after tint layer from bleeding through the color picker UI) */
+/* Swatch Shield */
 .setting-item-control .color-picker-swatch,
 .setting-item-control input[type="color"],
 .style-settings-container .setting-item-control div[style*="background-color"] {
@@ -806,7 +806,7 @@ body.theme-dark::after {
    06. WORKSPACE TRANSPARENCY & DEFAULT APP CHROME
    ========================================================== */
 
-/* Strips default opaque backgrounds from the entire app layout so the texture shows through */
+/* Strips default */
 body .app-container,
 body .workspace,
 body .workspace-split,
@@ -1140,9 +1140,7 @@ body:not(.layout-card).toggle-left-panel:not(.toggle-vault-profile):not(.toggle-
 }
 
 
-/* DEFAULT LAYOUT + CUSTOM LEFT PANEL + VAULT PROFILE ON
-   Vault Profile becomes independently customizable.
-   All four Vault Profile corner sliders work. */
+/* DEFAULT LAYOUT + CUSTOM LEFT PANEL + VAULT PROFILE ON */
 body:not(.layout-card).toggle-left-panel.toggle-vault-profile:not(.toggle-panel-borders):not(.is-mobile)
 .workspace-split.mod-left-split
 .workspace-sidedock-vault-profile {
@@ -1559,7 +1557,7 @@ body {
     --table-radius: var(--radius-s);
 }
 
-/* Table width — same as note width */
+/* Table width */
 .markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper,
 :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
     width: 100% !important;
