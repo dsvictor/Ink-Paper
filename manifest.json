@@ -1,7 +1,7 @@
 {
   "name": "Ink Paper",
-  "version": "1.0.6",
-  "minAppVersion": "1.12.0",
+  "version": "1.0.7",
+  "minAppVersion": "1.0.0",
   "author": "Jayanta Kumar Das",
   "authorUrl": "https://github.com/dsvictor"
 }
