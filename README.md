@@ -23,7 +23,7 @@ Ink Paper was built from the ground up to provide a distraction-free, visually u
 - **Translucent Architecture:** Sidebars, title bars, and file explorers have been rebuilt to be completely transparent, allowing your chosen background texture to serve as the unified canvas for your entire vault.
     
 
-## 🎨 The Paper Engine (V3)
+## 🎨 The Paper
 
 Most textured themes struggle with UI bleeding and overlapping pseudo-elements. Ink Paper introduces a highly robust, native CSS background engine:
 
