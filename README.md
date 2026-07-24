@@ -1,4 +1,13 @@
 # Ink Paper
+Support dsvictor
+<p align="left">
+  <a href="https://ko-fi.com/jayantakumardas" target="_blank">
+    <img src="https://img.shields.io/badge/Support%20me%20on-Ko--fi-F16061?logo=ko-fi&logoColor=white&style=flat-square" alt="Support me on Ko-fi">
+  </a>
+  <a href="https://paypal.me/JKustomDesign" target="_blank">
+    <img src="https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal&logoColor=white&style=flat-square" alt="Donate via PayPal">
+  </a>
+</p>
 
 **A highly customizable theme blending the warmth of physical paper with modern workspace layouts, powered by the soothing Flexoki color palette.**
 
