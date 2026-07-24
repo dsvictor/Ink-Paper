@@ -2344,3 +2344,77 @@ body:not(.disable-alternative-checkboxes):not(.tasks) li[data-task="-"].task-lis
     opacity: 1;
     transition: opacity var(--anim-duration-fast) linear;
 }
+
+/* Floating Status Bar */
+
+body:not(.is-mobile) .status-bar {
+    position: absolute !important;
+    bottom: 5px !important;
+    right: 5px !important;
+    left: auto !important;
+    width: 30px !important;
+    max-width: 30px !important;
+    height: 30px !important;
+    border-radius: 50px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0.7;
+
+    background-color: var(--background-secondary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--background-modifier-border);
+
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 !important;
+    transition: all 0.3s ease-out;
+}
+
+body:not(.is-mobile) .status-bar:hover {
+    opacity: 1;
+    max-width: 600px !important;
+    width: auto !important;
+    border-radius: 50px !important;
+    padding: 0 6px !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+}
+
+body:not(.is-mobile) .status-bar .status-bar-item:has(svg) {
+    border-radius: 50% !important;
+    height: 25px !important;
+    width: 25px !important;
+    min-width: 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 2px !important;
+    flex-shrink: 0;
+}
+
+body:not(.is-mobile) .status-bar .status-bar-item:not(:has(svg)) {
+    border-radius: 10px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 8px !important;
+    margin: 0 2px !important;
+    flex-shrink: 0;
+}
+
+body:not(.is-mobile) .status-bar > .status-bar-item:last-child {
+    margin: 0 2.5px 0 0 !important;
+}
+
+body:not(.is-mobile) .status-bar:hover > .status-bar-item:last-child {
+    margin: 0 2px !important;
+}
+
+body:not(.is-mobile) .horizontal-main-container,
+body:not(.is-mobile) > .app-container > .horizontal-main-container:has(~.status-bar:hover) {
+    padding-bottom: 0px !important;
+    transition: none !important;
+}
