@@ -847,12 +847,33 @@ body .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner
   background-color: var(--interactive-accent) !important;
   position: absolute !important;
   top: auto !important;
-  bottom: 3px !important;
+  bottom: 1px !important;
   border-radius: 2px !important;
   left: 0 !important;
   right: 0 !important;
   margin: 0 auto !important;
 }
+
+/* Interactive icon */
+.clickable-icon,
+.workspace-tab-header-inner-icon,
+.sidebar-toggle-button {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
+    will-change: transform;
+}
+.clickable-icon:hover,
+.workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.sidebar-toggle-button:hover {
+    transform: scale(1.15) !important;
+    color: var(--interactive-accent);
+}
+.sidebar-toggle-button.mod-left {
+    transform-origin: center !important;
+}
+.sidebar-toggle-button.mod-left:hover {
+    transform: scale(1.15) scaleX(-1) !important;
+}
+
 
 /* Clean up borders and split lines */
 body .workspace-leaf-resize-handle {
@@ -1206,89 +1227,6 @@ body.toggle-vault-profile .workspace-drawer-vault-profile * {
     --shadow-activated-file-dark: none;
 }
 
-.activated-file-default-light.theme-light {
-    --border-radius-activated-file-light: var(--radius-s) !important;
-    --color-activated-file-light: var(--nav-item-color-active) !important;
-    --background-activated-file-light: var(--nav-item-background-active) !important;
-    --shadow-activated-file-light: none !important;
-}
-
-.activated-file-default-dark.theme-dark {
-    --border-radius-activated-file-dark: var(--radius-s) !important;
-    --color-activated-file-dark: var(--nav-item-color-active) !important;
-    --background-activated-file-dark: var(--nav-item-background-active) !important;
-    --shadow-activated-file-dark: none !important;
-}
-
-.activated-file-accent-light.theme-light {
-    --border-radius-activated-file-light: var(--radius-s) !important;
-    --color-activated-file-light: var(--text-on-accent) !important;
-    --background-activated-file-light: var(--color-accent) !important;
-    --shadow-activated-file-light: none !important;
-}
-
-.activated-file-accent-dark.theme-dark {
-    --border-radius-activated-file-dark: var(--radius-s) !important;
-    --color-activated-file-dark: var(--text-on-accent) !important;
-    --background-activated-file-dark: var(--color-accent) !important;
-    --shadow-activated-file-dark: none !important;
-}
-
-.activated-file-accent-light.theme-light .nav-file-title.is-active .nav-file-tag,
-.activated-file-accent-dark.theme-dark .nav-file-title.is-active .nav-file-tag,
-.activated-file-accent-light.theme-light .tree-item-self.is-active svg,
-.activated-file-accent-dark.theme-dark .tree-item-self.is-active svg {
-    color: var(--text-on-accent) !important;
-}
-
-.activated-file-tab-style-light.theme-light {
-    --border-radius-activated-file-light: var(--border-radius-activated-tab-header-light) !important;
-    --color-activated-file-light: var(--color-activated-tab-header-light) !important;
-    --background-activated-file-light: var(--background-activated-tab-header-light) !important;
-    --shadow-activated-file-light: var(--shadow-activated-tab-header-light) !important;
-}
-
-.activated-file-tab-style-dark.theme-dark {
-    --border-radius-activated-file-dark: var(--border-radius-activated-tab-header-dark) !important;
-    --color-activated-file-dark: var(--color-activated-tab-header-dark) !important;
-    --background-activated-file-dark: var(--background-activated-tab-header-dark) !important;
-    --shadow-activated-file-dark: var(--shadow-activated-tab-header-dark) !important;
-}
-
-.activated-file-tab-style-light.theme-light .nav-file-title.is-active .nav-file-tag,
-.activated-file-tab-style-light.theme-light .tree-item-self.is-active svg {
-    color: var(--color-activated-file-light) !important;
-}
-
-.activated-file-tab-style-dark.theme-dark .nav-file-title.is-active .nav-file-tag,
-.activated-file-tab-style-dark.theme-dark .tree-item-self.is-active svg {
-    color: var(--color-activated-file-dark) !important;
-}
-
-.activated-file-customize-light {
-    --border-radius-activated-file-light: 4px;
-    --color-activated-file-light: var(--nav-item-color-active);
-    --background-activated-file-light: rgba(0, 0, 0, 0.05);
-    --shadow-activated-file-light: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-.activated-file-customize-dark {
-    --border-radius-activated-file-dark: 4px;
-    --color-activated-file-light: var(--nav-item-color-active);
-    --background-activated-file-dark: rgba(255, 255, 255, 0.075);
-    --shadow-activated-file-dark: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
-}
-
-.activated-file-customize-light.theme-light .nav-file-title.is-active .nav-file-tag,
-.activated-file-customize-light.theme-light .tree-item-self.is-active svg {
-    color: var(--color-activated-file-light) !important;
-}
-
-.activated-file-customize-dark.theme-dark .nav-file-title.is-active .nav-file-tag,
-.activated-file-customize-dark.theme-dark .tree-item-self.is-active svg {
-    color: var(--color-activated-file-dark) !important;
-}
-
 .theme-light:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active:hover,
 .theme-light .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active,
 .theme-light .mk-tree-item.nav-folder-title.is-active.is-selected,
@@ -1334,6 +1272,7 @@ body.toggle-vault-profile .workspace-drawer-vault-profile * {
 .workspace-leaf-content .tree-item-self :is(.tree-item-flair, .tree-item-inner) {
     line-height: 20px;
 }
+
 
 /* File Tags */
 .nav-file-tag {
@@ -1434,6 +1373,46 @@ body.toggle-vault-profile .workspace-drawer-vault-profile * {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M1.333 6V3.333C1.333 2.6 1.933 2 2.667 2h2.62a1.333 1.333 0 0 1 1.106.6l.547.8a1.333 1.333 0 0 0 1.107.6h5.286a1.333 1.333 0 0 1 1.334 1.333V12a1.333 1.333 0 0 1-1.334 1.333h-12'/%3e%3cpath d='m5.333 10.667 2-2-2-2'/%3e%3cpath d='M1.333 10.667V10a1.333 1.333 0 0 1 1.334-1.333h4'/%3e%3c/g%3e%3c/svg%3e");
 }
 
+/* --- Sidebar Pills --- */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title,
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title,
+.workspace-leaf-content[data-type="outline"] .tree-item-self {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease !important;
+    border-radius: 8px !important;
+    margin: 2px 6px !important;
+    width: calc(100% - 12px) !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:hover,
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title:hover,
+.workspace-leaf-content[data-type="outline"] .tree-item-self:hover {
+    transform: scale(1.02) !important;
+    background-color: color-mix(in srgb, var(--interactive-accent) 15%, transparent) !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-active,
+.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+    transform: scale(1.02) !important;
+    background-color: color-mix(in srgb, var(--interactive-accent) 25%, transparent) !important;
+    font-weight: 600 !important;
+}
+
+/* Collapsible Folder Physics */
+.nav-folder-children {
+    transform-origin: top !important;
+    animation: folder-spring-open 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards !important;
+}
+@keyframes folder-spring-open {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1) translateY(0);
+    }
+}
 
 /* ==========================================================
    10. SETTINGS MODAL
@@ -1497,18 +1476,9 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 /* ==========================================================
    11. SCROLLBARS
    ========================================================== */
-body {
-    /* Scrollbars */
-    --scrollbar-bg: rgba(var(--mono-rgb-100), 0);
-    --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.1);
-    --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.15);
-}
-
-
-/* Keep the 14px physical width so your mouse can still easily grab it */
 ::-webkit-scrollbar {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
     background-color: transparent !important;
 }
 
@@ -1516,33 +1486,28 @@ body {
     background-color: transparent !important;
 }
 
-/* 1. Default State: Invisible with a heavier mask */
+/* 1. Default state: Fully invisible when the mouse is elsewhere */
 ::-webkit-scrollbar-thumb {
     background-color: transparent !important;
-    border-radius: 99px !important;
+    border: 4px solid transparent !important;
     background-clip: padding-box !important;
-    /* A 5px mask leaves only a 4px sleek visible line in the center */
-    border: 5px solid transparent !important;
+    border-radius: 99px !important;
 }
 
-/* 2. Show the thin line when hovering anywhere in the pane */
+/* 2. Panel Hover state: Show the pill only when the mouse is over that specific panel */
 .workspace-leaf:hover ::-webkit-scrollbar-thumb,
 .workspace-drawer:hover ::-webkit-scrollbar-thumb,
 .modal:hover ::-webkit-scrollbar-thumb,
-.menu:hover ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb-bg) !important;
+.menu:hover ::-webkit-scrollbar-thumb,
+.markdown-source-view.mod-cm6:hover ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--interactive-accent) 30%, transparent) !important;
 }
 
-/* 3. Direct Hover: Thicken slightly when grabbed */
+/* 3. Direct Hover/Active state (fully opaque, expands slightly) */
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--scrollbar-active-thumb-bg) !important;
-    /* Shrinking the mask to 4px makes the visible bar 6px thick */
-    border-width: 4px !important;
-}
-
-::-webkit-scrollbar-corner {
-    background-color: transparent !important;
+    background-color: color-mix(in srgb, var(--interactive-accent) 60%, transparent) !important;
+    border-width: 2px !important;
 }
 
 
