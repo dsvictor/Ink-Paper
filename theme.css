@@ -1541,7 +1541,6 @@ body {
     border-collapse: separate;
     border-spacing: 0;
     border-radius: var(--table-radius);
-    overflow: hidden;
 }
 
 :is(.markdown-rendered, .cm-table-widget) {
