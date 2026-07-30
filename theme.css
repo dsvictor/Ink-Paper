@@ -433,7 +433,7 @@ settings:
         default: 0.50
         min: 0.0
         max: 1.0
-        step: 0.05
+        step: 0.01
     -
         id: paper-bg-blend-dark
         title: Texture Blend Mode (Dark)
@@ -477,7 +477,7 @@ settings:
         default: 0.50
         min: 0.0
         max: 1.0
-        step: 0.05
+        step: 0.01
     -
         id: paper-tint-blend-dark
         title: Tint Blend Mode (Dark)
@@ -555,9 +555,10 @@ settings:
   --background-tertiary: var(--color-base-40);
 
   --background-modifier-hover: rgba(16, 15, 15, 0.07);
-  --background-modifier-border: var(--color-base-35);
-  --background-modifier-border-hover: var(--color-base-40);
-  --background-modifier-border-focus: var(--color-base-50);
+  --background-modifier-border: var(--color-base-40);
+  --background-modifier-border-hover: var(--color-base-50);
+  --background-modifier-border-focus: var(--color-base-60);
+  --custom-graph-line: var(--color-base-50);
 
   --background-card: var(--color-base-30);
 
@@ -621,9 +622,10 @@ settings:
   --background-card: var(--color-base-30);
 
   --background-modifier-hover: rgba(206, 205, 195, 0.08);
-  --background-modifier-border: var(--color-base-35);
-  --background-modifier-border-hover: var(--color-base-40);
-  --background-modifier-border-focus: var(--color-base-50);
+  --background-modifier-border: var(--color-base-40);
+  --background-modifier-border-hover: var(--color-base-50);
+  --background-modifier-border-focus: var(--color-base-60);
+  --custom-graph-line: var(--color-base-50);
 
   --radius-s: 6px;
   --divider-color: transparent;
@@ -839,8 +841,8 @@ body .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner
   position: relative;
 }
 
-/* Active tab underline */
-body .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+/* 1. Main Editor Panel Active Tab (Green Arrow) */
+body .workspace-split.mod-root .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner::before {
   content: "" !important;
   width: calc(100% - 14px) !important;
   height: 2px !important;
@@ -848,6 +850,26 @@ body .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner
   position: absolute !important;
   top: auto !important;
   bottom: 1px !important;
+  border-radius: 2px !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* 2. Side Panels Active Tab (Red Arrows) */
+body .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  height: 100% !important;
+  overflow: visible !important;
+}
+
+body .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+  content: "" !important;
+  width: calc(100% - 14px) !important;
+  height: 2px !important;
+  background-color: var(--interactive-accent) !important;
+  position: absolute !important;
+  top: auto !important;
+  bottom: -3px !important;
   border-radius: 2px !important;
   left: 0 !important;
   right: 0 !important;
@@ -950,7 +972,7 @@ body.toggle-active-tab .workspace-tab-header.is-active .workspace-tab-header-inn
 body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-left-split .workspace-tab-container,
 body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-root .workspace-tab-container,
 body.toggle-panel-borders:not(.is-mobile) .workspace-split.mod-right-split .workspace-tab-container {
-    border: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--card-border-color, var(--color-accent)) !important;
+    border: var(--panel-border-width, 1px) var(--panel-border-style, solid) var(--panel-border-color, var(--card-border-color, var(--color-accent))) !important;
     border-radius: var(--panel-border-radius, 8px) !important;
     overflow: hidden !important;
 }
@@ -1003,6 +1025,15 @@ body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-spl
     border: none !important;
     transition: background-color 0.2s ease;
     opacity: 1 !important;
+}
+
+/* Custom Graph View Line Color */
+.theme-light {
+  --graph-line: var(--custom-graph-line) !important;
+}
+
+.theme-dark {
+  --graph-line: var(--custom-graph-line) !important;
 }
 
 /* Hover Accent for Default Layout */
@@ -1549,6 +1580,17 @@ body {
     & tr:last-child td:first-child { border-bottom-left-radius: var(--table-radius); }
     & tr:last-child td:last-child { border-bottom-right-radius: var(--table-radius); }
 }
+
+/* --- Table row/column grab handles --- */
+/*.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper,
+.markdown-source-view.mod-cm6 .cm-table-widget .cm-table-row-control,
+.markdown-source-view.mod-cm6 .cm-table-widget .cm-table-col-control,
+.cm-table-widget button,
+.cm-table-widget .handle {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}*/
 
 /* --- Editor Components: Tags --- */
 body {
