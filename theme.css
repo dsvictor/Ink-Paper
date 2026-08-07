@@ -704,8 +704,8 @@ settings:
             -   label: Accent color
                 value: h6-color-designated
     -
-        id: ink-paper-component
-        title: Component
+        id: ink-paper-element
+        title: Element
         type: heading
         collapsed: true
         level: 3
