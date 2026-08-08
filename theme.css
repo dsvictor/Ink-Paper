@@ -3,6 +3,17 @@ name: Ink Paper
 id: ink-paper
 settings:
     -
+        id: theme-info
+        title: "Thanks for loving Ink Paper"
+        description: |
+            See an issue or want to suggest a feature? Visit us on GitHub: <https://github.com/dsvictor/Ink-Paper>.
+
+            If you enjoy Ink Paper and would like to support its development, you can also support me on
+            [☕ Support on Ko-fi](https://ko-fi.com/jayantakumardas)[♥ Support via PayPal](https://www.paypal.me/JKustomDesign)
+        markdown: true
+        type: info-text
+        level: 0
+    -
         id: ink-paper-card-panel
         title: Card and Panel
         type: heading
@@ -703,6 +714,28 @@ settings:
                 value: h6-color-default
             -   label: Accent color
                 value: h6-color-designated
+    -
+        id: head-prop-card
+        title: Properties
+        description: "customise properties metadata."
+        type: heading
+        level: 4
+    -
+        id: prop-card
+        title: Properties Card
+        description: "wraps the properties block"
+        type: class-toggle
+        default: false
+    -
+        id: border-style
+        title: Border Style
+        type: variable-select
+        default: solid
+        options:
+                - solid
+                - dashed
+                - dotted
+
     -
         id: ink-paper-element
         title: Element
@@ -3207,14 +3240,32 @@ body {
     --h4-color: inherit;
     --h5-color: inherit;
     --h6-color: inherit;
-    --h1-accent-color: #B85C5C;
-    --h2-accent-color: #B67A45;
-    --h3-accent-color: #A99238;
-    --h4-accent-color: #5C8B67;
-    --h5-accent-color: #607FB0;
-    --h6-accent-color: #8167A8;
 }
-
+body {
+    /* Heading Colors */
+    --h1-color: inherit;
+    --h2-color: inherit;
+    --h3-color: inherit;
+    --h4-color: inherit;
+    --h5-color: inherit;
+    --h6-color: inherit;
+}
+.theme-light {
+    --h1-accent-color: #8F3F3F;
+    --h2-accent-color: #8B5A32;
+    --h3-accent-color: #806F28;
+    --h4-accent-color: #456B50;
+    --h5-accent-color: #4B638C;
+    --h6-accent-color: #685486;
+}
+.theme-dark {
+    --h1-accent-color: #C66A6A;
+    --h2-accent-color: #C18A5A;
+    --h3-accent-color: #B6A34E;
+    --h4-accent-color: #78A17F;
+    --h5-accent-color: #7F99C2;
+    --h6-accent-color: #9680B7;
+}
 /* Global Heading Indicator Settings */
 .markdown-rendered>:is(h1, h2, h3, h4, h5, h6),
 .markdown-preview-sizer>div>:is(h1, h2, h3, h4, h5, h6) {
@@ -3611,6 +3662,22 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 }
 
 
+/* ================== Properties ================== */
+
+.metadata-container {
+    margin: 1em 0;
+}
+
+/*properties card opt-in: floating glass slab (Style Settings)*/
+body.prop-card .metadata-container {
+    border: var(--panel-border-width, 1px) var(--border-style, solid) var(--panel-border-color, var(--card-border-color, var(--color-accent)));
+    background-color: transparent;
+    border-radius: var(--radius-m);
+
+    margin: 1em 0px !important;
+    padding: 5px !important;
+}
+
 /*style settings*/
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-content {
@@ -3623,6 +3690,9 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-bottom: 0;
     margin-top: 8px;
     border-radius: 0
+}
+.style-settings-container .setting-item-description a[href*="ko-fi.com"] {
+    margin-right: 15px;
 }
 
 .style-settings-container {
