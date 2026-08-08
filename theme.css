@@ -1978,7 +1978,7 @@ body.theme-light .mod-settings .vertical-tab-header::after { background-color: r
 body.theme-dark .mod-settings .vertical-tab-header::after  { background-color: rgba(255, 255, 255, 0.15) !important; }
 
 /* ----------------------------------------------------------
-   4. EMBEDDED MODAL PAPER TEXTURE ENGINE (1:1 MATCH)
+   4. EMBEDDED MODAL PAPER TEXTURE ENGINE
    Applies texture ONLY to embedded modals (.modal-container).
 ---------------------------------------------------------- */
 .modal-bg {
@@ -2051,6 +2051,10 @@ body.is-popout-window :is(.modal.mod-settings, .modal.mod-community-plugin, .mod
 body.is-popout-window :is(.modal.mod-settings, .modal.mod-community-plugin, .modal.mod-community-theme)::before,
 body.is-popout-window :is(.modal.mod-settings, .modal.mod-community-plugin, .modal.mod-community-theme)::after {
     display: none !important;
+}
+.setting-page-titlebar {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 /* ==========================================================
@@ -3676,6 +3680,19 @@ body.prop-card .metadata-container {
 
     margin: 1em 0px !important;
     padding: 5px !important;
+}
+body.theme-dark.prop-card .metadata-container {
+    box-shadow:
+        var(--ulu-glass-inset-tl-dark),
+        var(--ulu-glass-inset-br-dark),
+        0 4px 12px rgb(from var(--mono-rgb-0) r g b/0.2);
+}
+
+body.theme-light.prop-card .metadata-container {
+    box-shadow:
+        var(--ulu-glass-inset-tl-light),
+        var(--ulu-glass-inset-br-light),
+        0 4px 12px rgb(from var(--mono-rgb-0) r g b/0.08);
 }
 
 /*style settings*/
