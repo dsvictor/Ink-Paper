@@ -3681,19 +3681,6 @@ body.prop-card .metadata-container {
     margin: 1em 0px !important;
     padding: 5px !important;
 }
-body.theme-dark.prop-card .metadata-container {
-    box-shadow:
-        var(--ulu-glass-inset-tl-dark),
-        var(--ulu-glass-inset-br-dark),
-        0 4px 12px rgb(from var(--mono-rgb-0) r g b/0.2);
-}
-
-body.theme-light.prop-card .metadata-container {
-    box-shadow:
-        var(--ulu-glass-inset-tl-light),
-        var(--ulu-glass-inset-br-light),
-        0 4px 12px rgb(from var(--mono-rgb-0) r g b/0.08);
-}
 
 /*style settings*/
 
