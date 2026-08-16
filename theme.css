@@ -32,8 +32,79 @@ settings:
             - label: Card Layout
               value: layout-card
     -
+        id: toggle-card-bg
+        title: Custom Card Background
+        description: Override the default background color and opacity for Card Layout.
+        type: class-toggle
+        default: false
+    -
+        id: card-bg-color
+        title: Card Background Color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
+    -
+        id: toggle-panel-borders
+        title: Custon Card Borders
+        description: Apply custom borders to the Left, Middle, Right, and Vault Profile panels.
+        type: class-toggle
+        default: false
+    -
+        id: panel-border-style
+        title: Panel Border Style
+        type: variable-select
+        default: solid
+        options:
+            - solid
+            - dashed
+            - dotted
+    -
+        id: panel-border-color
+        title: Panel Border Color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    -
+        id: panel-border-width
+        title: Panel Border Thickness
+        type: variable-text
+        default: 1px
+    -
+        id: panel-border-radius
+        title: Panel Border Radius
+        type: variable-text
+        default: 8px
+    -
+        id: layout-gap-middle
+        title: Inner Panel Gap
+        description: Spacing BETWEEN the left, middle, and right panels.
+        type: variable-text
+        default: 5px
+    -
+        id: layout-gap-right
+        title: Right Edge Gap
+        description: Spacing on the far RIGHT edge of the window.
+        type: variable-text
+        default: 5px
+    -
+        id: layout-gap-left
+        title: Left Edge Gap
+        description: Spacing on the far LEFT edge of the window.
+        type: variable-text
+        default: 5px
+    -
+        id: layout-gap-bottom
+        title: Bottom Edge Gap
+        description: Spacing on the far BOTTOM edge of the window.
+        type: variable-text
+        default: 5px
+    -
         id: toggle-left-panel
-        title: Enable Custom Left Panel Background
+        title: Left Panel Background
         description: Adjust color and corner radius for the left sidebar.
         type: class-toggle
         default: false
@@ -83,7 +154,7 @@ settings:
         format: px
     -
         id: toggle-middle-panel
-        title: Enable Custom Middle Panel Background
+        title: Middle Panel Background
         description: Adjust color and corner radius for the main editor.
         type: class-toggle
         default: false
@@ -133,7 +204,7 @@ settings:
         format: px
     -
         id: toggle-right-panel
-        title: Enable Custom Right Panel Background
+        title: Right Panel Background
         description: Adjust color and corner radius for the right sidebar.
         type: class-toggle
         default: false
@@ -183,7 +254,7 @@ settings:
         format: px
     -
         id: toggle-active-tab
-        title: Enable Custom Active Tab Background
+        title: Active Tab Background
         type: class-toggle
         default: false
     -
@@ -196,7 +267,7 @@ settings:
         default-dark: '#262626'
     -
         id: toggle-vault-profile
-        title: Enable Custom Vault Profile Background
+        title: Vault Profile Background
         description: Adjust color and corner radius for the vault profile.
         type: class-toggle
         default: false
@@ -206,8 +277,8 @@ settings:
         type: variable-themed-color
         opacity: true
         format: hex
-        default-light: '#E6E4D9'
-        default-dark: '#343331'
+        default-light: '#F2F0E5'
+        default-dark: '#1C1B1A'
     -
         id: vault-profile-radius-top-left
         title: Top Left Corner Radius
@@ -244,71 +315,6 @@ settings:
         max: 30
         step: 1
         format: px
-    -
-        id: toggle-panel-borders
-        title: Enable Panel Borders
-        description: Apply custom borders to the Left, Middle, Right, and Vault Profile panels.
-        type: class-toggle
-        default: false
-    -
-        id: panel-border-width
-        title: Panel Border Thickness
-        type: variable-text
-        default: 1px
-    -
-        id: panel-border-color
-        title: Panel Border Color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#d4d4d4'
-        default-dark: '#3f3f3f'
-    -
-        id: panel-border-style
-        title: Panel Border Style
-        type: variable-select
-        default: solid
-        options:
-            - solid
-            - dashed
-            - dotted
-    -
-        id: panel-border-radius
-        title: Panel Border Radius
-        type: variable-text
-        default: 8px
-    -
-        id: layout-gap-middle
-        title: Inner Panel Gap
-        description: Spacing BETWEEN the left, middle, and right panels.
-        type: variable-text
-        default: 5px
-    -
-        id: layout-gap-right
-        title: Right Edge Gap
-        description: Spacing on the far RIGHT edge of the window.
-        type: variable-text
-        default: 5px
-    -
-        id: layout-gap-bottom
-        title: Bottom Edge Gap
-        description: Spacing on the far BOTTOM edge of the window.
-        type: variable-text
-        default: 5px
-    -
-        id: toggle-card-bg
-        title: Enable Custom Card Background
-        description: Override the default background color and opacity for Card Layout.
-        type: class-toggle
-        default: false
-    -
-        id: card-bg-color
-        title: Card Background Color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#F2F0E5'
-        default-dark: '#1C1B1A'
     -
         id: in-paper-texture
         title: Paper Texture
@@ -520,14 +526,14 @@ settings:
             - plus-lighter
             - plus-darker
     -
-        id: editor-pattern-style
+        id: background-pattern
         title: Background Pattern
         type: heading
         collapsed: true
         level: 3
     -
-        id: editor-pattern-style
-        title: Background pattern style
+        id: pattern-style
+        title: Pattern style
         type: class-select
         allowEmpty: false
         default: editor-pattern-none
@@ -541,19 +547,19 @@ settings:
             - label: Line
               value: editor-pattern-line
     -
-        id: editor-pattern-paper-scroll
-        title: Paper scroll (Middle Panel)
+        id: pattern-scroll
+        title: Pattern scroll (Middle Panel)
         description: Makes the pattern and notebook margin scroll dynamically with your note. Turn off to keep the background fixed.
         type: class-toggle
         default: true
     -
-        id: editor-pattern-margin
-        title: Show notebook margin (Middle Panel)
+        id: left-margin
+        title: Left margin (Middle Panel)
         description: Adds 2 parallel vertical lines on the left. (Only available for Line and Dots patterns).
         type: class-toggle
         default: false
     -
-        id: editor-margin-offset
+        id: left-margin-position
         title: Margin line position (Left)
         description: Adjusts the left/right placement of the vertical margin lines across the screen.
         type: variable-number-slider
@@ -574,7 +580,7 @@ settings:
         format: px
     -
         id: editor-pattern-color
-        title: Customize pattern color
+        title: Pattern color
         type: variable-themed-color
         opacity: true
         format: hex
@@ -582,8 +588,8 @@ settings:
         default-dark: '#FFFFFF17'
     -
         id: editor-pattern-size
-        title: Pattern spacing (Gap)
-        description: Controls the distance between lines or dots. Accepts CSS background-size values.
+        title: Pattern spacing
+        description: Controls the distance between lines or dots.
         type: variable-text
         default: 36px
     -
@@ -894,7 +900,7 @@ settings:
     -
         id: table-width
         title: Customize table width
-        description: () percent of the editor panel width
+        description: percent of the editor panel width
         type: variable-number-slider
         default: 88
         min: 10
@@ -1070,6 +1076,26 @@ settings:
         collapsed: true
         level: 3
     -
+        id: divider-style
+        title: Split Divider Style
+        description: Choose the appearance of the workspace split dividers.
+        type: class-select
+        allowEmpty: false
+        default: divider-hidden
+        options:
+            -   label: None
+                value: divider-hidden
+            -   label: Dots
+                value: divider-dots
+            -   label: Minimal Line
+                value: divider-minimal
+    -
+        id: floating-status-bar
+        title: Minimal Status Bar
+        description: Replaces the default full-width status bar with a minimal, floating pill that expands on hover.
+        type: class-toggle
+        default: true
+    -
         id: file-explorer
         title: File explorer
         type: heading
@@ -1089,6 +1115,32 @@ settings:
         id: colorful-folder
         title: Enable colorful folder icon
         type: class-toggle
+    -
+        id: ribbon
+        title: Ribbon
+        type: heading
+        collapsed: true
+        level: 4
+    -
+        id: ribbon-autohide
+        title: Auto hide ribbon
+        type: class-toggle
+        level: 5
+
+    -
+        id: misc
+        title: Misc
+        type: heading
+        collapsed: true
+        level: 3
+    -
+        id: anim-speed
+        title: Animation speed
+        type: variable-number-slider
+        default: 1
+        min: 0.5
+        max: 2
+        step: 0.05
 */
 
 /* ==========================================================
@@ -1239,7 +1291,7 @@ body {
   --color-middle-panel: #ffffff;
   --color-right-panel: #ffffff;
   --color-active-tab: #ffffff;
-  --color-vault-profile: #e3e3e3;
+  --color-vault-profile: #fcfcfc;
   --card-bg-color: #ffffff;
 
   /* Paper Engine Color Anchors */
@@ -1322,9 +1374,10 @@ body.layout-card:not(.toggle-card-bg) .setting-item[data-id$="card-bg-color"] {
     display: none !important;
 }
 
-/* Gap controls are useful whenever Card Layout OR Panel Borders is active. */
-body:not(.layout-card):not(.toggle-panel-borders) .setting-item:is(
+/* Gap controls are useful whenever Card Layout, Panel Borders, OR Custom Panels are active. */
+body:not(.layout-card):not(.toggle-panel-borders):not(.toggle-left-panel):not(.toggle-middle-panel):not(.toggle-right-panel) .setting-item:is(
     [data-id$="layout-gap-middle"],
+    [data-id$="layout-gap-left"],
     [data-id$="layout-gap-right"],
     [data-id$="layout-gap-bottom"]
 ) {
@@ -1380,13 +1433,13 @@ body:not(.table-width-customized) .setting-item[data-id$="table-width"] {
 /* ========== Pattern Hiding Rules ========== */
 /* Hide EVERYTHING if NO pattern is actively selected */
 body:not(.editor-pattern-grid):not(.editor-pattern-dots):not(.editor-pattern-line) .setting-item:is(
-    [data-id$="editor-pattern-paper-scroll"],
+    [data-id$="pattern-scroll"],
     [data-id$="editor-pattern-color"],
     [data-id$="editor-pattern-size"],
     [data-id$="editor-pattern-line-thickness"],
     [data-id$="editor-pattern-dot-size"],
-    [data-id$="editor-pattern-margin"],
-    [data-id$="editor-margin-offset"],
+    [data-id$="left-margin"],
+    [data-id$="left-margin-position"],
     [data-id$="editor-margin-text-indent"]
 ) {
     display: none !important;
@@ -1394,16 +1447,16 @@ body:not(.editor-pattern-grid):not(.editor-pattern-dots):not(.editor-pattern-lin
 
 /* Hide margin toggles if Grid is selected */
 body.editor-pattern-grid .setting-item:is(
-    [data-id$="editor-pattern-margin"],
-    [data-id$="editor-margin-offset"],
+    [data-id$="left-margin"],
+    [data-id$="left-margin-position"],
     [data-id$="editor-margin-text-indent"]
 ) {
     display: none !important;
 }
 
 /* Hide indent and offset settings if margin toggle is off */
-body:not(.editor-pattern-margin) .setting-item:is(
-    [data-id$="editor-margin-offset"],
+body:not(.left-margin) .setting-item:is(
+    [data-id$="left-margin-position"],
     [data-id$="editor-margin-text-indent"]
 ) {
     display: none !important;
@@ -1503,7 +1556,7 @@ body {
 
     /* Notebook Margin Variables */
     --editor-margin-color: rgba(220, 70, 70, 0.4);
-    --editor-margin-offset: 60px;
+    --left-margin-position: 60px;
     --editor-margin-gap: 4px;
     --editor-margin-text-indent: 0px;
 }
@@ -1536,7 +1589,7 @@ body.editor-pattern-line {
 /* ========== 2. Pattern Application ========== */
 
 /* A) Global Background (Default Layout + Paper Scroll OFF) */
-body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):not(.layout-card):not(.toggle-panel-borders):not(.toggle-middle-panel):not(.editor-pattern-paper-scroll) .app-container {
+body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):not(.layout-card):not(.toggle-panel-borders):not(.toggle-middle-panel):not(.pattern-scroll) .app-container {
     background-image: var(--editor-pattern-bg) !important;
     background-size: var(--editor-pattern-bg-size) !important;
     background-position: center var(--editor-pattern-y-offset-computed) !important;
@@ -1545,7 +1598,7 @@ body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):not(.l
 
 /* B) Restricted Static Layer (Card Layout, Panel Borders, OR Paper Scroll OFF) */
 /* Fits cleanly to the leaf bounds, letting the theme's overflow:hidden round the corners */
-body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):is(.layout-card, .toggle-panel-borders, .toggle-middle-panel):not(.editor-pattern-paper-scroll) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"] {
+body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):is(.layout-card, .toggle-panel-borders, .toggle-middle-panel):not(.pattern-scroll) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"] {
     background-image: var(--editor-pattern-bg) !important;
     background-size: var(--editor-pattern-bg-size) !important;
     background-position: center var(--editor-pattern-y-offset-computed) !important;
@@ -1554,7 +1607,7 @@ body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):is(.la
 
 /* C) Restricted Scrolling Layer (Paper Scroll ON) */
 /* Natively fills the entire scrollable area, including the padding at the top */
-body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line).editor-pattern-paper-scroll .workspace-split.mod-root :is(.cm-scroller, .markdown-preview-view) {
+body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line).pattern-scroll .workspace-split.mod-root :is(.cm-scroller, .markdown-preview-view) {
     background-image: var(--editor-pattern-bg) !important;
     background-size: var(--editor-pattern-bg-size) !important;
     background-position: center var(--editor-pattern-y-offset-computed) !important;
@@ -1566,19 +1619,19 @@ body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line).editor
 /* ========== 3. Notebook Margin (Middle Panel Only) ========== */
 
 /* Text Indent (Always applies if margin is on) */
-body.editor-pattern-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root :is(.cm-sizer, .markdown-preview-sizer) {
-    padding-left: calc(var(--editor-margin-offset) + var(--editor-margin-text-indent)) !important;
+body.left-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root :is(.cm-sizer, .markdown-preview-sizer) {
+    padding-left: calc(var(--left-margin-position) + var(--editor-margin-text-indent)) !important;
 }
 
 /* Margin Red Lines - Attached to static container so it stays fixed and doesn't jump horizontally */
-body.editor-pattern-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"] {
+body.left-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"] {
     position: relative;
 }
-body.editor-pattern-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"]::after {
+body.left-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"]::after {
     content: "" !important;
     position: absolute;
     top: 0; bottom: 0;
-    left: var(--editor-margin-offset);
+    left: var(--left-margin-position);
     width: var(--editor-margin-gap);
     border-left: var(--editor-pattern-line-thickness) solid var(--editor-margin-color);
     border-right: var(--editor-pattern-line-thickness) solid var(--editor-margin-color);
@@ -1773,7 +1826,8 @@ body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace-split.mod
 }
 
 /* Outer Gaps */
-body.toggle-panel-borders:not(.layout-card):not(.is-mobile) .workspace {
+body:is(.toggle-panel-borders, .toggle-left-panel, .toggle-middle-panel, .toggle-right-panel):not(.layout-card):not(.is-mobile) .workspace {
+    padding-left: var(--layout-gap-left, 5px) !important;
     padding-right: var(--layout-gap-right, 5px) !important;
     padding-bottom: var(--layout-gap-bottom, 5px) !important;
 }
@@ -1783,90 +1837,139 @@ body.toggle-panel-borders:not(.is-mobile) .workspace-tabs:not(.mod-top) .workspa
     box-shadow: none !important;
 }
 
-/* Global Resize Handle Hide (Borders/Cards) */
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle {
-    opacity: 0 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::before,
-body.toggle-panel-borders:not(.is-mobile) .workspace-leaf-resize-handle::after,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::before,
-body.layout-card:not(.is-mobile) .workspace-leaf-resize-handle::after {
+/* ==========================================
+   SPLIT DIVIDER STYLES
+   ========================================== */
+
+/* Global Reset & Transition Setup */
+body:not(.is-mobile) .workspace-leaf-resize-handle::before,
+body:not(.is-mobile) .workspace-leaf-resize-handle::after {
     display: none !important;
 }
+body:not(.is-mobile) .workspace-leaf-resize-handle {
+    border: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.2s ease, opacity 0.2s ease !important;
+}
 
-/* Vertical Dividers - Shape & Mask (Applies to Default AND Card Layout) */
-body:not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-body:not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+/* Shape: Minimal Bar (Used for 'Short' and 'None/Hover' options) */
+body:not(.divider-dots):not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
     height: 80% !important;
     width: 1.5px !important;
     top: calc((100% - 80%) / 2) !important;
-    border: none !important;
-
-    /* THE MAGIC: Mask the top and bottom to create the transparency fade */
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
     mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
-
-    /* Smoothly transition both color and visibility */
-    transition: background-color 0.2s ease, opacity 0.2s ease !important;
 }
-
-/* Vertical Dividers - Default Layout Base Color (Visible by default) */
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-    background-color: var(--background-modifier-border) !important;
-    opacity: 1 !important;
-}
-
-/* ==========================================
-   Horizontal Dividers - Shape & Mask
-   ========================================== */
-body:not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
-body:not(.toggle-panel-borders):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
+body:not(.divider-dots):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
     width: 80% !important;
     height: 1.5px !important;
     margin-left: 10% !important;
-    border: none !important;
-
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
     mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
-
-    transition: background-color 0.2s ease, opacity 0.2s ease !important;
 }
 
-/* Horizontal Dividers - Base Color (Visible ONLY in Default Layout) */
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
-body:not(.layout-card):not(.toggle-panel-borders):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
+/* 3. Shape: Dots */
+body.divider-dots:not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
+    width: 10px !important;
+    height: 100% !important;
+    top: 0 !important;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='20' viewBox='0 0 4 20' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='2' cy='10' r='2'/%3E%3Ccircle cx='2' cy='18' r='2'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='20' viewBox='0 0 4 20' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='2' cy='10' r='2'/%3E%3Ccircle cx='2' cy='18' r='2'/%3E%3C/svg%3E") !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+}
+body.divider-dots:not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
+body.divider-dots:not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
+    height: 10px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='10' cy='2' r='2'/%3E%3Ccircle cx='18' cy='2' r='2'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='10' cy='2' r='2'/%3E%3Ccircle cx='18' cy='2' r='2'/%3E%3C/svg%3E") !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+}
+
+/* IDLE STATE: Visible
+   Only applies if 'Dots' or 'Short' is selected AND no structural layouts are active */
+body:is(.divider-minimal, .divider-dots):not(.layout-card, .toggle-panel-borders, .toggle-left-panel, .toggle-middle-panel, .toggle-right-panel):not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
     background-color: var(--background-modifier-border) !important;
     opacity: 1 !important;
 }
 
+/* IDLE STATE: Hidden
+   Activates if 'None' is selected OR if structural layouts (Cards/Borders/Panels) are enabled */
+body:is(.divider-hidden, .layout-card, .toggle-panel-borders, .toggle-left-panel, .toggle-middle-panel, .toggle-right-panel):not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
+    background-color: transparent !important;
+    opacity: 0 !important;
+}
 
-
-/* Hover Accent for Default AND Card Layout */
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:hover,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle:active,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-leaf-resize-handle.is-grabbing,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-left-split > .workspace-leaf-resize-handle.is-grabbing,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-handle.is-grabbing,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle:hover,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle:hover,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle:active,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle:active,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle.is-grabbing,
-body:is(.theme-light, .theme-dark):not(.toggle-panel-borders):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle.is-grabbing {
+/* HOVER & ACTIVE STATE */
+body:is(.theme-light, .theme-dark):not(.is-mobile) .workspace-leaf-resize-handle:is(:hover, :active, .is-grabbing) {
     background-color: var(--color-accent) !important;
     opacity: 1 !important;
     transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out !important;
 }
+
+/* Split divider (Only show on hover) */
+body.divider-hidden:not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
+    background-color: transparent !important;
+    opacity: 0 !important;
+}
+body:is(.divider-minimal, .divider-dots):not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
+    background-color: var(--background-modifier-border) !important;
+    opacity: 1 !important;
+}
+
+/* ==========================================================
+   Ribbon Vertical Divider
+   ========================================================== */
+
+body:not(.is-mobile) .workspace-ribbon.mod-left {
+    position: relative !important;
+}
+body.theme-light:not(.is-mobile) .workspace-ribbon.mod-left::after,
+body.theme-dark:not(.is-mobile) .workspace-ribbon.mod-left::after,
+body.theme-light.toggle-panel-borders:not(.is-mobile) .workspace-ribbon.mod-left::after,
+body.theme-dark.toggle-panel-borders:not(.is-mobile) .workspace-ribbon.mod-left::after,
+body.theme-light.layout-card:not(.is-mobile) .workspace-ribbon.mod-left::after,
+body.theme-dark.layout-card:not(.is-mobile) .workspace-ribbon.mod-left::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    height: 80% !important;
+    top: calc((100% - 80%) / 2) !important;
+    width: 1.5px !important;
+
+    background-color: var(--background-modifier-border) !important;
+    pointer-events: none !important;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
+
+    opacity: 1;
+    transition: opacity var(--anim-out, 0.2s) ease-in-out !important;
+}
+
+/* Fade the line out when the ribbon auto-hides */
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.mod-left::after {
+    opacity: 0 !important;
+    transition: opacity var(--anim-out) !important;
+}
+
+/* Fade the line back in when the ribbon is hovered */
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.mod-left:hover::after {
+    opacity: 1 !important;
+    transition: opacity var(--anim-in) !important;
+}
+
+
 
 /* --- Card Layout --- */
 body.layout-card:not(.is-mobile) .workspace::before {
@@ -1883,7 +1986,9 @@ body.layout-card:not(.is-mobile) .workspace.is-right-sidedock-open .workspace-sp
     margin-left: var(--layout-gap-middle, 8px) !important;
 }
 
+/* --- Card Layout --- */
 body.layout-card:not(.is-mobile) .workspace {
+    padding-left: var(--layout-gap-left, 8px) !important;
     padding-right: var(--layout-gap-right, 8px) !important;
     padding-bottom: var(--layout-gap-bottom, 8px) !important;
     margin-right: 0px !important;
@@ -2304,7 +2409,7 @@ body:not(.file-icon-remove).colorful-folder .nav-folder.mod-root>.nav-folder-tit
 /* Collapsible Folder Physics */
 .nav-folder-children {
     transform-origin: top !important;
-    animation: folder-spring-open 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards !important;
+    animation: folder-spring-open 0.35s var(--anim-motion) forwards !important;
 }
 @keyframes folder-spring-open {
     0% {
@@ -3579,9 +3684,11 @@ li[data-task="<"]>p>input:checked {
     margin-right: auto !important;
 }
 
-/* Floating Status Bar */
+/* ==========================================
+   FLOATING STATUS BAR (TOGGLEABLE)
+   ========================================== */
 
-body:not(.is-mobile) .status-bar {
+body.floating-status-bar:not(.is-mobile) .status-bar {
     position: absolute !important;
     bottom: 5px !important;
     right: 5px !important;
@@ -3606,17 +3713,17 @@ body:not(.is-mobile) .status-bar {
     transition: all 0.3s ease-out;
 }
 
-body:not(.is-mobile) .status-bar:hover {
+body.floating-status-bar:not(.is-mobile) .status-bar:hover {
     opacity: 1;
     max-width: 600px !important;
     width: auto !important;
     border-radius: 50px !important;
     padding: 0 6px !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+    transition: all var(anim-motion);
 }
 
-body:not(.is-mobile) .status-bar .status-bar-item:has(svg) {
+body.floating-status-bar:not(.is-mobile) .status-bar .status-bar-item:has(svg) {
     border-radius: 50% !important;
     height: 25px !important;
     width: 25px !important;
@@ -3629,7 +3736,7 @@ body:not(.is-mobile) .status-bar .status-bar-item:has(svg) {
     flex-shrink: 0;
 }
 
-body:not(.is-mobile) .status-bar .status-bar-item:not(:has(svg)) {
+body.floating-status-bar:not(.is-mobile) .status-bar .status-bar-item:not(:has(svg)) {
     border-radius: 10px !important;
     height: 20px !important;
     display: flex !important;
@@ -3639,16 +3746,16 @@ body:not(.is-mobile) .status-bar .status-bar-item:not(:has(svg)) {
     flex-shrink: 0;
 }
 
-body:not(.is-mobile) .status-bar > .status-bar-item:last-child {
+body.floating-status-bar:not(.is-mobile) .status-bar > .status-bar-item:last-child {
     margin: 0 2.5px 0 0 !important;
 }
 
-body:not(.is-mobile) .status-bar:hover > .status-bar-item:last-child {
+body.floating-status-bar:not(.is-mobile) .status-bar:hover > .status-bar-item:last-child {
     margin: 0 2px !important;
 }
 
-body:not(.is-mobile) .horizontal-main-container,
-body:not(.is-mobile) > .app-container > .horizontal-main-container:has(~.status-bar:hover) {
+body.floating-status-bar:not(.is-mobile) .horizontal-main-container,
+body.floating-status-bar:not(.is-mobile) > .app-container > .horizontal-main-container:has(~.status-bar:hover) {
     padding-bottom: 0px !important;
     transition: none !important;
 }
@@ -4258,4 +4365,77 @@ body .style-settings-heading[data-level="0"] + .style-settings-container > .sett
     border-top: none !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
+}
+
+/*====== Animations ======*/
+body {
+    /* Animations */
+    --anim-speed: 1;
+    --anim-duration-superfast: calc(75ms / var(--anim-speed));
+    --anim-duration-fast: calc(150ms / var(--anim-speed));
+    --anim-duration-moderate: calc(250ms / var(--anim-speed));
+    --anim-duration-slow: calc(500ms / var(--anim-speed));
+    --anim-motion: cubic-bezier(0.32, 0.72, 0, 1);
+    --anim-in: var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion);
+    --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion);
+}
+
+
+/* ---------- ribbon autohide ---------- */
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
+    --ribbon-width: 16px;
+    transition: all var(--anim-out);
+}
+
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover {
+    --ribbon-width: 44px;
+    transition: all var(--anim-in);
+}
+
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left>* {
+    opacity: 0;
+    transition: all var(--anim-out);
+}
+
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
+    opacity: 1;
+    transition: all var(--anim-in);
+}
+
+body:not(.is-mobile).ribbon-autohide.show-ribbon .workspace::before {
+    width: calc(100% - 16px);
+}
+
+body:not(.is-mobile).ribbon-autohide.show-ribbon>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before {
+    width: calc(100% - 44px);
+}
+
+/* macos autohide fix*/
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    margin-left: 28px;
+}
+
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    margin-left: 0px;
+}
+
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    transition: height var(--anim-out), opacity var(--anim-out), margin-left var(--anim-out);
+}
+
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    transition: height var(--anim-out), opacity var(--anim-out), margin-left var(--anim-in);
+}
+
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+    transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
 }
