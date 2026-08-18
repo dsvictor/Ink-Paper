@@ -1852,28 +1852,40 @@ body:not(.is-mobile) .workspace-leaf-resize-handle {
     transition: background-color 0.2s ease, opacity 0.2s ease !important;
 }
 
-/* Shape: Minimal Bar (Used for 'Short' and 'None/Hover' options) */
-body:not(.divider-dots):not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
+/* 1. Shape: Minimal Bar (VERTICAL LINES for Sidebars & Side-by-Side Panes) */
+body:not(.divider-dots):not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split, .mod-vertical) > .workspace-leaf-resize-handle,
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-root:not(.mod-horizontal) > .workspace-leaf-resize-handle,
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-root:not(.mod-horizontal) > * > .workspace-leaf-resize-handle {
     height: 80% !important;
     width: 1.5px !important;
     top: calc((100% - 80%) / 2) !important;
+    margin-left: 0 !important;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
     mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%) !important;
 }
-body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
+
+/* 2. Shape: Minimal Bar (HORIZONTAL LINES for Stacked Panes) */
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-horizontal:not(.mod-left-split):not(.mod-right-split) > .workspace-leaf-resize-handle,
+body:not(.divider-dots):not(.is-mobile) .workspace-split.mod-horizontal:not(.mod-left-split):not(.mod-right-split) > * > .workspace-leaf-resize-handle,
 body:not(.divider-dots):not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
     width: 80% !important;
     height: 1.5px !important;
     margin-left: 10% !important;
+    top: auto !important;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
     mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
 }
 
-/* 3. Shape: Dots */
-body.divider-dots:not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split) > .workspace-leaf-resize-handle {
+/* 3. Shape: Dots (VERTICAL LINES for Sidebars & Side-by-Side Panes) */
+body.divider-dots:not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-right-split, .mod-vertical) > .workspace-leaf-resize-handle,
+body.divider-dots:not(.is-mobile) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+body.divider-dots:not(.is-mobile) .workspace-split.mod-root:not(.mod-horizontal) > .workspace-leaf-resize-handle,
+body.divider-dots:not(.is-mobile) .workspace-split.mod-root:not(.mod-horizontal) > * > .workspace-leaf-resize-handle {
     width: 10px !important;
     height: 100% !important;
     top: 0 !important;
+    margin-left: 0 !important;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='20' viewBox='0 0 4 20' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='2' cy='10' r='2'/%3E%3Ccircle cx='2' cy='18' r='2'/%3E%3C/svg%3E") !important;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='20' viewBox='0 0 4 20' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='2' cy='10' r='2'/%3E%3Ccircle cx='2' cy='18' r='2'/%3E%3C/svg%3E") !important;
     -webkit-mask-repeat: no-repeat !important;
@@ -1881,11 +1893,15 @@ body.divider-dots:not(.is-mobile) .workspace-split:is(.mod-left-split, .mod-righ
     -webkit-mask-position: center !important;
     mask-position: center !important;
 }
-body.divider-dots:not(.is-mobile) .workspace-split.mod-vertical > .workspace-leaf-resize-handle,
+
+/* 4. Shape: Dots (HORIZONTAL LINES for Stacked Panes) */
+body.divider-dots:not(.is-mobile) .workspace-split.mod-horizontal:not(.mod-left-split):not(.mod-right-split) > .workspace-leaf-resize-handle,
+body.divider-dots:not(.is-mobile) .workspace-split.mod-horizontal:not(.mod-left-split):not(.mod-right-split) > * > .workspace-leaf-resize-handle,
 body.divider-dots:not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-handle {
     height: 10px !important;
     width: 100% !important;
     margin-left: 0 !important;
+    top: auto !important;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='10' cy='2' r='2'/%3E%3Ccircle cx='18' cy='2' r='2'/%3E%3C/svg%3E") !important;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4' fill='black'%3E%3Ccircle cx='2' cy='2' r='2'/%3E%3Ccircle cx='10' cy='2' r='2'/%3E%3Ccircle cx='18' cy='2' r='2'/%3E%3C/svg%3E") !important;
     -webkit-mask-repeat: no-repeat !important;
@@ -1894,15 +1910,13 @@ body.divider-dots:not(.is-mobile) .workspace-tabs > hr.workspace-leaf-resize-han
     mask-position: center !important;
 }
 
-/* IDLE STATE: Visible
-   Only applies if 'Dots' or 'Short' is selected AND no structural layouts are active */
+/* IDLE STATE: Visible */
 body:is(.divider-minimal, .divider-dots):not(.layout-card, .toggle-panel-borders, .toggle-left-panel, .toggle-middle-panel, .toggle-right-panel):not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
     background-color: var(--background-modifier-border) !important;
     opacity: 1 !important;
 }
 
-/* IDLE STATE: Hidden
-   Activates if 'None' is selected OR if structural layouts (Cards/Borders/Panels) are enabled */
+/* IDLE STATE: Hidden */
 body:is(.divider-hidden, .layout-card, .toggle-panel-borders, .toggle-left-panel, .toggle-middle-panel, .toggle-right-panel):not(.is-mobile) .workspace-leaf-resize-handle:not(:hover):not(:active):not(.is-grabbing) {
     background-color: transparent !important;
     opacity: 0 !important;
@@ -3410,15 +3424,23 @@ body {
 
 
     input[type=checkbox]:hover {
-        outline-offset: 2px;
-        outline: 2px solid var(--background-modifier-border-hover);
+        outline-offset: 1px;
+        outline: 1px solid var(--background-modifier-border-hover);
     }
 }
 
-input[type=checkbox] {
-    transition: box-shadow var(--anim-duration-moderate) var(--anim-motion-swing), filter var(--anim-duration-moderate) var(--anim-motion-smooth);
-    cursor: pointer;
+input[type="checkbox"].task-list-item-checkbox:active {
+    transform: scale(0.75);
 }
+input[type="checkbox"].task-list-item-checkbox:checked {
+    animation: checkbox-pop 0.3s var(--anim-motion) forwards;
+}
+@keyframes checkbox-pop {
+    0%   { transform: scale(0.75); }
+    50%  { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
 
 input[type=checkbox]:checked:after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M15.53 2.41a1.5 1.5 0 0 1 .06 2.12l-8.5 9a1.501 1.501 0 0 1-2.15.03l-4.5-4.5a1.5 1.5 0 0 1 2.12-2.12l3.41 3.408 7.44-7.878a1.5 1.5 0 0 1 2.12-.06Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
