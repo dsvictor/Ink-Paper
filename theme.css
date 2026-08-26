@@ -1764,8 +1764,7 @@ body.left-margin:is(.editor-pattern-line, .editor-pattern-dots) .workspace-split
 
 
 .clickable-icon,
-.workspace-tab-header-inner-icon,
-.sidebar-toggle-button {
+.workspace-tab-header-inner-icon {
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
     will-change: transform;
 }
@@ -3431,10 +3430,13 @@ body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-fra
 body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
     transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
 }
+body:not(.is-mobile) .workspace-ribbon {
+    padding: 10px 4px 0px;
+}
 
 
 
-/* ==========================================
+/* =========================================
    FLOATING STATUS BAR
    ========================================== */
 
@@ -3443,70 +3445,208 @@ body.floating-status-bar:not(.is-mobile) .status-bar {
     bottom: 5px !important;
     right: 5px !important;
     left: auto !important;
-    width: 30px !important;
-    max-width: 30px !important;
-    height: 30px !important;
-    border-radius: 50px !important;
-    overflow: hidden;
-    white-space: nowrap;
-    opacity: 0.7;
-
-    background-color: var(--background-secondary) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid var(--background-modifier-border);
-
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    width: 24px !important;
+    max-width: 24px !important;
+    height: 24px !important;
+    box-sizing: border-box !important;
     padding: 0 !important;
-
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 2px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border: 1px solid var(--background-modifier-border) !important;
+    border-radius: 50px !important;
+    background: var(--background-secondary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20) !important;
+    opacity: 0.70;
+    z-index: 100;
     transition:
-        width 0.3s ease-out,
-        max-width 0.3s ease-out,
-        opacity 0.3s ease-out,
-        border-radius 0.3s ease-out,
-        box-shadow 0.3s ease-out;
+        width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        max-width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.25s ease,
+        box-shadow 0.30s ease,
+        border-radius 0.30s ease;
 }
 
-body.floating-status-bar:not(.is-mobile) .status-bar:hover {
-    opacity: 1;
+body.floating-status-bar:not(.is-mobile)
+.status-bar:hover {
     width: auto !important;
     max-width: 600px !important;
+    padding: 0 24px 0 6px !important;
+    opacity: 1;
     border-radius: 50px !important;
-    padding: 0 6px !important;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28) !important;
 }
 
-body.floating-status-bar:not(.is-mobile) .status-bar .status-bar-item:has(svg) {
-    border-radius: 50% !important;
-    height: 25px !important;
+body.floating-status-bar:not(.is-mobile)
+.status-bar .status-bar-item {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar .status-bar-item:not(:last-child):has(svg) {
     width: 25px !important;
     min-width: 25px !important;
+    height: 25px !important;
+    padding: 0 !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 2px !important;
-    flex-shrink: 0;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
 }
 
-body.floating-status-bar:not(.is-mobile) .status-bar .status-bar-item:not(:has(svg)) {
-    border-radius: 10px !important;
+body.floating-status-bar:not(.is-mobile)
+.status-bar .status-bar-item:not(:has(svg)) {
     height: 20px !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
-    padding: 0 8px !important;
-    margin: 0 2px !important;
-    flex-shrink: 0;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
 }
 
-body.floating-status-bar:not(.is-mobile) .status-bar > .status-bar-item:last-child {
-    margin: 0 2.5px 0 0 !important;
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:last-child {
+    position: absolute !important;
+    right: 1px !important;
+    top: 50% !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    padding: 0 !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    z-index: 20 !important;
+    transform: translateY(-50%) scale(1) !important;
+    transform-origin: center center !important;
+    transition:
+        background-color 0.22s ease,
+        box-shadow 0.22s ease,
+        opacity 0.18s ease !important;
 }
 
-body.floating-status-bar:not(.is-mobile) .status-bar:hover > .status-bar-item:last-child {
-    margin: 0 2px !important;
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:last-child svg {
+    position: absolute !important;
+    inset: 0 !important;
+    margin: auto !important;
+    width: 70% !important;
+    height: 70% !important;
+    display: block !important;
+    transform: none !important;
+    transform-origin: center center !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:last-child::before,
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:last-child::after {
+    display: none !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:last-child:hover {
+    transform: translateY(-50%) scale(1.08) !important;
+    background: var(--background-modifier-hover) !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20) !important;
+    opacity: 1 !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar >
+.status-bar-item:not(:last-child) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    clip-path: inset(0 100% 0 0);
+    transition:
+        opacity 0s linear,
+        visibility 0s linear,
+        clip-path 0s linear !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar:hover >
+.status-bar-item:not(:last-child) {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    clip-path: inset(0 0 0 0);
+    transition:
+        opacity 0.15s ease 0.08s,
+        visibility 0s linear,
+        clip-path 0s linear !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar:hover >
+.status-bar-item:last-child {
+    right: 1px !important;
+    transform: translateY(-50%) scale(1) !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar:hover >
+.status-bar-item:last-child:hover {
+    transform: translateY(-50%) scale(1.08) !important;
+    background: var(--background-modifier-hover) !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20) !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar .status-bar-item:has(svg):hover {
+    background: var(--background-modifier-hover) !important;
+}
+
+body.floating-status-bar:not(.is-mobile)
+.status-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        transparent 45%
+    );
+    opacity: 0.7;
+}
+.theme-dark
+body.floating-status-bar:not(.is-mobile)
+.status-bar {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.30) !important;
+}
+.theme-light
+body.floating-status-bar:not(.is-mobile).status-bar {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    body.floating-status-bar:not(.is-mobile).status-bar,
+    body.floating-status-bar:not(.is-mobile).status-bar .status-bar-item {
+        transition: none !important;
+    }
 }
 
 
