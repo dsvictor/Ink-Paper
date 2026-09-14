@@ -301,7 +301,7 @@ settings:
 -
     id: pattern-scroll
     title: Pattern scroll (Middle Panel)
-    description: Makes the pattern and notebook margin scroll dynamically with your note. Turn off to keep the background fixed.
+    description: Makes the paper texture, pattern and notebook margin scroll dynamically with your note. Turn off to keep the background fixed.
     type: class-toggle
     default: true
 -
@@ -1209,6 +1209,48 @@ body.theme-dark::after {
   mix-blend-mode: var(--paper-tint-blend-dark);
 }
 
+/* ---------------------------------------------------------- */
+/*     Scrolling Paper (used when "Pattern scroll" is ON)      */
+/* ---------------------------------------------------------- */
+/* The fixed body::before and body::after layers cannot follow the
+   editor scroll, so the same composite is rebuilt as a set of
+   background layers on the scroller itself:
+
+     undercoat  -> opaque anchor, so the fixed layers behind
+                   the (transparent) editor stop showing through
+     canvas     -> undercoat + base background opacity, flattened
+     texture    -> the paper image, blended against the canvas
+     veil       -> canvas at (1 - texture opacity), which is
+                   exactly what the opacity on ::before produced
+     tint       -> the tint layer, blended on top                */
+
+body {
+    --paper-scroll-undercoat: var(--color-base-00);
+}
+
+/* A solid card paints its own surface behind the editor */
+body.card-layout.card-background-solid:not(.is-mobile) {
+    --paper-scroll-undercoat: var(--background-mod-root-split);
+}
+
+body.theme-light {
+    --paper-scroll-canvas: color-mix(in srgb, #FFFFFF calc(var(--paper-bg-color-opacity-light, 1) * 100%), var(--paper-scroll-undercoat));
+    --paper-scroll-texture: var(--paper-bg-image-light);
+    --paper-scroll-texture-blend: var(--paper-bg-blend-light);
+    --paper-scroll-veil: color-mix(in srgb, var(--paper-scroll-canvas) calc((1 - var(--paper-bg-image-opacity-light, 1)) * 100%), transparent);
+    --paper-scroll-tint: color-mix(in srgb, var(--paper-tint-color-light, #FFFFFF) calc(var(--paper-tint-opacity-light, 0) * 100%), transparent);
+    --paper-scroll-tint-blend: var(--paper-tint-blend-light);
+}
+
+body.theme-dark {
+    --paper-scroll-canvas: color-mix(in srgb, #000000 calc(var(--paper-bg-color-opacity-dark, 1) * 100%), var(--paper-scroll-undercoat));
+    --paper-scroll-texture: var(--paper-bg-image-dark);
+    --paper-scroll-texture-blend: var(--paper-bg-blend-dark);
+    --paper-scroll-veil: color-mix(in srgb, var(--paper-scroll-canvas) calc((1 - var(--paper-bg-image-opacity-dark, 1)) * 100%), transparent);
+    --paper-scroll-tint: color-mix(in srgb, var(--paper-tint-color-dark, #000000) calc(var(--paper-tint-opacity-dark, 0) * 100%), transparent);
+    --paper-scroll-tint-blend: var(--paper-tint-blend-dark);
+}
+
 .setting-item-control .color-picker-swatch,
 .setting-item-control input[type="color"],
 .style-settings-container .setting-item-control div[style*="background-color"] {
@@ -1321,7 +1363,6 @@ body:not(.table-width-customized) .setting-item[data-id$="table-width"] {
 }
 
 body:not(.editor-pattern-grid):not(.editor-pattern-dots):not(.editor-pattern-line) .setting-item:is(
-    [data-id$="pattern-scroll"],
     [data-id$="editor-pattern-color"],
     [data-id$="editor-pattern-size"],
     [data-id$="editor-pattern-line-thickness"],
@@ -1797,6 +1838,12 @@ body.theme-dark {
 }
 
 body {
+    /* Neutral single-layer defaults, used when no pattern is selected */
+    --editor-pattern-bg: none;
+    --editor-pattern-bg-size-list: auto;
+    --editor-pattern-bg-pos-list: 0 0;
+    --editor-pattern-bg-blend-list: normal;
+
     --editor-pattern-size: 36px;
     --editor-pattern-line-thickness: 1px;
     --editor-pattern-dot-size: 1.5px;
@@ -1816,18 +1863,28 @@ body.editor-pattern-grid {
         linear-gradient(to bottom, var(--editor-pattern-color) var(--editor-pattern-line-thickness), transparent var(--editor-pattern-line-thickness));
     --editor-pattern-bg-size: var(--editor-pattern-size) var(--editor-pattern-size);
     --editor-pattern-y-offset-computed: var(--editor-pattern-y-offset);
+    /* Explicit per-layer lists, needed when the pattern is stacked on the paper layers */
+    --editor-pattern-bg-size-list: var(--editor-pattern-size) var(--editor-pattern-size), var(--editor-pattern-size) var(--editor-pattern-size);
+    --editor-pattern-bg-pos-list: center var(--editor-pattern-y-offset-computed), center var(--editor-pattern-y-offset-computed);
+    --editor-pattern-bg-blend-list: normal, normal;
 }
 
 body.editor-pattern-dots {
     --editor-pattern-bg: radial-gradient(circle, var(--editor-pattern-color) var(--editor-pattern-dot-size), transparent var(--editor-pattern-dot-size));
     --editor-pattern-bg-size: var(--editor-pattern-size) var(--editor-pattern-size);
     --editor-pattern-y-offset-computed: calc((var(--editor-pattern-size) / -2) + var(--editor-pattern-y-offset));
+    --editor-pattern-bg-size-list: var(--editor-pattern-size) var(--editor-pattern-size);
+    --editor-pattern-bg-pos-list: center var(--editor-pattern-y-offset-computed);
+    --editor-pattern-bg-blend-list: normal;
 }
 
 body.editor-pattern-line {
     --editor-pattern-bg: linear-gradient(to bottom, var(--editor-pattern-color) var(--editor-pattern-line-thickness), transparent var(--editor-pattern-line-thickness));
     --editor-pattern-bg-size: 100% var(--editor-pattern-size);
     --editor-pattern-y-offset-computed: var(--editor-pattern-y-offset);
+    --editor-pattern-bg-size-list: 100% var(--editor-pattern-size);
+    --editor-pattern-bg-pos-list: center var(--editor-pattern-y-offset-computed);
+    --editor-pattern-bg-blend-list: normal;
 }
 
 body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):not(.layout-card):not(.toggle-panel-borders):not(.toggle-middle-panel):not(.pattern-scroll) .app-container {
@@ -1844,12 +1901,33 @@ body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line):is(.la
     background-repeat: repeat !important;
 }
 
-body:is(.editor-pattern-grid, .editor-pattern-dots, .editor-pattern-line).pattern-scroll .workspace-split.mod-root :is(.cm-scroller, .markdown-preview-view) {
-    background-image: var(--editor-pattern-bg) !important;
-    background-size: var(--editor-pattern-bg-size) !important;
-    background-position: center var(--editor-pattern-y-offset-computed) !important;
+/* Paper texture and pattern share one local background stack, so both travel
+   with the note instead of staying pinned to the viewport.
+   Layer order, top to bottom: pattern, tint, veil, texture, canvas. */
+body.pattern-scroll .workspace-split.mod-root :is(.cm-scroller, .markdown-preview-view):not(.markdown-embed *) {
+    background-color: var(--paper-scroll-canvas) !important;
+    background-image:
+        var(--editor-pattern-bg),
+        linear-gradient(var(--paper-scroll-tint), var(--paper-scroll-tint)),
+        linear-gradient(var(--paper-scroll-veil), var(--paper-scroll-veil)),
+        var(--paper-scroll-texture) !important;
+    background-size:
+        var(--editor-pattern-bg-size-list),
+        auto, auto, auto !important;
+    background-position:
+        var(--editor-pattern-bg-pos-list),
+        0 0, 0 0, 0 0 !important;
+    background-blend-mode:
+        var(--editor-pattern-bg-blend-list),
+        var(--paper-scroll-tint-blend), normal, var(--paper-scroll-texture-blend) !important;
     background-attachment: local !important;
     background-repeat: repeat !important;
+
+    /* The chrome above keeps the fixed texture, so the phases cannot line up.
+       Close the seam with the card border instead, marking the top edge of the
+       sheet. The border sits on the scroller, so it stays put while the paper
+       runs underneath it. */
+    border-top: var(--card-border-width, 1px) var(--card-border-style, dashed) var(--card-border-color, var(--background-modifier-border-hover)) !important;
 }
 
 
